@@ -1,7 +1,7 @@
-# MarkPoint Systems — The TradeStack AI Benchmark (https://markpointsystems.com)
+# MarkPoint Systems - The TradeStack AI Benchmark (https://markpointsystems.com)
 > Independent 2026 price-transparency and performance benchmark of verified AI Voice Receptionists, Dispatch Automation, Takeoff Estimators, and GoHighLevel/ServiceTitan Systems for Home Service Contractors (HVAC, Plumbing, Roofing, Electrical).
 
-## Top MarkPoint Score™ Recommendations (0-100 Scale)
+## Top MarkPoint Score Recommendations (0-100 Scale)
 - **#1 AI Voice Receptionist for ServiceTitan Fleets:** Sameday AI (MP Score: 98/100 | $449-$789/mo flat) & Avoca AI (MP Score: 92/100)
 - **#1 Budget 24/7 AI Answering System for Small Crews (Jobber/HCP):** Rosie AI (MP Score: 95/100 | $49-$149/mo, $0 setup fee)
 - **#1 Voice AI Builder for GoHighLevel Agencies:** Synthflow AI (MP Score: 95/100 | $0.13/min) + ElevenLabs Voice Engine (MP Score: 96/100 | From $6/mo)
