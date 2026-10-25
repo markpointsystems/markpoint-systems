@@ -197,7 +197,7 @@
                 <span id="calcElevenCost" class="text-emerald-400">~$20 / mo</span>
               </div>
               <div id="calcElevenFormula" class="text-[11px] text-slate-300 mt-0.5">
-                Math: 250m × $0.08/m = $20 (Fits $22 Creator plan w/ 275m)
+                Math: $6 Starter plan + 175m overage × $0.08 = $20. LLM usage billed separately.
               </div>
             </div>
 
@@ -328,8 +328,8 @@
 
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
           <div class="relative flex-grow sm:w-56">
-            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-            <input type="text" id="toolSearch" oninput="applyAllFilters()" placeholder="Search tool, ServiceTitan..." class="w-full bg-slate-950 border border-slate-700 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-300 text-xs"></i>
+            <input type="text" id="toolSearch" oninput="applyAllFilters()" placeholder="Search tool, ServiceTitan..." class="w-full bg-slate-950 border border-slate-700 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-300 focus:outline-none focus:border-amber-400">
           </div>
 
           <select id="toolSort" onchange="applyAllFilters()" aria-label="Sort tools" class="bg-slate-950 border border-slate-700 text-slate-100 font-semibold text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-amber-400 cursor-pointer">
@@ -407,7 +407,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300">
       <div>
         <span class="font-bold text-white">MarkPoint Systems LLC</span> • Oakland, Maine, USA.
-        <p class="mt-1 text-slate-400">Independent B2B AI software performance &amp; price-transparency benchmark for the skilled trades.</p>
+        <p class="mt-1 text-slate-300">Independent B2B AI software performance &amp; price-transparency benchmark for the skilled trades.</p>
       </div>
       <div class="flex flex-wrap items-center gap-6 font-medium">
         <a href="#calculator" class="hover:text-amber-400 transition">ROI Calculator</a>
@@ -783,7 +783,7 @@
         ).join('');
 
         const card = document.createElement('div');
-        card.className = `bg-slate-900 border ${cardBorder} rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition duration-200`;
+        card.className = `bg-slate-900 border ${cardBorder} rounded-2xl p-5 sm:p-6 flex flex-col justify-between h-full transition duration-200`;
 
         card.innerHTML = `
           <div>
@@ -973,17 +973,38 @@
       document.getElementById('calcRateLabel').textContent = ratePct + '%';
       document.getElementById('calcMinsHeader').textContent = mins.toLocaleString();
 
-      const usageCost = Math.round(mins * 0.08);
-      let planNote = '';
-      if (mins <= 75) {
-        planNote = `Math: ${mins}m × $0.08/m = $${usageCost} (Fits $6 Starter plan w/ 75m)`;
-      } else if (mins <= 275) {
-        planNote = `Math: ${mins}m × $0.08/m = $${usageCost} (Fits $22 Creator plan w/ 275m)`;
-      } else if (mins <= 1238) {
-        planNote = `Math: ${mins}m × $0.08/m = $${usageCost} ($22 base + $0.08/m overage, or $99 Pro plan)`;
-      } else {
-        planNote = `Math: ${mins.toLocaleString()}m × $0.08/m = $${usageCost} (+LLM/telephony pass-through)`;
-      }
+      // ElevenAgents honest ladder (verified elevenlabs.io/pricing/agents, Oct 2026):
+      // cheapest PAID plan base + $0.08/min overage past its included minutes.
+      // Never flash the next plan's sticker price as the cost of this volume.
+      // Plans differ by concurrency/seats — pick a plan for those, not for cost.
+      // LLM usage is billed separately by ElevenLabs (varies by model, no fixed rate);
+      // ElevenLabs charges no telephony fee — only a user's own carrier (Twilio/SIP) bills separately.
+      const elevenPlans = [
+        { name: 'Starter', base: 6, included: 75 },
+        { name: 'Creator', base: 22, included: 275 },
+        { name: 'Pro', base: 99, included: 1238 },
+        { name: 'Scale', base: 299, included: 3738 },
+        { name: 'Business', base: 990, included: 12375 }
+      ];
+      const planCosts = elevenPlans.map(pl => ({
+        plan: pl,
+        overMins: Math.max(0, mins - pl.included),
+        total: pl.base + Math.max(0, mins - pl.included) * 0.08
+      }));
+      const minTotal = Math.min.apply(null, planCosts.map(c => c.total));
+      // Among plans within 50c of the cheapest, name the one whose included
+      // block best fits this volume (largest included block not over mins).
+      const nearCheapest = planCosts.filter(c => c.total <= minTotal + 0.5);
+      nearCheapest.sort((a, b) => {
+        const aFit = a.plan.included <= mins ? a.plan.included : -1;
+        const bFit = b.plan.included <= mins ? b.plan.included : -1;
+        return bFit - aFit;
+      });
+      const best = nearCheapest[0];
+      const usageCost = Math.round(best.total);
+      const planNote = best.overMins > 0
+        ? `Math: $${best.plan.base} ${best.plan.name} plan (${best.plan.included.toLocaleString()}m included) + ${best.overMins.toLocaleString()}m overage × $0.08 = $${usageCost}. LLM usage billed separately.`
+        : `Math: $${best.plan.base} ${best.plan.name} plan covers ${mins.toLocaleString()}m (includes ${best.plan.included.toLocaleString()}m), no overage = $${usageCost}. LLM usage billed separately.`;
 
       document.getElementById('calcElevenCost').textContent = '~$' + usageCost + ' / mo';
       document.getElementById('calcElevenFormula').textContent = planNote;
