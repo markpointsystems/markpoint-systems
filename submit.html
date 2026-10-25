@@ -6,43 +6,44 @@
   <title>Vendor Verification & Sponsorship Portal | MarkPoint Systems</title>
   <meta name="description" content="Claim your audited software card, submit official right-of-reply notes, or upgrade to a MarkPoint Verified Partner or Category King sponsor.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              gold: '#F59E0B',
-              dark: '#0B0F19',
-              card: '#111827',
-              border: '#1F2937'
-            }
-          }
-        }
-      }
-    }
-  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    const STRIPE_VERIFIED_149_URL = "https://buy.stripe.com/cNibJ3eBw2PC4DZ83Dc7u00";
+    const STRIPE_KING_499_URL     = "https://buy.stripe.com/3cI4gBgJE1Lyb2n3Nnc7u01";
+  </script>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+<body class="bg-[#090D16] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
 
-  <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+  <!-- STICKY HEADER WITH INLINE MP EMBLEM SVG -->
+  <header class="sticky top-0 z-50 bg-[#090D16]/95 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <a href="/" class="flex items-center space-x-2">
-          <span class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black text-lg">M</span>
-          <span class="text-lg font-bold tracking-tight text-white">MarkPoint<span class="text-amber-400">Systems</span></span>
-        </a>
-        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-          Vendor & Partner Portal
-        </span>
-      </div>
+      <a href="/" class="flex items-center space-x-3 group">
+        <svg class="w-10 h-10 flex-shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="14" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+          <path d="M10 46V18H16L24 31L32 18H38V46H32.5V27.5L24 41L15.5 27.5V46H10Z" fill="url(#goldGradSub)"/>
+          <path d="M41 46V18H50C54.5 18 57.5 20.8 57.5 25.5C57.5 30.2 54.5 33 50 33H46.5V46H41ZM46.5 28.5H49.5C51.5 28.5 52.5 27.3 52.5 25.5C52.5 23.7 51.5 22.5 49.5 22.5H46.5V28.5Z" fill="url(#goldGradSub)"/>
+          <circle cx="48.5" cy="25.5" r="3" stroke="#10B981" stroke-width="1.4"/>
+          <circle cx="48.5" cy="25.5" r="1" fill="#10B981"/>
+          <path d="M36 36.5L43 43.5L58 24" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="goldGradSub" x1="10" y1="18" x2="56" y2="46" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FDE68A"/>
+              <stop offset="0.5" stop-color="#F59E0B"/>
+              <stop offset="1" stop-color="#B45309"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="flex flex-col">
+          <div class="text-base sm:text-lg font-black tracking-wider leading-none">
+            <span class="text-amber-400">MARKPOINT</span> <span class="text-emerald-400">SY</span><span class="text-white">ST</span><span class="text-emerald-400">EMS</span>
+          </div>
+          <span class="text-[10px] text-slate-300 tracking-widest uppercase mt-0.5 font-semibold">Vendor &amp; Partner Portal</span>
+        </div>
+      </a>
 
       <nav class="flex items-center space-x-4">
-        <a href="/" class="text-xs sm:text-sm text-slate-300 hover:text-white transition">← Back to Directory</a>
-        <a href="#pricing-tiers" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl transition shadow">
+        <a href="/" class="text-xs sm:text-sm text-slate-200 hover:text-amber-400 font-semibold transition">← Back to Directory</a>
+        <a href="#pricing-tiers" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-extrabold px-4 py-2 rounded-xl transition shadow">
           Sponsorship Tiers
         </a>
       </nav>
@@ -51,14 +52,14 @@
 
   <!-- HERO -->
   <section class="pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
-    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium mb-4">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-bold mb-4">
       <i class="fa-solid fa-scale-balanced"></i>
-      <span>Institutional Editorial Integrity</span>
+      <span>Institutional Editorial Integrity • Scores Never Sold</span>
     </div>
     <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-3xl mx-auto leading-tight">
-      Claim Your Audited Benchmark Card or <span class="text-amber-400">Partner With Us</span>.
+      Claim Your Audited Benchmark Card or <span class="text-amber-400 whitespace-nowrap">Partner With Us.</span>
     </h1>
-    <p class="mt-4 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto">
+    <p class="mt-4 text-sm sm:text-base text-slate-200 max-w-2xl mx-auto">
       MarkPoint Systems provides independent performance, pricing transparency, and uptime benchmarking for the skilled trades. Vendors can verify data for free or secure featured directory placement.
     </p>
   </section>
@@ -70,15 +71,15 @@
         <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
           October 2026 Audit Cohort
         </span>
-        <span class="text-xs text-slate-400">Instant Stripe Activation • Cancel Anytime</span>
+        <span class="text-xs text-slate-300 font-medium">Instant Stripe Activation • Cancel Anytime</span>
       </div>
       <h2 class="text-xl font-bold text-white mb-2">Already Listed in Our 2026 Benchmark? Claim Your Card</h2>
-      <p class="text-xs sm:text-sm text-slate-300 mb-4">
-        Select your software below to preview your live MarkPoint Score and unlock your Verified Partner badge, direct Free-Trial/Demo CTA button, or Category King exclusivity.
+      <p class="text-xs sm:text-sm text-slate-200 mb-4">
+        Select your software below to preview your live MarkPoint Score and unlock your Verified Partner placement, direct Free-Trial/Demo CTA button, or Category King exclusivity.
       </p>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
-        <select id="vendorClaimSelect" onchange="updateClaimPreview()" class="md:col-span-2 w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400">
+        <select id="vendorClaimSelect" onchange="updateClaimPreview()" class="md:col-span-2 w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 cursor-pointer">
           <option value="">-- Select Your Audited Software Listing --</option>
           <option value="Sameday AI|98|24/7 AI Voice Receptionists">Sameday AI (Current MP Score: 98/100 — Hold Expires Oct 28)</option>
           <option value="Rosie AI|95|24/7 AI Voice Receptionists">Rosie AI (Current MP Score: 95/100 — Unclaimed)</option>
@@ -95,7 +96,7 @@
           <option value="ServiceTitan Max|88|Speed-to-Lead & Field CRM">ServiceTitan / Titan Intelligence (Current MP Score: 88/100)</option>
           <option value="New Vendor Submission|--|New Category Audit">Don't see your tool? Submit a New Vendor for Audit</option>
         </select>
-        <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition shadow">
+        <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-xl text-sm transition shadow">
           Unlock Listing ↓
         </a>
       </div>
@@ -105,14 +106,14 @@
           <div>
             <span class="text-emerald-400 font-bold">✓ Listing Located:</span> 
             <strong id="claimVendorName" class="text-white"></strong> 
-            <span class="text-slate-400">(<span id="claimVendorCat"></span> • MP Score: <span id="claimVendorScore" class="text-amber-400 font-bold"></span>/100)</span>
+            <span class="text-slate-300">(<span id="claimVendorCat"></span> • MP Score: <span id="claimVendorScore" class="text-amber-400 font-bold"></span>/100)</span>
           </div>
-          <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30">
-            Eligible for Verified Badge ($149/mo) or Category King ($499/mo)
+          <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30 font-semibold">
+            Eligible for Verified Partner ($149/mo) or Category King ($499/mo)
           </span>
         </div>
-        <p class="text-xs text-slate-400 mt-2">
-          Select a tier below to activate via Stripe, or email <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline">admin@markpointsystems.com</a> to submit an official 1-sentence vendor verification note for your audit card at $0 cost.
+        <p class="text-xs text-slate-300 mt-2">
+          Select a tier below to activate via Stripe, or email <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline font-semibold">admin@markpointsystems.com</a> to submit an official 1-sentence vendor verification note for your audit card at $0 cost.
         </p>
       </div>
     </div>
@@ -121,9 +122,9 @@
   <!-- SPONSORSHIP TIERS SECTION -->
   <section id="pricing-tiers" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
     <div class="text-center mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold text-white">Direct B2B Directory Sponsorships</h2>
-      <p class="text-xs sm:text-sm text-slate-400 mt-2">
-        Institutional pricing powered by Stripe. Direct bank payouts to MarkPoint Systems LLC via Thread Bank.
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Direct B2B Directory Sponsorships</h2>
+      <p class="text-xs sm:text-sm text-slate-300 mt-2">
+        Self-serve monthly billing powered by Stripe. Cancel anytime with one click.
       </p>
     </div>
 
@@ -136,28 +137,28 @@
             <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase tracking-wider">
               MarkPoint Verified™
             </span>
-            <span class="text-xs text-slate-400">Monthly Recurring</span>
+            <span class="text-xs text-slate-300 font-medium">Monthly Recurring</span>
           </div>
           <div class="mb-6">
             <span class="text-4xl font-extrabold text-white">$149</span>
-            <span class="text-slate-400 text-sm font-medium">/ month</span>
+            <span class="text-slate-300 text-sm font-medium">/ month</span>
           </div>
-          <p class="text-xs sm:text-sm text-slate-300 mb-6">
-            Designed for high-performing software platforms that want to stand out from sales-gated or unverified tools.
+          <p class="text-xs sm:text-sm text-slate-200 mb-6">
+            Designed for high-performing software platforms that want to convert high-intent contractor traffic directly from their benchmark card.
           </p>
 
-          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 mb-8">
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-200 mb-8">
             <li class="flex items-start">
               <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
-              <span><strong>MarkPoint Verified™ Badge:</strong> Official green credibility badge on your card.</span>
+              <span><strong>MarkPoint Verified™ Partner Badge:</strong> Official verified partner status on your card.</span>
             </li>
             <li class="flex items-start">
               <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
-              <span><strong>Direct Outbound CTA Button:</strong> Send high-intent contractors straight to your free trial or demo page.</span>
+              <span><strong>Direct Outbound CTA Button:</strong> Send contractors straight to your Free Trial or Demo booking URL.</span>
             </li>
             <li class="flex items-start">
               <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
-              <span><strong>Official Vendor Note:</strong> Publish your verified uptime, customer guarantee, and onboarding specs.</span>
+              <span><strong>Official Vendor Context Note:</strong> Publish your verified uptime, customer guarantee, and onboarding specs.</span>
             </li>
             <li class="flex items-start">
               <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
@@ -167,18 +168,17 @@
         </div>
 
         <div>
-          <!-- STRIPE CHECKOUT LINK (VERIFIED BADGE) -->
-          <a href="https://buy.stripe.com/test_00gbJv7jO1f1fTOfYY" target="_blank" class="block w-full text-center bg-slate-800 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-xl text-sm transition shadow">
+          <a id="stripeVerifiedBtn" href="mailto:admin@markpointsystems.com?subject=Activate%20MarkPoint%20Verified%20Partner%20(%24149%2Fmo)" target="_blank" rel="noopener" class="block w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-6 rounded-xl text-sm transition shadow">
             Claim Verified Partner ($149/mo) →
           </a>
-          <p class="text-[11px] text-slate-500 text-center mt-2.5">Instant Stripe activation. Cancel anytime with one click.</p>
+          <p class="text-[11px] text-slate-300 text-center mt-2.5">Instant Stripe checkout. No long-term contract.</p>
         </div>
       </div>
 
       <!-- TIER 2: CATEGORY KING SPONSOR -->
       <div class="bg-slate-900 border-2 border-amber-500 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500 text-slate-950 uppercase tracking-wider shadow">
+          <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500 text-slate-950 uppercase tracking-wider shadow">
             Exclusive #1 Category Slot
           </span>
         </div>
@@ -188,45 +188,67 @@
             <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase tracking-wider">
               Category King™
             </span>
-            <span class="text-xs text-slate-400">Strictly 1 Per Category</span>
+            <span class="text-xs text-slate-300 font-medium">Strictly 1 Per Category</span>
           </div>
           <div class="mb-6">
             <span class="text-4xl font-extrabold text-white">$499</span>
-            <span class="text-slate-400 text-sm font-medium">/ month</span>
+            <span class="text-slate-300 text-sm font-medium">/ month</span>
           </div>
-          <p class="text-xs sm:text-sm text-slate-300 mb-6">
-            The marquee header position. Dominates all category searches and secures the gold crown slot on MarkPoint Systems.
+          <p class="text-xs sm:text-sm text-slate-200 mb-6">
+            The marquee header position. Dominates category filtering and secures the gold Category King crown on MarkPoint Systems.
           </p>
 
-          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 mb-8">
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-200 mb-8">
             <li class="flex items-start">
               <i class="fa-solid fa-crown text-amber-400 mt-1 mr-2.5"></i>
-              <span><strong>Permanent Top Placement:</strong> Pinned as #1 in your primary software category.</span>
+              <span><strong>Pinned #1 Category Placement:</strong> Featured at the top of your software category.</span>
             </li>
             <li class="flex items-start">
               <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
-              <span><strong>Gold Category King Badge:</strong> High-visibility gold styling and border across desktop & mobile.</span>
+              <span><strong>Gold Category King Crown Badge:</strong> Named category crown (e.g., Category King: Voice Dispatch) across desktop &amp; mobile.</span>
             </li>
             <li class="flex items-start">
               <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
-              <span><strong>Dedicated 60-Sec Review Slot:</strong> Feature your preferred video walkthrough or full-length product demo.</span>
+              <span><strong>High-Contrast Gold CTA Button:</strong> Maximum click-through prominence on the benchmark grid.</span>
             </li>
             <li class="flex items-start">
               <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
-              <span><strong>llms.txt Header Priority:</strong> Top-ranked benchmark recommendation for AI search agents and crawlers.</span>
+              <span><strong>llms.txt Featured Sponsor Tag:</strong> Highlighted in our machine-readable AI search feed.</span>
             </li>
           </ul>
         </div>
 
         <div>
-          <!-- STRIPE CHECKOUT LINK (CATEGORY KING) -->
-          <a href="https://buy.stripe.com/test_7sI7tfcE4g9V7nedQR" target="_blank" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-6 rounded-xl text-sm transition shadow">
+          <a id="stripeKingBtn" href="mailto:admin@markpointsystems.com?subject=Secure%20Category%20King%20Sponsorship%20(%24499%2Fmo)" target="_blank" rel="noopener" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3.5 px-6 rounded-xl text-sm transition shadow">
             Secure Category King ($499/mo) →
           </a>
-          <p class="text-[11px] text-slate-500 text-center mt-2.5">Subject to category availability. First-come, first-served.</p>
+          <p class="text-[11px] text-slate-300 text-center mt-2.5">Subject to category availability. First-come, first-served.</p>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- PARTNER RECOMMENDED SELF-SERVE STACK (YOUR 3 VERIFIED AFFILIATE LINKS) -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6">
+      <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-400">
+          Contractor Quick-Start Links
+        </span>
+        <span class="text-[11px] text-slate-300">(Paid Link) — I earn a commission if you buy through my link.</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <a href="https://www.gohighlevel.com/?fp_ref=mark-7ed2c0" target="_blank" rel="noopener sponsored" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl p-3 text-center text-xs font-bold text-amber-400 transition">
+          GoHighLevel ($97/mo) (Paid Link) →
+        </a>
+        <a href="https://try.elevenlabs.io/markpointsystems" target="_blank" rel="noopener sponsored" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl p-3 text-center text-xs font-bold text-emerald-400 transition">
+          ElevenAgents ($0.08/m) (Paid Link) →
+        </a>
+        <a href="https://affiliate.tidio.com/markpointsystems" target="_blank" rel="noopener sponsored" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl p-3 text-center text-xs font-bold text-sky-400 transition">
+          Tidio Lyro AI ($32.50/mo) (Paid Link) →
+        </a>
+      </div>
     </div>
   </section>
 
@@ -235,20 +257,20 @@
     <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
       <div class="flex items-center space-x-3 mb-4">
         <i class="fa-solid fa-envelope-open-text text-amber-400 text-xl"></i>
-        <h3 class="text-xl font-bold text-white">Editorial Right of Reply & Free Corrections</h3>
+        <h3 class="text-xl font-bold text-white">Editorial Right of Reply &amp; Free Corrections</h3>
       </div>
-      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
-        We believe that pricing and performance benchmarking must be fair, accurate, and transparent. If our automated scrapers or status-page trackers have documented outdated pricing, unverified integration statuses, or incorrect downtime figures, our editorial team will update your card at zero cost.
+      <p class="text-xs sm:text-sm text-slate-200 leading-relaxed mb-4">
+        Pricing and performance benchmarking must be fair, accurate, and verifiable. If our Wayback pricing sweeps or status-page trackers need context, or if you have launched a new self-serve tier or integration, our team will update your factual card specs at zero cost.
       </p>
-      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-2">
-        <div><strong>Vendor Verification Requirements:</strong></div>
-        <p class="text-slate-400">
-          Send an email from your official company domain to <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline font-semibold">admin@markpointsystems.com</a> with:
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-200 space-y-2">
+        <div><strong>How to Submit a Free Official Vendor Note:</strong></div>
+        <p class="text-slate-300">
+          Email <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline font-semibold">admin@markpointsystems.com</a> from your company domain with:
         </p>
-        <ul class="list-disc list-inside text-slate-400 space-y-1 pl-2">
-          <li>Your direct public pricing URL or published tier documentation.</li>
-          <li>Your official public status page URL (Statuspage, Better Uptime, etc.).</li>
-          <li>Your proposed 1-sentence official vendor note for your listing.</li>
+        <ul class="list-disc list-inside text-slate-300 space-y-1 pl-2">
+          <li>Your direct public pricing URL or updated tier documentation.</li>
+          <li>Your official public status page URL (Statuspage, Instatus, Better Stack, etc.).</li>
+          <li>Your proposed 1-sentence official vendor verification note.</li>
         </ul>
       </div>
     </div>
@@ -256,28 +278,43 @@
 
   <!-- FOOTER -->
   <footer class="bg-slate-950 border-t border-slate-800 py-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300">
       <div>
         <span class="font-bold text-white">MarkPoint Systems LLC</span> • Oakland, Maine, USA.
-        <p class="mt-1">Independent B2B performance & price-transparency audit for the skilled trades.</p>
+        <p class="mt-1 text-slate-400">Independent B2B performance &amp; price-transparency audit for the skilled trades.</p>
       </div>
       <div class="flex items-center space-x-6">
         <a href="/" class="hover:text-amber-400 transition">Directory Home</a>
-        <a href="/llms.txt" class="font-mono text-slate-300 hover:text-amber-400 transition">llms.txt Feed</a>
+        <a href="/llms.txt" class="font-mono hover:text-amber-400 transition">llms.txt Feed</a>
         <a href="mailto:admin@markpointsystems.com" class="hover:text-amber-400 transition">admin@markpointsystems.com</a>
       </div>
     </div>
   </footer>
 
   <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const vBtn = document.getElementById('stripeVerifiedBtn');
+      const kBtn = document.getElementById('stripeKingBtn');
+
+      if (typeof STRIPE_VERIFIED_149_URL === 'string' && STRIPE_VERIFIED_149_URL.indexOf('https://buy.stripe.com/') === 0) {
+        vBtn.href = STRIPE_VERIFIED_149_URL;
+      }
+      if (typeof STRIPE_KING_499_URL === 'string' && STRIPE_KING_499_URL.indexOf('https://buy.stripe.com/') === 0) {
+        kBtn.href = STRIPE_KING_499_URL;
+      }
+    });
+
     function updateClaimPreview() {
       const sel = document.getElementById('vendorClaimSelect').value;
       const box = document.getElementById('claimPreviewBox');
-      if (!sel || sel.includes('--')) { box.classList.add('hidden'); return; }
-      const [name, score, cat] = sel.split('|');
-      document.getElementById('claimVendorName').textContent = name;
-      document.getElementById('claimVendorScore').textContent = score;
-      document.getElementById('claimVendorCat').textContent = cat;
+      if (!sel || sel.indexOf('|') === -1) {
+        box.classList.add('hidden');
+        return;
+      }
+      const parts = sel.split('|');
+      document.getElementById('claimVendorName').textContent = parts[0];
+      document.getElementById('claimVendorScore').textContent = parts[1];
+      document.getElementById('claimVendorCat').textContent = parts[2];
       box.classList.remove('hidden');
     }
   </script>
