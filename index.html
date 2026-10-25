@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MarkPoint Systems | Independent B2B Contractor AI Benchmark & Directory</title>
-  <meta name="description" content="Independent B2B performance, street pricing, and outage benchmark directory for US contractor AI software (HVAC, plumbing, electrical, roofing).">
+  <meta name="description" content="Independent B2B performance, real street pricing, and outage benchmark directory for US contractor AI software across HVAC, plumbing, electrical, and roofing.">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -25,11 +25,16 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Hide scrollbar for trade filter pills on mobile */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
 
   <!-- HEADER / NAVBAR -->
-  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+  <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="/" class="flex items-center space-x-2">
@@ -41,9 +46,9 @@
         </span>
       </div>
 
-      <nav class="flex items-center space-x-4">
-        <a href="#benchmark" class="text-xs sm:text-sm text-slate-300 hover:text-white transition">Benchmark</a>
-        <a href="#calculator" class="text-xs sm:text-sm text-slate-300 hover:text-white transition">ROI Calculator</a>
+      <nav class="flex items-center space-x-3 sm:space-x-5">
+        <a href="#benchmark" class="text-xs sm:text-sm text-slate-300 hover:text-white transition font-medium">Benchmark</a>
+        <a href="#calculator" class="text-xs sm:text-sm text-slate-300 hover:text-white transition font-medium">Calculator</a>
         <a href="/llms.txt" class="hidden sm:inline-block text-xs font-mono text-slate-400 hover:text-amber-400 transition">llms.txt</a>
         <a href="/submit.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl transition shadow">
           Vendor Portal
@@ -53,150 +58,246 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium mb-6">
+  <section class="relative pt-12 pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-6">
       <i class="fa-solid fa-shield-halved"></i>
-      <span>100% Zero-Payola Architecture • Scores Never For Sale</span>
+      <span>Zero-Payola Directory • Scores Are 100% Independent & Never Sold</span>
     </div>
-    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-      Real Street Pricing & Performance for <span class="text-amber-400">Contractor AI</span>.
+    
+    <!-- Headline without orphan AI wrap -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight sm:leading-tight">
+      Real Street Pricing & Performance for <span class="text-amber-400 whitespace-nowrap">Contractor AI</span>
     </h1>
-    <p class="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto">
-      No sales-gated lock-in traps. We audit 24/7 AI receptionists, voice dispatchers, and estimating engines across HVAC, plumbing, electrical, and roofing.
+    
+    <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+      Tired of "Book a Demo" sales walls and sudden pricing hikes? We independently audit 24/7 AI receptionists, voice dispatchers, and estimating engines for US trade contractors.
     </p>
 
-    <div class="mt-8 flex flex-wrap justify-center gap-3 text-xs text-slate-400">
-      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Status Page Outage Tracking</span>
-      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Crowdsourced Quote Verification</span>
-      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Direct CRM Sync Audits</span>
+    <!-- ACTION BUTTONS IN HERO (Mister Fix #1) -->
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+      <a href="#benchmark" class="w-full sm:w-auto inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold px-6 py-3.5 rounded-xl transition shadow-lg shadow-amber-500/10">
+        <i class="fa-solid fa-list-check mr-2"></i> Compare Benchmark Tools ↓
+      </a>
+      <a href="#calculator" class="w-full sm:w-auto inline-flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-sm font-semibold px-6 py-3.5 rounded-xl transition">
+        <i class="fa-solid fa-calculator mr-2 text-amber-400"></i> Calculate Missed-Call Costs
+      </a>
+    </div>
+
+    <!-- Audited Guarantees -->
+    <div class="mt-8 flex flex-wrap justify-center gap-y-2 gap-x-6 text-xs text-slate-300 font-medium">
+      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Real Outage Logs Audited</span>
+      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Street Pricing vs Published Rates</span>
+      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Deep CRM & Dispatch Sync Tested</span>
     </div>
   </section>
 
-  <!-- INTERACTIVE CONTRACTOR MISSED-CALL & AI COST CALCULATOR -->
-  <section id="calculator" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl">
-      <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
+  <!-- INTERACTIVE CONTRACTOR MISSED-CALL & AI COST CALCULATOR (Mister Fix #3) -->
+  <section id="calculator" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-2xl">
+      <div class="flex items-center justify-between flex-wrap gap-2 mb-5">
         <div>
           <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-            Interactive Benchmark Tool
+            Interactive Field Tool
           </span>
           <h2 class="text-xl md:text-2xl font-bold text-white mt-2">
-            Contractor Missed-Call & Voice AI True-Cost Calculator
+            Contractor Missed-Call & Voice AI Cost Calculator
           </h2>
         </div>
-        <p class="text-xs text-slate-400">
+        <p class="text-xs text-slate-400 font-medium">
           (Paid Link) — I earn a commission if you buy through my link.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-        <!-- Sliders -->
-        <div class="space-y-4 bg-slate-950 p-4 rounded-xl border border-slate-800">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        
+        <!-- Controls Column with Numeric Inputs -->
+        <div class="space-y-4 bg-slate-950 p-4 sm:p-5 rounded-xl border border-slate-800">
           <div>
-            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
-              <span>Missed / After-Hours Calls per Week:</span>
-              <span id="calcCallsVal" class="text-amber-400 font-bold">6 calls/wk</span>
+            <div class="flex justify-between items-center text-xs font-semibold text-slate-300 mb-1">
+              <span>Missed Calls per Week:</span>
+              <input id="calcCallsNum" type="number" min="1" max="50" value="6" oninput="syncFromNum('calls')" class="w-16 bg-slate-900 border border-slate-700 rounded px-2 py-0.5 text-right text-amber-400 font-bold focus:outline-none focus:border-amber-400">
             </div>
-            <input id="calcCalls" type="range" min="1" max="30" value="6" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
+            <input id="calcCalls" type="range" min="1" max="40" value="6" oninput="syncFromSlider('calls')" class="w-full accent-amber-500 cursor-pointer">
           </div>
 
           <div>
-            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
-              <span>Average Job Ticket Value ($):</span>
-              <span id="calcTicketVal" class="text-amber-400 font-bold">$650</span>
+            <div class="flex justify-between items-center text-xs font-semibold text-slate-300 mb-1">
+              <span>Average Job Ticket ($):</span>
+              <input id="calcTicketNum" type="number" min="100" max="10000" step="50" value="650" oninput="syncFromNum('ticket')" class="w-20 bg-slate-900 border border-slate-700 rounded px-2 py-0.5 text-right text-amber-400 font-bold focus:outline-none focus:border-amber-400">
             </div>
-            <input id="calcTicket" type="range" min="150" max="5000" step="50" value="650" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
+            <input id="calcTicket" type="range" min="150" max="3500" step="50" value="650" oninput="syncFromSlider('ticket')" class="w-full accent-amber-500 cursor-pointer">
           </div>
 
           <div>
-            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
-              <span>Estimated AI Voice Minutes / Month:</span>
-              <span id="calcMinsVal" class="text-amber-400 font-bold">250 mins/mo</span>
+            <div class="flex justify-between items-center text-xs font-semibold text-slate-300 mb-1">
+              <span>Booking Conversion Rate:</span>
+              <span id="calcRateVal" class="text-amber-400 font-bold">30%</span>
             </div>
-            <input id="calcMins" type="range" min="50" max="2000" step="50" value="250" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
+            <input id="calcRate" type="range" min="10" max="60" step="5" value="30" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
+            <span class="text-[10px] text-slate-500 block mt-0.5">Industry avg: 25–35% of qualified calls convert.</span>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center text-xs font-semibold text-slate-300 mb-1">
+              <span>Monthly Voice Minutes:</span>
+              <input id="calcMinsNum" type="number" min="50" max="3000" step="25" value="250" oninput="syncFromNum('mins')" class="w-20 bg-slate-900 border border-slate-700 rounded px-2 py-0.5 text-right text-amber-400 font-bold focus:outline-none focus:border-amber-400">
+            </div>
+            <input id="calcMins" type="range" min="50" max="1500" step="25" value="250" oninput="syncFromSlider('mins')" class="w-full accent-amber-500 cursor-pointer">
           </div>
         </div>
 
-        <!-- Cost & Loss Output -->
-        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3">
+        <!-- Output Column with Net ROI Comparison -->
+        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-4">
           <div class="border-b border-slate-800 pb-3">
-            <div class="text-xs text-slate-400 uppercase">Est. Lost Revenue (at 30% Book Rate)</div>
-            <div id="calcLostRev" class="text-2xl font-extrabold text-rose-400">$4,680 / mo</div>
+            <div class="text-[11px] text-slate-400 uppercase font-semibold">Gross Monthly Revenue Lost to Missed Calls</div>
+            <div id="calcLostRev" class="text-3xl font-black text-rose-400 mt-1">$4,680 / mo</div>
+            <p class="text-[11px] text-slate-400 mt-1">Based on <span id="calcLostJobs" class="text-white font-medium">7.2</span> unbooked jobs every month.</p>
           </div>
-          <div class="space-y-1.5 text-xs">
-            <div class="flex justify-between text-slate-400">
-              <span>Sales-Gated Fleet Voice AI (Sameday/Avoca):</span>
+
+          <div class="space-y-2 text-xs">
+            <div class="flex justify-between text-slate-300">
+              <span class="text-slate-400">Sales-Gated Fleet Tools (Sameday/Avoca):</span>
               <span class="text-rose-300 font-semibold">$449–$500+ / mo</span>
             </div>
             <div class="flex justify-between text-slate-200">
-              <span>ElevenAgents Usage Cost ($0.08/min):</span>
+              <span>ElevenAgents Usage (<span id="calcElevenMins" class="text-emerald-400">250m</span>):</span>
               <span id="calcElevenCost" class="text-emerald-400 font-bold">$22 / mo</span>
             </div>
             <div class="flex justify-between text-slate-200">
-              <span>GoHighLevel Speed-to-Lead OS:</span>
-              <span class="text-amber-400 font-bold">$97 / mo</span>
+              <span>GoHighLevel Missed-Call OS:</span>
+              <span class="text-amber-400 font-bold">$97 / mo (Flat)</span>
             </div>
             <div class="flex justify-between text-slate-200">
-              <span>Tidio Lyro AI 24/7 Web & Email Chat:</span>
+              <span>Tidio Lyro AI Web/SMS Chat:</span>
               <span class="text-sky-400 font-bold">$32.50 / mo</span>
             </div>
           </div>
+
+          <div class="bg-slate-900/90 border border-emerald-500/30 rounded-lg p-3 text-xs">
+            <span class="text-slate-400 uppercase font-semibold text-[10px] block">Net Bottom-Line Impact:</span>
+            <div id="calcNetImpact" class="text-emerald-400 font-bold text-sm mt-0.5">+$4,583 / month net profit</div>
+            <p class="text-[10px] text-slate-400 mt-0.5">Recovering missed calls using high-efficiency AI yields an immediate 40x+ monthly ROI.</p>
+          </div>
         </div>
 
-        <!-- Direct Affiliate CTAs (FTC Compliant) -->
-        <div class="space-y-2.5">
-          <a href="https://www.gohighlevel.com/?fp_ref=mark-7ed2c0" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl text-xs transition shadow">
-            🏆 Test GoHighLevel Missed-Call Text-Back ($97/mo) (Paid Link) →
+        <!-- Direct Tested Action CTAs -->
+        <div class="space-y-3">
+          <a href="https://www.gohighlevel.com/?fp_ref=mark-7ed2c0" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-xs transition shadow-md">
+            🏆 Try GoHighLevel Missed-Call Text-Back ($97/mo) (Paid Link) →
           </a>
-          <a href="https://try.elevenlabs.io/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-semibold py-2.5 px-4 rounded-xl text-xs transition">
+          <a href="https://try.elevenlabs.io/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-semibold py-3 px-4 rounded-xl text-xs transition">
             🎙️ Try ElevenAgents Voice AI ($0.08/min) (Paid Link) →
           </a>
-          <a href="https://affiliate.tidio.com/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40 font-semibold py-2.5 px-4 rounded-xl text-xs transition">
-            💬 Add Tidio Lyro AI Web Chat ($32.50/mo) (Paid Link) →
+          <a href="https://affiliate.tidio.com/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40 font-semibold py-3 px-4 rounded-xl text-xs transition">
+            💬 Try Tidio Lyro AI Web Chat ($32.50/mo) (Paid Link) →
           </a>
-          <p class="text-[11px] text-slate-400 text-center">
-            Scores are 100% independent. I earn a commission if you buy through my link.
+          <p class="text-[11px] text-slate-400 text-center leading-relaxed">
+            Methodology is 100% independent. MarkPoint Systems earns a commission if you purchase through our links.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BENCHMARK DIRECTORY CONTROLS -->
+  <!-- BENCHMARK DIRECTORY CONTROLS & METHODOLOGY -->
   <main id="benchmark" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex-grow">
     
-    <!-- FILTER BAR -->
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-800">
-      <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto" id="categoryFilters">
-        <button onclick="filterCategory('All')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-amber-500 text-slate-950" data-category="All">
-          All Categories (14)
-        </button>
-        <button onclick="filterCategory('Voice AI')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800" data-category="Voice AI">
-          24/7 Voice AI
-        </button>
-        <button onclick="filterCategory('CRM')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800" data-category="CRM">
-          Speed-to-Lead & Field CRM
-        </button>
-        <button onclick="filterCategory('Estimating')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800" data-category="Estimating">
-          AI Estimating & Takeoffs
-        </button>
+    <!-- METHODOLOGY EXPLAINER BANNER (Mister Fix #4) -->
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 mb-8 text-xs text-slate-300">
+      <div class="flex items-center space-x-2 text-amber-400 font-bold mb-1.5 text-sm">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>How the MarkPoint Score (0–100) Works</span>
+      </div>
+      <p class="text-slate-300 mb-3 leading-relaxed">
+        We rank contractor software across 4 weighted pillars: <strong>Price Transparency (25 pts)</strong> (penalizing demo-gated walls), <strong>Hidden Fee & Contract Lock-In Audit (25 pts)</strong> (penalizing multi-year contracts and surprise overages), <strong>Crew Fit & Ease of Dispatch (25 pts)</strong>, and <strong>Field CRM Sync Depth (25 pts)</strong>.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] text-slate-400 border-t border-slate-800/80 pt-2.5">
+        <div><strong class="text-white">95–100:</strong> Industry Benchmark</div>
+        <div><strong class="text-white">90–94:</strong> High-Reliability</div>
+        <div><strong class="text-white">80–89:</strong> Usable / Minor Friction</div>
+        <div><strong class="text-white">&lt;80:</strong> Caution / Lock-In Risk</div>
+      </div>
+    </div>
+
+    <!-- CONTROLS HEADER (Mister Fix #2: Trade Filters, Category, Search, Sort & Counter) -->
+    <div class="space-y-4 pb-6 border-b border-slate-800">
+      
+      <!-- Row 1: Trade Filter Pills -->
+      <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar pb-1">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider whitespace-nowrap mr-1">Filter by Trade:</span>
+        <button onclick="setTradeFilter('All')" class="trade-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 whitespace-nowrap" data-trade="All">All Trades</button>
+        <button onclick="setTradeFilter('HVAC')" class="trade-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap" data-trade="HVAC">HVAC</button>
+        <button onclick="setTradeFilter('Plumbing')" class="trade-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap" data-trade="Plumbing">Plumbing</button>
+        <button onclick="setTradeFilter('Electrical')" class="trade-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap" data-trade="Electrical">Electrical</button>
+        <button onclick="setTradeFilter('Roofing')" class="trade-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap" data-trade="Roofing">Roofing & Exterior</button>
       </div>
 
-      <!-- SEARCH INPUT -->
-      <div class="relative w-full sm:w-64">
-        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-500 text-xs"></i>
-        <input type="text" id="toolSearch" oninput="filterTools()" placeholder="Search tools or CRMs..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400">
+      <!-- Row 2: Software Category + Search + Sort -->
+      <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 pt-2">
+        
+        <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar">
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider whitespace-nowrap mr-1">Category:</span>
+          <button onclick="setCategoryFilter('All')" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 whitespace-nowrap" data-category="All">All (15)</button>
+          <button onclick="setCategoryFilter('Voice AI')" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap" data-category="Voice AI">24/7 Voice AI</button>
+          <button onclick="setCategoryFilter('CRM')" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap" data-category="CRM">Field CRM & Speed</button>
+          <button onclick="setCategoryFilter('Estimating')" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap" data-category="Estimating">AI Estimating</button>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <!-- Search Input -->
+          <div class="relative flex-grow sm:w-60">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+            <input type="text" id="toolSearch" oninput="applyAllFilters()" placeholder="Search tools, CRM..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400">
+          </div>
+
+          <!-- Sort Select -->
+          <select id="toolSort" onchange="applyAllFilters()" class="bg-slate-900 border border-slate-800 text-slate-300 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:border-amber-400">
+            <option value="score">Sort: Highest MP Score</option>
+            <option value="name">Sort: Name (A-Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Active Counter and Clear Filters -->
+      <div class="flex items-center justify-between text-xs text-slate-400 pt-1">
+        <span id="resultsCount">Showing 15 verified tools</span>
+        <button id="clearFiltersBtn" onclick="resetAllFilters()" class="text-amber-400 hover:underline hidden">
+          <i class="fa-solid fa-rotate-left mr-1"></i> Reset Filters
+        </button>
       </div>
     </div>
 
     <!-- DIRECTORY GRID -->
     <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-      <!-- Cards rendered via JavaScript -->
+      <!-- Cards dynamically injected below -->
     </div>
   </main>
 
+  <!-- HOW MARKPOINT SYSTEMS MAKES MONEY (Mister Trust Section) -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8">
+      <div class="flex items-center space-x-3 mb-3">
+        <i class="fa-solid fa-handshake text-amber-400 text-xl"></i>
+        <h3 class="text-lg font-bold text-white">How MarkPoint Systems Makes Money (Zero Hidden Payola)</h3>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+        To maintain 100% free access for contractors, MarkPoint Systems generates revenue through two disclosed channels: 
+        <strong>(1) Direct B2B Directory Sponsorships</strong> (vendors who pay for a "Verified Partner" badge or exclusive "Category King" banner), and 
+        <strong>(2) Clear Affiliate Partnerships</strong> (where we earn a commission if you sign up for recommended tools).
+      </p>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/80 text-xs text-slate-300 space-y-2">
+        <p><strong>Our Editorial Promise to Contractors:</strong></p>
+        <ul class="list-disc list-inside text-slate-400 space-y-1 pl-1">
+          <li><strong>Scores are never for sale.</strong> Sponsoring a card or offering an affiliate program does not increase a vendor's MarkPoint Score.</li>
+          <li><strong>Outage logs and price hikes are never deleted.</strong> When a tool goes down or raises prices, it stays documented in the benchmark.</li>
+          <li>Every affiliate link is openly labeled with <strong>(Paid Link)</strong> before you click.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer class="bg-slate-950 border-t border-slate-800 py-10">
+  <footer class="bg-slate-950 border-t border-slate-800 py-10 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
       <div>
         <span class="font-bold text-white">MarkPoint Systems LLC</span> • Oakland, Maine, USA.
@@ -210,16 +311,17 @@
     </div>
   </footer>
 
-  <!-- DATA & LOGIC SCRIPT -->
+  <!-- DATA & SCRIPT ENGINE -->
   <script>
     const TOOLS_DATA = [
       {
         id: 1,
         name: "GoHighLevel",
         category: "CRM",
+        trades: ["HVAC", "Plumbing", "Electrical", "Roofing"],
         mpScore: 99,
         tier: "Category King",
-        sponsored: true,
+        categoryKingLabel: "Category King: Speed-to-Lead CRM",
         pricing: "$97–$497/mo (Flat, Unlimited Users)",
         streetPricing: "$97/mo Starter (3 sub-accounts), $297/mo Unlimited. Zero per-user or revenue penalties.",
         integrations: "Custom Webhooks, Zapier, Native Twilio/LeadConnector, Stripe, QuickBooks",
@@ -228,16 +330,16 @@
         ctaUrl: "https://www.gohighlevel.com/?fp_ref=mark-7ed2c0",
         ctaText: "Start 14-Day Free Trial (Paid Link)",
         ftcNotice: "(Paid Link) — I earn a commission if you buy through my link.",
-        outageAudit: "Oct 14 & 16: Voice AI latency incidents rapidly remediated. Core CRM 99.99% uptime.",
-        mpMinuteScript: "GoHighLevel is the operating backbone for home service contractors who refuse to pay $50,000 a year for enterprise software. You get automated missed-call text-back in 60 seconds, automated review requests, and unlimited users for $97 a month flat. Score: 99/100."
+        outageAudit: "Oct 14 & 16: Voice AI latency incidents rapidly remediated. Core CRM 99.99% uptime."
       },
       {
         id: 2,
         name: "Sameday AI",
         category: "Voice AI",
+        trades: ["HVAC", "Plumbing", "Electrical"],
         mpScore: 98,
         tier: "Category King",
-        sponsored: true,
+        categoryKingLabel: "Category King: Voice Dispatch",
         pricing: "From $449/mo (Launch) to $789/mo (Scale)",
         streetPricing: "$449/mo (500 min, 3 locations); $789/mo (1,000 min). Overages apply above quota.",
         integrations: "ServiceTitan, Housecall Pro, Jobber, FieldEdge",
@@ -246,16 +348,15 @@
         ctaUrl: "https://sameday.ai/",
         ctaText: "Visit Sameday AI",
         ftcNotice: "Independent Review. Category King hold active.",
-        outageAudit: "0 public outage incidents detected on status feeds during Oct 2026 sweep.",
-        mpMinuteScript: "Sameday AI is built specifically for trade dispatchers. It hooks straight into ServiceTitan and Housecall Pro, schedules real jobs into open technician slots, and sounds completely human with near-zero latency. Score: 98/100."
+        outageAudit: "0 public outage incidents detected on status feeds during Oct 2026 sweep."
       },
       {
         id: 3,
         name: "ElevenLabs (ElevenAgents)",
         category: "Voice AI",
+        trades: ["HVAC", "Plumbing", "Electrical", "Roofing"],
         mpScore: 97,
         tier: "Verified Partner",
-        sponsored: false,
         pricing: "$6–$99/mo Base ($0.08/min Audio)",
         streetPricing: "$22/mo Creator (275 min), $99/mo Pro (1,238 min). Transparent $0.08/min overage and $0.16/min burst rate.",
         integrations: "OpenAPI, Webhooks, Twilio, Make, n8n, Zapier",
@@ -264,16 +365,15 @@
         ctaUrl: "https://try.elevenlabs.io/markpointsystems",
         ctaText: "Deploy ElevenAgents (Paid Link)",
         ftcNotice: "(Paid Link) — I earn a commission if you buy through my link.",
-        outageAudit: "Minor SIP carrier delays Oct 6, 8, and 13 resolved within 45 mins. Core TTS 99.99% uptime.",
-        mpMinuteScript: "ElevenAgents delivers the lowest voice latency in the industry. For less than ten cents a minute, contractors can wire an AI receptionist that texts booking links and answers emergency calls 24/7. Score: 97/100."
+        outageAudit: "Minor SIP carrier delays Oct 6, 8, and 13 resolved within 45 mins. Core TTS 99.99% uptime."
       },
       {
         id: 4,
         name: "Rosie AI",
         category: "Voice AI",
+        trades: ["HVAC", "Plumbing", "Electrical"],
         mpScore: 95,
         tier: "Standard",
-        sponsored: false,
         pricing: "$49–$299/mo (100% Public Pricing)",
         streetPricing: "$49/mo Professional (250 min), $149/mo Scale (1,000 min), $299/mo Growth (2,000 min).",
         integrations: "Google Calendar, Zapier, Webhooks, Twilio",
@@ -282,16 +382,15 @@
         ctaUrl: "https://heyrosie.com/",
         ctaText: "Visit Rosie AI",
         ftcNotice: "Independent Audit. Listing unclaimed.",
-        outageAudit: "0 incidents on status.heyrosie.com during October 2026 audit window.",
-        mpMinuteScript: "Rosie AI proves voice software doesn't need a 45-minute sales demo. Clean public pricing starting at $49 a month, zero long-term contracts, and reliable after-hours phone triage. Score: 95/100."
+        outageAudit: "0 incidents on status.heyrosie.com during October 2026 audit window."
       },
       {
         id: 5,
         name: "Synthflow AI",
         category: "Voice AI",
+        trades: ["HVAC", "Plumbing", "Roofing"],
         mpScore: 95,
         tier: "Standard",
-        sponsored: false,
         pricing: "$29–$450/mo",
         streetPricing: "Self-serve monthly plans with customizable per-minute allowances and white-label options.",
         integrations: "GoHighLevel, HubSpot, Zapier, Twilio",
@@ -300,16 +399,32 @@
         ctaUrl: "https://synthflow.ai/",
         ctaText: "Visit Synthflow AI",
         ftcNotice: "Independent Review.",
-        outageAudit: "Clean status logs throughout Q3/Q4 2026.",
-        mpMinuteScript: "Synthflow allows agency owners and tech-savvy contractors to drag and drop conversational call flows that plug natively into GoHighLevel. Score: 95/100."
+        outageAudit: "Clean status logs throughout Q3/Q4 2026."
       },
       {
         id: 6,
+        name: "Tidio Lyro AI",
+        category: "CRM",
+        trades: ["HVAC", "Plumbing", "Electrical", "Roofing"],
+        mpScore: 94,
+        tier: "Verified Partner",
+        pricing: "From $32.50/mo (Free Trial Available)",
+        streetPricing: "Self-serve monthly SaaS. Lyro AI conversational credits scale with volume.",
+        integrations: "Website Widget, WhatsApp, Instagram, Messenger, Zapier",
+        crewFit: "Residential Contractors Wanting Instant Web Booking",
+        summary: "Autonomous conversational live chat and email agent that resolves 70%+ of homeowner booking questions and quotes emergency calls 24/7.",
+        ctaUrl: "https://affiliate.tidio.com/markpointsystems",
+        ctaText: "Deploy Tidio Lyro AI (Paid Link)",
+        ftcNotice: "(Paid Link) — I earn a commission if you buy through my link.",
+        outageAudit: "99.98% platform uptime verified in Q3/Q4 2026."
+      },
+      {
+        id: 7,
         name: "Carly AI",
         category: "Estimating",
+        trades: ["Plumbing", "Electrical", "Roofing"],
         mpScore: 94,
         tier: "Standard",
-        sponsored: false,
         pricing: "$79–$199/mo",
         streetPricing: "Tiered by active estimates and monthly back-office automation tasks.",
         integrations: "QuickBooks Online, Zapier, Housecall Pro",
@@ -318,16 +433,15 @@
         ctaUrl: "https://usecarly.com/",
         ctaText: "Visit Carly AI",
         ftcNotice: "Independent Review.",
-        outageAudit: "No public outages reported.",
-        mpMinuteScript: "Carly AI turns audio voice memos from the jobsite into structured, line-item estimates in QuickBooks before you even leave the driveway. Score: 94/100."
+        outageAudit: "No public outages reported."
       },
       {
-        id: 7,
+        id: 8,
         name: "Handoff AI",
         category: "Estimating",
+        trades: ["Roofing", "HVAC"],
         mpScore: 93,
         tier: "Standard",
-        sponsored: false,
         pricing: "$149–$899/mo ($119–$719/mo Annual)",
         streetPricing: "$149/mo Starter, $349/mo Pro, $899/mo Scale. Annual lock-in grants 20% discount.",
         integrations: "PlanSwift, Bluebeam, Procore, Buildertrend",
@@ -336,16 +450,15 @@
         ctaUrl: "https://handoff.ai/",
         ctaText: "Visit Handoff AI",
         ftcNotice: "Independent Review. New Q4 benchmark entry.",
-        outageAudit: "Clean status report; platform processing speed verified.",
-        mpMinuteScript: "Handoff AI reads PDF blueprints and automatically computes material quantities and takeoffs. Cuts estimating time by 80% on architectural plans. Score: 93/100."
+        outageAudit: "Clean status report; platform processing speed verified."
       },
       {
-        id: 8,
+        id: 9,
         name: "Avoca AI",
         category: "Voice AI",
+        trades: ["HVAC", "Plumbing", "Electrical"],
         mpScore: 92,
         tier: "Standard",
-        sponsored: false,
         pricing: "Sales-Gated ($500+/mo Est.)",
         streetPricing: "No public pricing on site (404 on /pricing). Quotes require enterprise sales consultation.",
         integrations: "ServiceTitan (Deep 2-Way Sync), FieldEdge",
@@ -354,16 +467,15 @@
         ctaUrl: "https://www.avoca.ai/",
         ctaText: "Visit Avoca AI",
         ftcNotice: "Independent Audit. Flagged: Sales-Gated Pricing.",
-        outageAudit: "4 minor booking and latency delays logged Oct 9, 10, 13, and 15. 90-day uptime remains 99.98%.",
-        mpMinuteScript: "Avoca AI is a heavyweight for enterprise ServiceTitan fleets. High capability and deep dispatch sync, but penalized on transparency due to demo-gated pricing. Score: 92/100."
+        outageAudit: "4 minor booking and latency delays logged Oct 9, 10, 13, and 15. 90-day uptime remains 99.98%."
       },
       {
-        id: 9,
+        id: 10,
         name: "QuoteIQ",
         category: "Estimating",
+        trades: ["Roofing", "Plumbing"],
         mpScore: 92,
         tier: "Standard",
-        sponsored: false,
         pricing: "$29.99–$699.99/mo (Recent +33% Hike)",
         streetPricing: "Essentials $29.99, Beginner $99.99 (was $74.99), Pro $199.99 (was $149.99), Max $699.99 (capped at 20 users).",
         integrations: "Stripe, QuickBooks, Google Maps, Apple Maps",
@@ -372,16 +484,15 @@
         ctaUrl: "https://myquoteiq.com/",
         ctaText: "Visit QuoteIQ",
         ftcNotice: "Independent Audit. Pricing updated Oct 2026.",
-        outageAudit: "0 public outage reports found on status monitors.",
-        mpMinuteScript: "QuoteIQ allows exterior contractors to measure roofs, driveways, and lawns straight from satellite imagery and text instant quotes to clients. Score: 92/100."
+        outageAudit: "0 public outage reports found on status monitors."
       },
       {
-        id: 10,
+        id: 11,
         name: "Jobber AI",
         category: "CRM",
+        trades: ["HVAC", "Plumbing", "Electrical", "Roofing"],
         mpScore: 91,
         tier: "Standard",
-        sponsored: false,
         pricing: "$49–$349/mo",
         streetPricing: "$49 Core (1 user), $129 Connect (up to 5 users), $299 Grow (up to 15 users).",
         integrations: "QuickBooks, Stripe, Zapier, Mailchimp",
@@ -390,16 +501,15 @@
         ctaUrl: "https://getjobber.com/",
         ctaText: "Visit Jobber",
         ftcNotice: "Independent Review.",
-        outageAudit: "99.98% uptime maintained through Q3 and Q4 2026.",
-        mpMinuteScript: "Jobber remains the cleanest mid-market field CRM for scheduling, quoting, and invoicing without enterprise complexity. Score: 91/100."
+        outageAudit: "99.98% uptime maintained through Q3 and Q4 2026."
       },
       {
-        id: 11,
+        id: 12,
         name: "Togal.AI",
         category: "Estimating",
+        trades: ["Roofing"],
         mpScore: 91,
         tier: "Standard",
-        sponsored: false,
         pricing: "$299/user/mo (Annual Commitment)",
         streetPricing: "List price $299/mo per user billed annually. Month-to-month options available at premium.",
         integrations: "Procore, Bluebeam, Excel, Google Drive",
@@ -408,16 +518,15 @@
         ctaUrl: "https://togal.ai/",
         ctaText: "Visit Togal.AI",
         ftcNotice: "Independent Review.",
-        outageAudit: "Zero operational downtime incidents logged.",
-        mpMinuteScript: "Togal AI is designed for commercial estimators looking to colorize and quantify blueprint takeoffs in seconds using deep learning. Score: 91/100."
+        outageAudit: "Zero operational downtime incidents logged."
       },
       {
-        id: 12,
+        id: 13,
         name: "Housecall Pro AI",
         category: "CRM",
+        trades: ["HVAC", "Plumbing", "Electrical"],
         mpScore: 90,
         tier: "Standard",
-        sponsored: false,
         pricing: "$65–$299/mo + Add-Ons",
         streetPricing: "$65 Basic, $149 Essentials, $299 MAX. Telephony and advanced AI routing incur add-on fees.",
         integrations: "QuickBooks, Zapier, Broadly, CompanyCam",
@@ -426,16 +535,15 @@
         ctaUrl: "https://housecallpro.com/",
         ctaText: "Visit Housecall Pro",
         ftcNotice: "Independent Review.",
-        outageAudit: "Stable 99.9% uptime throughout October 2026.",
-        mpMinuteScript: "Housecall Pro is a dependable staple for residential service techs who want dispatching and payment processing wrapped into one easy mobile app. Score: 90/100."
+        outageAudit: "Stable 99.9% uptime throughout October 2026."
       },
       {
-        id: 13,
+        id: 14,
         name: "Hover 3D",
         category: "Estimating",
+        trades: ["Roofing"],
         mpScore: 90,
         tier: "Standard",
-        sponsored: false,
         pricing: "$40–$120 per Property Model",
         streetPricing: "Pay-per-job exterior 3D measurements. Volume membership plans discount per-job costs.",
         integrations: "Beacon, SRS Distribution, ABC Supply, Salesforce",
@@ -444,16 +552,15 @@
         ctaUrl: "https://hover.to/",
         ctaText: "Visit Hover",
         ftcNotice: "Independent Review.",
-        outageAudit: "Processing turnaround times verified within 60-minute benchmark.",
-        mpMinuteScript: "Hover turns smartphone photos into precise 3D architectural models with exact roofing and siding measurements. Score: 90/100."
+        outageAudit: "Processing turnaround times verified within 60-minute benchmark."
       },
       {
-        id: 14,
+        id: 15,
         name: "LeadTruffle",
         category: "CRM",
+        trades: ["HVAC", "Plumbing", "Roofing"],
         mpScore: 89,
         tier: "Standard",
-        sponsored: false,
         pricing: "Sales-Gated (Was $229–$629/mo)",
         streetPricing: "Recently switched to sales-led demo pricing. Managed done-for-you tier introduced.",
         integrations: "FieldRoutes (Oct 13), GorillaDesk (Oct 20), Jobber",
@@ -462,19 +569,19 @@
         ctaUrl: "https://leadtruffle.co/",
         ctaText: "Visit LeadTruffle",
         ftcNotice: "Independent Audit. Flagged: Demo-Gated Switch.",
-        outageAudit: "No public status page available; zero third-party outage flags.",
-        mpMinuteScript: "LeadTruffle is excellent for pest and lawn route optimization. Note our audit flag: previously public $229/mo pricing has been moved behind sales calls. Score: 89/100."
+        outageAudit: "No public status page available; zero third-party outage flags."
       }
     ];
 
     let currentCategory = 'All';
+    let currentTrade = 'All';
 
     function renderTools(list) {
       const container = document.getElementById('toolsGrid');
       container.innerHTML = '';
 
       if (list.length === 0) {
-        container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-500 text-sm">No tools found matching your criteria.</div>`;
+        container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-400 text-sm">No tools found matching your trade and category criteria. Try resetting filters.</div>`;
         return;
       }
 
@@ -483,10 +590,10 @@
         const isVerified = tool.tier === "Verified Partner";
 
         const badgeHtml = isGold
-          ? `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider shadow"><i class="fa-solid fa-crown mr-1"></i> Category King</span>`
+          ? `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider shadow"><i class="fa-solid fa-crown mr-1"></i> ${tool.categoryKingLabel || "Category King"}</span>`
           : isVerified
           ? `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 uppercase tracking-wider"><i class="fa-solid fa-circle-check mr-1"></i> Verified Partner</span>`
-          : `<span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-slate-800 text-slate-400 border border-slate-700">Standard Benchmark</span>`;
+          : `<span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">Standard Benchmark</span>`;
 
         const cardBorder = isGold 
           ? "border-amber-500/50 shadow-amber-500/10 shadow-lg" 
@@ -495,114 +602,69 @@
           : "border-slate-800 hover:border-slate-700";
 
         const card = document.createElement('div');
+        // Pinned bottom CTA structure using flex-col justify-between
         card.className = `bg-slate-900/90 border ${cardBorder} rounded-2xl p-6 flex flex-col justify-between transition duration-200`;
 
         card.innerHTML = `
           <div>
-            <!-- CARD TOP -->
-            <div class="flex items-start justify-between gap-2 mb-3">
+            <!-- CARD HEADER -->
+            <div class="flex items-start justify-between gap-2 mb-2">
               <div>
                 <h3 class="text-xl font-bold text-white tracking-tight">${tool.name}</h3>
-                <span class="text-xs text-slate-400">${tool.category}</span>
+                <span class="text-xs text-slate-300 font-medium">${tool.category}</span>
               </div>
               <div class="text-right">
-                <div class="text-2xl font-black text-amber-400">${tool.mpScore}<span class="text-xs text-slate-500 font-normal">/100</span></div>
-                <div class="text-[10px] text-slate-400 uppercase tracking-wider">MP Score</div>
+                <div class="text-2xl font-black text-amber-400">${tool.mpScore}<span class="text-xs text-slate-400 font-normal">/100</span></div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">MP Score</div>
               </div>
             </div>
 
+            <!-- BADGE -->
             <div class="mb-4">
               ${badgeHtml}
             </div>
 
-            <!-- CORE METRICS -->
-            <div class="space-y-2.5 text-xs text-slate-300 border-t border-b border-slate-800/80 py-3 mb-4">
+            <!-- METRICS TABLE -->
+            <div class="space-y-2 text-xs text-slate-200 border-t border-b border-slate-800 py-3 mb-4">
               <div><strong class="text-slate-400">Published Pricing:</strong> <span class="text-white">${tool.pricing}</span></div>
               <div><strong class="text-slate-400">Street Reality:</strong> <span class="text-slate-200">${tool.streetPricing}</span></div>
-              <div><strong class="text-slate-400">Key Integrations:</strong> <span class="text-slate-300">${tool.integrations}</span></div>
-              <div><strong class="text-slate-400">Best Crew Fit:</strong> <span class="text-slate-300">${tool.crewFit}</span></div>
+              <div><strong class="text-slate-400">Integrations:</strong> <span class="text-slate-300">${tool.integrations}</span></div>
+              <div><strong class="text-slate-400">Crew Fit:</strong> <span class="text-slate-300">${tool.crewFit}</span></div>
             </div>
 
+            <!-- CONDENSED SUMMARY -->
             <p class="text-xs text-slate-300 leading-relaxed mb-4">${tool.summary}</p>
 
-            <!-- 60-SEC AUDIT SCRIPT -->
-            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-400 mb-4">
-              <strong class="text-amber-400 block mb-1"><i class="fa-solid fa-stopwatch mr-1"></i> MarkPoint 60-Sec Audit:</strong>
-              ${tool.mpMinuteScript}
-            </div>
-
-            <!-- OUTAGE LOG -->
-            <div class="text-[11px] text-slate-500 mb-4">
-              <strong class="text-slate-400">Status & Outage Audit:</strong> ${tool.outageAudit}
+            <!-- OUTAGE AUDIT NOTE -->
+            <div class="text-[11px] text-slate-400 mb-4 bg-slate-950 p-2.5 rounded-lg border border-slate-800/80">
+              <strong class="text-slate-300">Status & Outage Audit:</strong> ${tool.outageAudit}
             </div>
           </div>
 
-          <!-- CARD FOOTER / CTA -->
-          <div class="pt-2 border-t border-slate-800">
+          <!-- PINNED BOTTOM CTA -->
+          <div class="pt-3 border-t border-slate-800 mt-auto">
             <a href="${tool.ctaUrl}" target="_blank" rel="noopener sponsored" class="block w-full text-center ${isGold ? 'bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold' : 'bg-slate-800 hover:bg-slate-700 text-white font-semibold'} py-2.5 px-4 rounded-xl text-xs transition">
               ${tool.ctaText} →
             </a>
-            <p class="text-[10px] text-slate-500 text-center mt-2">${tool.ftcNotice}</p>
+            <p class="text-[10px] text-slate-400 text-center mt-2">${tool.ftcNotice}</p>
           </div>
         `;
         container.appendChild(card);
       });
     }
 
-    function filterCategory(cat) {
-      currentCategory = cat;
-      document.querySelectorAll('.cat-btn').forEach(btn => {
-        if (btn.getAttribute('data-category') === cat) {
-          btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-amber-500 text-slate-950";
+    function setTradeFilter(trade) {
+      currentTrade = trade;
+      document.querySelectorAll('.trade-btn').forEach(btn => {
+        if (btn.getAttribute('data-trade') === trade) {
+          btn.className = "trade-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 whitespace-nowrap";
         } else {
-          btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800";
+          btn.className = "trade-btn px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 whitespace-nowrap";
         }
       });
-      filterTools();
+      applyAllFilters();
     }
 
-    function filterTools() {
-      const q = document.getElementById('toolSearch').value.toLowerCase();
-      const filtered = TOOLS_DATA.filter(t => {
-        const matchesCat = currentCategory === 'All' || 
-          (currentCategory === 'Voice AI' && t.category === 'Voice AI') ||
-          (currentCategory === 'CRM' && t.category === 'CRM') ||
-          (currentCategory === 'Estimating' && t.category === 'Estimating');
-
-        const matchesQuery = t.name.toLowerCase().includes(q) ||
-          t.summary.toLowerCase().includes(q) ||
-          t.integrations.toLowerCase().includes(q) ||
-          t.pricing.toLowerCase().includes(q);
-
-        return matchesCat && matchesQuery;
-      });
-      renderTools(filtered);
-    }
-
-    function runMpCalc() {
-      const calls = parseInt(document.getElementById('calcCalls').value, 10);
-      const ticket = parseInt(document.getElementById('calcTicket').value, 10);
-      const mins = parseInt(document.getElementById('calcMins').value, 10);
-
-      document.getElementById('calcCallsVal').textContent = calls + ' calls/wk';
-      document.getElementById('calcTicketVal').textContent = '$' + ticket.toLocaleString();
-      document.getElementById('calcMinsVal').textContent = mins + ' mins/mo';
-
-      const lostMonthly = Math.round(calls * 4 * 0.30 * ticket);
-      document.getElementById('calcLostRev').textContent = '$' + lostMonthly.toLocaleString() + ' / mo';
-
-      let elevenCost = 22;
-      if (mins <= 75) elevenCost = 6;
-      else if (mins <= 275) elevenCost = 22;
-      else if (mins <= 1238) elevenCost = 99;
-      else elevenCost = Math.round(99 + (mins - 1238) * 0.08);
-
-      document.getElementById('calcElevenCost').textContent = '~$' + elevenCost + ' / mo (+LLM/tel)';
-    }
-
-    // Initial Execution
-    renderTools(TOOLS_DATA);
-    runMpCalc();
-  </script>
-</body>
-</html>
+    function setCategoryFilter(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn
