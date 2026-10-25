@@ -1,673 +1,608 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MarkPoint Systems | The 2026 Price-Transparent AI Benchmark for HVAC, Plumbing & Contractors</title>
-<!-- Instant Gold 'MP' Vector Favicon (Zero extra image file needed!) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F172A' stroke='%23F59E0B' stroke-width='6'/><text x='50' y='64' font-family='Arial,sans-serif' font-size='48' font-weight='900' fill='%23F59E0B' text-anchor='middle'>MP</text><circle cx='82' cy='22' r='10' fill='%2310B981'/></svg>" />
-
-<!-- Executive Social Share Preview for X DMs & Founder Emails -->
-<meta property="og:title" content="MarkPoint Systems™ | 2026 Contractor AI Price & Performance Benchmark" />
-<meta property="og:description" content="Home of the MarkPoint Minute™: Set the mark. To the point. 25+ Contractor AI Voice, Dispatch & Estimating Systems scored 0-100 with 100% price transparency." />
-<meta property="og:url" content="https://markpointsystems.com/" />
-<meta name="twitter:card" content="summary_large_image" />
-  <meta name="description" content="Home of the MarkPoint Minute™: Set the mark. To the point. Compare 25+ verified AI voice receptionists, estimating tools, and contractor systems in 60 seconds." />
-  <link rel="canonical" href="https://markpointsystems.com/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkPoint Systems | Independent B2B Contractor AI Benchmark & Directory</title>
+  <meta name="description" content="Independent B2B performance, street pricing, and outage benchmark directory for US contractor AI software (HVAC, plumbing, electrical, roofing).">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "MarkPoint Systems — TradeStack AI Benchmark",
-    "url": "https://markpointsystems.com",
-    "description": "Home of MarkPoint Minute Reviews: Independent price-transparency and performance benchmark of AI systems for home service contractors."
-  }
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#F59E0B',
+              dark: '#0B0F19',
+              card: '#111827',
+              border: '#1F2937'
+            }
+          }
+        }
+      }
+    }
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
 
-  <!-- Top Announcement Banner -->
-  <div class="bg-amber-500 text-slate-950 text-xs sm:text-sm font-bold py-2 px-4 text-center">
-    🎬 NEW: Watch 60-Second "MarkPoint Minute™" System Audits! <a href="submit.html" class="underline ml-2 hover:text-slate-800">Software Founder? Get Your System Reviewed &amp; Verified &rarr;</a>
-  </div>
-
-  <!-- Navigation Header -->
-  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-40">
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <span class="bg-amber-500 text-slate-950 font-black px-2.5 py-1 rounded text-lg tracking-tighter">MP</span>
-        <div>
-          <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white">MarkPoint<span class="text-amber-500">Systems</span></span>
-          <span class="hidden sm:inline-block text-[10px] font-mono uppercase bg-slate-800 text-amber-400 px-2 py-0.5 rounded ml-1.5 border border-slate-700">Set The Mark. To The Point.</span>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="#matcher" class="hover:text-amber-400 transition">30-Sec System Matcher</a>
-        <a href="#directory" class="hover:text-amber-400 transition">MarkPoint Minute™ Index</a>
-        <a href="#newsletter" class="hover:text-amber-400 transition">Operator Briefing</a>
-        <a href="/llms.txt" class="hover:text-amber-400 transition text-xs font-mono bg-slate-800 px-2.5 py-1 rounded border border-slate-700">/llms.txt</a>
+      <div class="flex items-center space-x-3">
+        <a href="/" class="flex items-center space-x-2">
+          <span class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black text-lg">M</span>
+          <span class="text-lg font-bold tracking-tight text-white">MarkPoint<span class="text-amber-400">Systems</span></span>
+        </a>
+        <span class="hidden md:inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+          Q4 2026 Live Audit
+        </span>
+      </div>
+
+      <nav class="flex items-center space-x-4">
+        <a href="#benchmark" class="text-xs sm:text-sm text-slate-300 hover:text-white transition">Benchmark</a>
+        <a href="#calculator" class="text-xs sm:text-sm text-slate-300 hover:text-white transition">ROI Calculator</a>
+        <a href="/llms.txt" class="hidden sm:inline-block text-xs font-mono text-slate-400 hover:text-amber-400 transition">llms.txt</a>
+        <a href="/submit.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl transition shadow">
+          Vendor Portal
+        </a>
       </nav>
-      <a href="submit.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2 rounded-lg transition">
-        + Get MarkPoint Verified
-      </a>
     </div>
   </header>
 
-  <!-- Hero + 30-Second System Matcher -->
-  <section id="matcher" class="py-12 sm:py-16 px-4 border-b border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950">
-    <div class="max-w-5xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 text-xs font-semibold mb-5">
-        <span>🎬 Home of MarkPoint Minute™ Reviews: Set the Mark. To the Point. Explained in a Minute!</span>
-      </div>
-      <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight mb-4">
-        The Price-Transparent AI Benchmark for <span class="text-amber-500">HVAC, Plumbing, Roofing &amp; Agencies</span>
-      </h1>
-      <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto mb-8">
-        Skip the 45-minute software sales calls. Watch our 60-second <strong>MarkPoint Minute™</strong> video audits and compare 25+ verified AI Voice Receptionists, Dispatch Systems, and Estimators by real setup cost.
-      </p>
-<!-- INTERACTIVE CONTRACTOR MISSED-CALL & AI COST CALCULATOR -->
-<section class="max-w-6xl mx-auto px-4 mb-10">
-  <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl">
-    <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
-      <div>
-        <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-          Interactive Benchmark Tool
-        </span>
-        <h2 class="text-xl md:text-2xl font-bold text-white mt-2">
-          Contractor Missed-Call & Voice AI True-Cost Calculator
-        </h2>
-      </div>
-      <p class="text-xs text-slate-400">
-        Disclosure: I earn a commission if you buy through my links Marked (Paid Link) below.
-      </p>
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium mb-6">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>100% Zero-Payola Architecture • Scores Never For Sale</span>
     </div>
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+      Real Street Pricing & Performance for <span class="text-amber-400">Contractor AI</span>.
+    </h1>
+    <p class="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto">
+      No sales-gated lock-in traps. We audit 24/7 AI receptionists, voice dispatchers, and estimating engines across HVAC, plumbing, electrical, and roofing.
+    </p>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-      <!-- Sliders -->
-      <div class="space-y-4 bg-slate-950 p-4 rounded-xl border border-slate-800">
+    <div class="mt-8 flex flex-wrap justify-center gap-3 text-xs text-slate-400">
+      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Status Page Outage Tracking</span>
+      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Crowdsourced Quote Verification</span>
+      <span class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Direct CRM Sync Audits</span>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE CONTRACTOR MISSED-CALL & AI COST CALCULATOR -->
+  <section id="calculator" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+      <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
         <div>
-          <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
-            <span>Missed / After-Hours Calls per Week:</span>
-            <span id="calcCallsVal" class="text-amber-400 font-bold">6 calls/wk</span>
-          </div>
-          <input id="calcCalls" type="range" min="1" max="30" value="6" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
+          <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            Interactive Benchmark Tool
+          </span>
+          <h2 class="text-xl md:text-2xl font-bold text-white mt-2">
+            Contractor Missed-Call & Voice AI True-Cost Calculator
+          </h2>
         </div>
-
-        <div>
-          <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
-            <span>Average Job Ticket Value ($):</span>
-            <span id="calcTicketVal" class="text-amber-400 font-bold">$650</span>
-          </div>
-          <input id="calcTicket" type="range" min="150" max="5000" step="50" value="650" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
-        </div>
-
-        <div>
-          <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
-            <span>Estimated AI Voice Minutes / Month:</span>
-            <span id="calcMinsVal" class="text-amber-400 font-bold">250 mins/mo</span>
-          </div>
-          <input id="calcMins" type="range" min="50" max="2000" step="50" value="250" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
-        </div>
-      </div>
-
-      <!-- Cost & Loss Output -->
-      <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3">
-        <div class="border-b border-slate-800 pb-3">
-          <div class="text-xs text-slate-400 uppercase">Est. Lost Revenue (at 30% Book Rate)</div>
-          <div id="calcLostRev" class="text-2xl font-extrabold text-rose-400">$4,680 / mo</div>
-        </div>
-        <div class="space-y-1.5 text-xs">
-          <div class="flex justify-between text-slate-400">
-            <span>Sales-Gated Fleet Voice AI (Sameday/Avoca):</span>
-            <span class="text-rose-300 font-semibold">$449–$500+ / mo</span>
-          </div>
-          <div class="flex justify-between text-slate-200">
-            <span>ElevenAgents Usage Cost ($0.08/min):</span>
-            <span id="calcElevenCost" class="text-emerald-400 font-bold">$22 / mo</span>
-          </div>
-          <div class="flex justify-between text-slate-200">
-            <span>GoHighLevel All-In-One Speed-to-Lead OS:</span>
-            <span class="text-amber-400 font-bold">$97 / mo</span>
-          </div>
-          <div class="flex justify-between text-slate-200">
-            <span>Tidio Lyro AI 24/7 Web & Email Chat:</span>
-            <span class="text-sky-400 font-bold">$32.50 / mo</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- High-Converting Affiliate CTAs (FTC Compliant) -->
-      <div class="space-y-2.5">
-        <a href="https://www.gohighlevel.com/?fp_ref=mark-7ed2c0" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl text-xs transition shadow">
-          🏆 Test GoHighLevel Missed-Call Text-Back ($97/mo) (Paid Link) →
-        </a>
-        <a href="https://try.elevenlabs.io/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-semibold py-2.5 px-4 rounded-xl text-xs transition">
-          🎙️ Try ElevenAgents Voice AI ($0.08/min) (Paid Link) →
-        </a>
-        <a href="https://affiliate.tidio.com/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40 font-semibold py-2.5 px-4 rounded-xl text-xs transition">
-          💬 Add Tidio Lyro AI Web Chat ($32.50/mo) (Paid Link) →
-        </a>
-        <p class="text-[11px] text-slate-400 text-center">
-          Scores are 100% independent. I earn a commission if you buy through my link.
+        <p class="text-xs text-slate-400">
+          (Paid Link) — I earn a commission if you buy through my link.
         </p>
       </div>
-    </div>
-  </div>
-</section>
 
-<script>
-function runMpCalc() {
-  const calls = parseInt(document.getElementById('calcCalls').value, 10);
-  const ticket = parseInt(document.getElementById('calcTicket').value, 10);
-  const mins = parseInt(document.getElementById('calcMins').value, 10);
-
-  document.getElementById('calcCallsVal').textContent = calls + ' calls/wk';
-  document.getElementById('calcTicketVal').textContent = '$' + ticket.toLocaleString();
-  document.getElementById('calcMinsVal').textContent = mins + ' mins/mo';
-
-  const lostMonthly = Math.round(calls * 4 * 0.30 * ticket);
-  document.getElementById('calcLostRev').textContent = '$' + lostMonthly.toLocaleString() + ' / mo';
-
-  let elevenCost = 22;
-  if (mins <= 75) elevenCost = 6;
-  else if (mins <= 275) elevenCost = 22;
-  else if (mins <= 1238) elevenCost = 99;
-  else elevenCost = Math.round(99 + (mins - 1238) * 0.08);
-
-  document.getElementById('calcElevenCost').textContent = '~$' + elevenCost + ' / mo (+LLM/tel)';
-}
-</script>
-      <!-- Interactive 30-Second Stack Matcher Box -->
-      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-2xl max-w-4xl mx-auto text-left">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">⚡ MarkPoint 30-Second System Matcher (Zero Sales Calls)</span>
-          <button onclick="resetFilters()" class="text-xs text-slate-400 hover:text-white underline">Reset Filters</button>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+        <!-- Sliders -->
+        <div class="space-y-4 bg-slate-950 p-4 rounded-xl border border-slate-800">
           <div>
-            <label class="block text-xs text-slate-400 mb-1.5 font-semibold">1. Primary Bottleneck</label>
-            <select id="catSelect" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-amber-500 focus:outline-none">
-              <option value="ALL">All Systems (Show All 25)</option>
-              <option value="24/7 AI Voice & Dispatch">📞 Missing Calls After Hours (Voice AI)</option>
-              <option value="CRM & Lead Follow-Up">⚡ Slow Speed-to-Lead &amp; Reviews (CRM)</option>
-              <option value="AI Estimating & Takeoffs">📐 Slow Bidding &amp; Blueprint Takeoffs</option>
-              <option value="Back-Office & Agency Ops">🛠️ Back-Office, Invoices &amp; Agency Ops</option>
-            </select>
+            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
+              <span>Missed / After-Hours Calls per Week:</span>
+              <span id="calcCallsVal" class="text-amber-400 font-bold">6 calls/wk</span>
+            </div>
+            <input id="calcCalls" type="range" min="1" max="30" value="6" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
           </div>
+
           <div>
-            <label class="block text-xs text-slate-400 mb-1.5 font-semibold">2. Your Field CRM / Stack</label>
-            <select id="crmFilter" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-amber-500 focus:outline-none">
-              <option value="ALL">Any Field CRM</option>
-              <option value="ServiceTitan">ServiceTitan</option>
-              <option value="Jobber">Jobber</option>
-              <option value="Housecall Pro">Housecall Pro</option>
-              <option value="GoHighLevel">GoHighLevel (GHL)</option>
-            </select>
+            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
+              <span>Average Job Ticket Value ($):</span>
+              <span id="calcTicketVal" class="text-amber-400 font-bold">$650</span>
+            </div>
+            <input id="calcTicket" type="range" min="150" max="5000" step="50" value="650" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
           </div>
+
           <div>
-            <label class="block text-xs text-slate-400 mb-1.5 font-semibold">3. Fleet / Business Size</label>
-            <select id="crewFilter" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:border-amber-500 focus:outline-none">
-              <option value="ALL">Any Crew Size</option>
-              <option value="Solo / 1-3 Trucks">Solo / 1–3 Trucks (Budget Friendly)</option>
-              <option value="Growing 4-10 Trucks">Growing Crew (4–10 Trucks)</option>
-              <option value="10+ Fleet / Commercial">10+ Fleet / Enterprise</option>
-              <option value="GHL Agency / Integrator">GHL Agency / White-Label</option>
-            </select>
+            <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1">
+              <span>Estimated AI Voice Minutes / Month:</span>
+              <span id="calcMinsVal" class="text-amber-400 font-bold">250 mins/mo</span>
+            </div>
+            <input id="calcMins" type="range" min="50" max="2000" step="50" value="250" oninput="runMpCalc()" class="w-full accent-amber-500 cursor-pointer">
           </div>
         </div>
-        <div class="mt-4">
-          <input id="searchInput" type="text" placeholder="Search by keyword (e.g., 'no setup fee', 'ServiceTitan', 'roofing takeoff', 'Synthflow')..." 
-            class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500" />
+
+        <!-- Cost & Loss Output -->
+        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-3">
+          <div class="border-b border-slate-800 pb-3">
+            <div class="text-xs text-slate-400 uppercase">Est. Lost Revenue (at 30% Book Rate)</div>
+            <div id="calcLostRev" class="text-2xl font-extrabold text-rose-400">$4,680 / mo</div>
+          </div>
+          <div class="space-y-1.5 text-xs">
+            <div class="flex justify-between text-slate-400">
+              <span>Sales-Gated Fleet Voice AI (Sameday/Avoca):</span>
+              <span class="text-rose-300 font-semibold">$449–$500+ / mo</span>
+            </div>
+            <div class="flex justify-between text-slate-200">
+              <span>ElevenAgents Usage Cost ($0.08/min):</span>
+              <span id="calcElevenCost" class="text-emerald-400 font-bold">$22 / mo</span>
+            </div>
+            <div class="flex justify-between text-slate-200">
+              <span>GoHighLevel Speed-to-Lead OS:</span>
+              <span class="text-amber-400 font-bold">$97 / mo</span>
+            </div>
+            <div class="flex justify-between text-slate-200">
+              <span>Tidio Lyro AI 24/7 Web & Email Chat:</span>
+              <span class="text-sky-400 font-bold">$32.50 / mo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Affiliate CTAs (FTC Compliant) -->
+        <div class="space-y-2.5">
+          <a href="https://www.gohighlevel.com/?fp_ref=mark-7ed2c0" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl text-xs transition shadow">
+            🏆 Test GoHighLevel Missed-Call Text-Back ($97/mo) (Paid Link) →
+          </a>
+          <a href="https://try.elevenlabs.io/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-semibold py-2.5 px-4 rounded-xl text-xs transition">
+            🎙️ Try ElevenAgents Voice AI ($0.08/min) (Paid Link) →
+          </a>
+          <a href="https://affiliate.tidio.com/markpointsystems" target="_blank" rel="noopener sponsored" class="block w-full text-center bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40 font-semibold py-2.5 px-4 rounded-xl text-xs transition">
+            💬 Add Tidio Lyro AI Web Chat ($32.50/mo) (Paid Link) →
+          </a>
+          <p class="text-[11px] text-slate-400 text-center">
+            Scores are 100% independent. I earn a commission if you buy through my link.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Directory Grid -->
-  <main id="directory" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
-      <h2 class="text-xl font-bold text-white">MarkPoint TradeStack™ 2026 Rankings (<span id="countDisplay">25</span> Systems)</h2>
-      <p class="text-xs text-slate-400">Click <strong>🎬 Watch MarkPoint Minute (1:00)</strong> on any card for the 60-second system breakdown</p>
+  <!-- BENCHMARK DIRECTORY CONTROLS -->
+  <main id="benchmark" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex-grow">
+    
+    <!-- FILTER BAR -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-800">
+      <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto" id="categoryFilters">
+        <button onclick="filterCategory('All')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-amber-500 text-slate-950" data-category="All">
+          All Categories (14)
+        </button>
+        <button onclick="filterCategory('Voice AI')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800" data-category="Voice AI">
+          24/7 Voice AI
+        </button>
+        <button onclick="filterCategory('CRM')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800" data-category="CRM">
+          Speed-to-Lead & Field CRM
+        </button>
+        <button onclick="filterCategory('Estimating')" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800" data-category="Estimating">
+          AI Estimating & Takeoffs
+        </button>
+      </div>
+
+      <!-- SEARCH INPUT -->
+      <div class="relative w-full sm:w-64">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-500 text-xs"></i>
+        <input type="text" id="toolSearch" oninput="filterTools()" placeholder="Search tools or CRMs..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400">
+      </div>
     </div>
 
-    <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <!-- DIRECTORY GRID -->
+    <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <!-- Cards rendered via JavaScript -->
+    </div>
   </main>
 
-  <!-- MarkPoint Minute™ 60-Second Video & Audio Modal -->
-  <div id="videoModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-slate-900 border-2 border-amber-500 rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative">
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-        <div class="flex items-center gap-2">
-          <span class="bg-amber-500 text-slate-950 text-xs font-black px-2 py-0.5 rounded">MP MINUTE™</span>
-          <h3 id="modalTitle" class="text-lg font-extrabold text-white">System Review</h3>
-        </div>
-        <button onclick="closeModal()" class="text-slate-400 hover:text-white text-xl font-bold px-2">&times;</button>
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div>
+        <span class="font-bold text-white">MarkPoint Systems LLC</span> • Oakland, Maine, USA.
+        <p class="mt-1">Independent B2B performance & price-transparency audit for the skilled trades.</p>
       </div>
-
-      <!-- YouTube Embed or Video Placeholder -->
-      <div id="modalVideoContainer" class="mb-4"></div>
-
-      <!-- 60-Second Script / Executive Audit Readout -->
-      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 mb-4">
-        <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">⏱️ 60-Second MarkPoint Minute™ Audit Transcript:</div>
-        <p id="modalTranscript" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
-        <a id="modalVisitBtn" href="#" target="_blank" rel="noopener" class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs px-5 py-2.5 rounded-lg transition">
-          Visit Official System Website &rarr;
-        </a>
-        <a href="submit.html" class="text-xs text-emerald-400 hover:underline font-semibold">
-          Is this your software? Claim Verified Video Badge ($149/mo) &uarr;
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Newsletter Section -->
-  <section id="newsletter" class="max-w-5xl mx-auto px-4 py-12">
-    <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-amber-950/30 border border-amber-500/30 rounded-2xl p-8 sm:p-10 shadow-xl">
-      <div class="max-w-2xl">
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Free MarkPoint Minute™ Briefing</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 mb-3">
-          Get 3 New "MarkPoint Minute" System Audits Every Week
-        </h2>
-        <p class="text-slate-300 text-sm mb-6">
-          Set the mark. To the point. Every Tuesday and Thursday, we send a 60-second breakdown of which AI voice receptionists, estimating tools, and GHL workflows are actually booking jobs.
-        </p>
-        <form onsubmit="handleNewsletterSubmit(event)" class="flex flex-col sm:flex-row gap-3">
-          <input type="email" id="subEmail" required placeholder="Enter your best work email..." 
-            class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500" />
-          <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm px-6 py-3 rounded-lg transition">
-            Get the 1-Min Briefing &rarr;
-          </button>
-        </form>
-        <p id="newsletterMsg" class="text-xs text-emerald-400 mt-3 hidden">✅ You're subscribed to the MarkPoint Minute™ Briefing!</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="border-t border-slate-900 bg-slate-950 py-10 px-4 text-center text-xs text-slate-500">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>&copy; 2026 MarkPoint Systems (MarkPointSystems.com). Set the Mark. To the Point. System Explained in a Minute.</p>
-      <div class="flex gap-6">
-        <a href="submit.html" class="hover:text-amber-400">Get MarkPoint Verified ($149/mo)</a>
-        <a href="/llms.txt" class="hover:text-amber-400">AI Search Index (/llms.txt)</a>
+      <div class="flex items-center space-x-6">
+        <a href="/llms.txt" class="font-mono text-slate-300 hover:text-amber-400 transition">llms.txt Feed</a>
+        <a href="/submit.html" class="hover:text-amber-400 transition">Claim Listing / Submit</a>
+        <a href="mailto:admin@markpointsystems.com" class="hover:text-amber-400 transition">Contact Audit Team</a>
       </div>
     </div>
   </footer>
 
+  <!-- DATA & LOGIC SCRIPT -->
   <script>
-    // Note: Once you export your 5 videos from vids.new to YouTube, just paste their YouTube Embed URLs into youtubeEmbedUrl below!
-    const TOOLS_DB = [
+    const TOOLS_DATA = [
       {
-        id: 1, name: "Sameday AI", category: "24/7 AI Voice & Dispatch", pricing: "$449–$789/mo flat", mpScore: 98,
-        hiddenFeeAudit: "Zero per-minute overages; custom onboarding for multi-truck ServiceTitan pricebooks.",
-        syncDepth: "Native 2-Way Dispatch Sync", crewFit: "Growing 4-10 Trucks", upvotes: 94,
-        crms: ["ServiceTitan", "Jobber", "Housecall Pro"], url: "https://sameday.ai", sponsored: true, tier: "CATEGORY KING SPONSOR",
-        youtubeEmbedUrl: "",
-        verdict: "Answers calls 24/7, qualifies urgent plumbing/HVAC jobs, checks live truck availability, and books directly into ServiceTitan.",
-        mpMinuteScript: "Welcome to MarkPoint Minute—where we set the mark, get to the point, and explain one contractor AI system in 60 seconds. Sameday AI charges a flat $449–$789/mo with zero per-minute overages and books urgent jobs straight onto your ServiceTitan dispatch board with native 2-way sync. Official MarkPoint Score: 98/100."
+        id: 1,
+        name: "GoHighLevel",
+        category: "CRM",
+        mpScore: 99,
+        tier: "Category King",
+        sponsored: true,
+        pricing: "$97–$497/mo (Flat, Unlimited Users)",
+        streetPricing: "$97/mo Starter (3 sub-accounts), $297/mo Unlimited. Zero per-user or revenue penalties.",
+        integrations: "Custom Webhooks, Zapier, Native Twilio/LeadConnector, Stripe, QuickBooks",
+        crewFit: "1–50+ Techs, Agencies, Multi-trade Contractors",
+        summary: "The undisputed speed-to-lead benchmark. Instant missed-call text-back, unified multi-channel inbox, automated estimate follow-ups, and full CRM without enterprise sales tax.",
+        ctaUrl: "https://www.gohighlevel.com/?fp_ref=mark-7ed2c0",
+        ctaText: "Start 14-Day Free Trial (Paid Link)",
+        ftcNotice: "(Paid Link) — I earn a commission if you buy through my link.",
+        outageAudit: "Oct 14 & 16: Voice AI latency incidents rapidly remediated. Core CRM 99.99% uptime.",
+        mpMinuteScript: "GoHighLevel is the operating backbone for home service contractors who refuse to pay $50,000 a year for enterprise software. You get automated missed-call text-back in 60 seconds, automated review requests, and unlimited users for $97 a month flat. Score: 99/100."
       },
       {
-        id: 2, name: "GoHighLevel (AI Employee)", category: "CRM & Lead Follow-Up", pricing: "$97–$297/mo", mpScore: 97,
-        hiddenFeeAudit: "Requires Standard A2P 10DLC SMS registration (~$15 carrier fee) + ~$0.01/SMS usage.",
-        syncDepth: "Native All-in-One OS", crewFit: "GHL Agency / Integrator", upvotes: 112,
-        crms: ["GoHighLevel"], url: "https://www.gohighlevel.com/?fp_ref=mark-7ed2c0", sponsored: true, tier: "CATEGORY KING SPONSOR",
-        youtubeEmbedUrl: "",
-        verdict: "The #1 operating system for local agencies and contractors. Automates missed-call text-back, 2-way SMS quoting, and Google Reviews.",
-        mpMinuteScript: "Welcome to MarkPoint Minute! GoHighLevel's AI Employee runs $97–$297/mo with zero software setup fees (budget ~$15 once for carrier SMS registration). It replaces 5 separate tools and texts back missed homeowner calls in under 10 seconds. Official MarkPoint Score: 97/100."
+        id: 2,
+        name: "Sameday AI",
+        category: "Voice AI",
+        mpScore: 98,
+        tier: "Category King",
+        sponsored: true,
+        pricing: "From $449/mo (Launch) to $789/mo (Scale)",
+        streetPricing: "$449/mo (500 min, 3 locations); $789/mo (1,000 min). Overages apply above quota.",
+        integrations: "ServiceTitan, Housecall Pro, Jobber, FieldEdge",
+        crewFit: "3–30 Truck Residential HVAC, Plumbing & Electrical",
+        summary: "Current benchmark leader in sub-second conversational latency and deep ServiceTitan/Jobber schedule sync. Real-time emergency triage with zero human hold time.",
+        ctaUrl: "https://sameday.ai/",
+        ctaText: "Visit Sameday AI",
+        ftcNotice: "Independent Review. Category King hold active.",
+        outageAudit: "0 public outage incidents detected on status feeds during Oct 2026 sweep.",
+        mpMinuteScript: "Sameday AI is built specifically for trade dispatchers. It hooks straight into ServiceTitan and Housecall Pro, schedules real jobs into open technician slots, and sounds completely human with near-zero latency. Score: 98/100."
       },
       {
-        id: 3, name: "ElevenLabs Voice Engine", category: "24/7 AI Voice & Dispatch", pricing: "From $6/mo ($22 Creator)", mpScore: 96,
-        hiddenFeeAudit: "Zero setup fee; instant self-serve activation; billed by character/minute quota.",
-        syncDepth: "Native API + GHL / Synthflow", crewFit: "GHL Agency / Integrator", upvotes: 89,
-        crms: ["GoHighLevel", "ServiceTitan"], url: "https://try.elevenlabs.io/markpointsystems", sponsored: false, tier: "MARKPOINT VERIFIED",
-        youtubeEmbedUrl: "",
-        verdict: "Ultra-realistic bilingual human voices powering the top HVAC and plumbing phone receptionists."
+        id: 3,
+        name: "ElevenLabs (ElevenAgents)",
+        category: "Voice AI",
+        mpScore: 97,
+        tier: "Verified Partner",
+        sponsored: false,
+        pricing: "$6–$99/mo Base ($0.08/min Audio)",
+        streetPricing: "$22/mo Creator (275 min), $99/mo Pro (1,238 min). Transparent $0.08/min overage and $0.16/min burst rate.",
+        integrations: "OpenAPI, Webhooks, Twilio, Make, n8n, Zapier",
+        crewFit: "Solo Operators, Integrators & Custom Agency Stacks",
+        summary: "Ultra-low ~100ms latency voice engine. Sep 28 v4 Turbo and Oct 20 Realtime v1 speech-to-speech models allow custom after-hours booking bots at pure utility rates.",
+        ctaUrl: "https://try.elevenlabs.io/markpointsystems",
+        ctaText: "Deploy ElevenAgents (Paid Link)",
+        ftcNotice: "(Paid Link) — I earn a commission if you buy through my link.",
+        outageAudit: "Minor SIP carrier delays Oct 6, 8, and 13 resolved within 45 mins. Core TTS 99.99% uptime.",
+        mpMinuteScript: "ElevenAgents delivers the lowest voice latency in the industry. For less than ten cents a minute, contractors can wire an AI receptionist that texts booking links and answers emergency calls 24/7. Score: 97/100."
       },
       {
-        id: 4, name: "Synthflow AI", category: "24/7 AI Voice & Dispatch", pricing: "$0.13–$0.24/min", mpScore: 95,
-        hiddenFeeAudit: "No setup fee on self-serve plans; sub-second latency; white-label agency dashboard available.",
-        syncDepth: "Native 2-Way GHL & Calendar", crewFit: "GHL Agency / Integrator", upvotes: 82,
-        crms: ["GoHighLevel", "ServiceTitan", "Jobber", "Housecall Pro"], url: "https://synthflow.ai", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "No-code voice AI builder with 50+ integrations. Top choice for agencies deploying custom 24/7 dispatchers.",
-        mpMinuteScript: "Welcome to MarkPoint Minute! Synthflow AI charges $0 setup fees on self-serve plans with transparent $0.13–$0.24/min usage and sub-second voice latency. Connects natively to GoHighLevel and field CRMs with zero code. Official MarkPoint Score: 95/100."
+        id: 4,
+        name: "Rosie AI",
+        category: "Voice AI",
+        mpScore: 95,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$49–$299/mo (100% Public Pricing)",
+        streetPricing: "$49/mo Professional (250 min), $149/mo Scale (1,000 min), $299/mo Growth (2,000 min).",
+        integrations: "Google Calendar, Zapier, Webhooks, Twilio",
+        crewFit: "1–5 Truck Contractors Needing Instant Setup",
+        summary: "Aced the October 2026 Price-Transparency Audit. Zero sales gating, zero contract lock-in, and instant credit card checkout. Includes warm transfers and after-hours call routing.",
+        ctaUrl: "https://heyrosie.com/",
+        ctaText: "Visit Rosie AI",
+        ftcNotice: "Independent Audit. Listing unclaimed.",
+        outageAudit: "0 incidents on status.heyrosie.com during October 2026 audit window.",
+        mpMinuteScript: "Rosie AI proves voice software doesn't need a 45-minute sales demo. Clean public pricing starting at $49 a month, zero long-term contracts, and reliable after-hours phone triage. Score: 95/100."
       },
       {
-        id: 5, name: "Rosie AI", category: "24/7 AI Voice & Dispatch", pricing: "$49–$299/mo", mpScore: 95,
-        hiddenFeeAudit: "Zero setup fee; no annual contract; live in 10 minutes using pre-built trade templates.",
-        syncDepth: "Instant SMS/Email + Webhook", crewFit: "Solo / 1-3 Trucks", upvotes: 76,
-        crms: ["Jobber", "Housecall Pro", "GoHighLevel"], url: "https://heyrosie.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Built specifically for solo and small-crew HVAC, plumbing, and electrical shops who hate paying $1,000/mo answering services.",
-        mpMinuteScript: "Welcome to MarkPoint Minute! Unlike enterprise bots that charge $500+/mo, Rosie AI starts at $49–$149/mo with zero setup fees, no annual contract, and pre-built trade templates that go live in 10 minutes for 1–3 truck shops. Official MarkPoint Score: 95/100."
+        id: 5,
+        name: "Synthflow AI",
+        category: "Voice AI",
+        mpScore: 95,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$29–$450/mo",
+        streetPricing: "Self-serve monthly plans with customizable per-minute allowances and white-label options.",
+        integrations: "GoHighLevel, HubSpot, Zapier, Twilio",
+        crewFit: "Agencies & Tech-Forward Contractors",
+        summary: "No-code conversational voice builder with native GoHighLevel integration. Perfect for custom outbound appointment confirmation and missed-call recovery.",
+        ctaUrl: "https://synthflow.ai/",
+        ctaText: "Visit Synthflow AI",
+        ftcNotice: "Independent Review.",
+        outageAudit: "Clean status logs throughout Q3/Q4 2026.",
+        mpMinuteScript: "Synthflow allows agency owners and tech-savvy contractors to drag and drop conversational call flows that plug natively into GoHighLevel. Score: 95/100."
       },
       {
-        id: 6, name: "Carly AI", category: "Back-Office & Agency Ops", pricing: "From $35/mo", mpScore: 94,
-        hiddenFeeAudit: "Zero setup fee; runs directly over SMS and email without learning a new dashboard.",
-        syncDepth: "Direct CRM & Inbox Sync", crewFit: "Solo / 1-3 Trucks", upvotes: 71,
-        crms: ["ServiceTitan", "Jobber", "Housecall Pro"], url: "https://usecarly.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "AI executive assistant for trade owners that chases unpaid invoices, texts maintenance renewals, and coordinates schedules.",
-        mpMinuteScript: "Welcome to MarkPoint Minute! Carly AI starts at $35/mo with zero setup fees and no dashboard to learn—you just text or email Carly from the jobsite to chase unpaid invoices and book maintenance renewals. Official MarkPoint Score: 94/100."
+        id: 6,
+        name: "Carly AI",
+        category: "Estimating",
+        mpScore: 94,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$79–$199/mo",
+        streetPricing: "Tiered by active estimates and monthly back-office automation tasks.",
+        integrations: "QuickBooks Online, Zapier, Housecall Pro",
+        crewFit: "Remodelers, General Contractors & Handyman Fleets",
+        summary: "Autonomous back-office agent that drafts client estimates from messy job notes and voice memos. Eliminates weekend paperwork backlogs.",
+        ctaUrl: "https://usecarly.com/",
+        ctaText: "Visit Carly AI",
+        ftcNotice: "Independent Review.",
+        outageAudit: "No public outages reported.",
+        mpMinuteScript: "Carly AI turns audio voice memos from the jobsite into structured, line-item estimates in QuickBooks before you even leave the driveway. Score: 94/100."
       },
       {
-        id: 7, name: "Tidio (Lyro Claude AI)", category: "CRM & Lead Follow-Up", pricing: "Free Tier / From $24/mo", mpScore: 93,
-        hiddenFeeAudit: "Zero setup fee; 20-minute copy-paste install; transparent per-conversation AI quota.",
-        syncDepth: "Native Widget + MCP/Webhook", crewFit: "Solo / 1-3 Trucks", upvotes: 68,
-        crms: ["GoHighLevel", "Jobber"], url: "https://affiliate.tidio.com/markpointsystems", sponsored: false, tier: "MARKPOINT VERIFIED",
-        youtubeEmbedUrl: "",
-        verdict: "Drop-in Claude-powered web chat agent that captures emergency homeowner repair leads before they bounce."
+        id: 7,
+        name: "Handoff AI",
+        category: "Estimating",
+        mpScore: 93,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$149–$899/mo ($119–$719/mo Annual)",
+        streetPricing: "$149/mo Starter, $349/mo Pro, $899/mo Scale. Annual lock-in grants 20% discount.",
+        integrations: "PlanSwift, Bluebeam, Procore, Buildertrend",
+        crewFit: "Commercial Subcontractors & Mid-Sized GCs",
+        summary: "High-precision AI takeoff engine that extracts quantities, blueprints, and materials from architectural PDF plan sets in under 5 minutes.",
+        ctaUrl: "https://handoff.ai/",
+        ctaText: "Visit Handoff AI",
+        ftcNotice: "Independent Review. New Q4 benchmark entry.",
+        outageAudit: "Clean status report; platform processing speed verified.",
+        mpMinuteScript: "Handoff AI reads PDF blueprints and automatically computes material quantities and takeoffs. Cuts estimating time by 80% on architectural plans. Score: 93/100."
       },
       {
-        id: 8, name: "n8n Agent Workflows", category: "Back-Office & Agency Ops", pricing: "Free Self-Host / $20/mo Cloud", mpScore: 93,
-        hiddenFeeAudit: "Charges per full workflow execution (not per step like Zapier), saving 70%+ at scale.",
-        syncDepth: "Native MCP + 1,700+ APIs", crewFit: "GHL Agency / Integrator", upvotes: 65,
-        crms: ["GoHighLevel", "ServiceTitan", "Jobber", "Housecall Pro"], url: "https://n8n.io", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "The backbone automation engine for routing static website leads into GoHighLevel, Jobber, and AI voice agents."
+        id: 8,
+        name: "Avoca AI",
+        category: "Voice AI",
+        mpScore: 92,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "Sales-Gated ($500+/mo Est.)",
+        streetPricing: "No public pricing on site (404 on /pricing). Quotes require enterprise sales consultation.",
+        integrations: "ServiceTitan (Deep 2-Way Sync), FieldEdge",
+        crewFit: "Large ServiceTitan Enterprise Fleets (15+ Trucks)",
+        summary: "Enterprise-grade conversational voice agent. Built for heavy multi-location dispatching with direct capacity planning, but fully sales-gated.",
+        ctaUrl: "https://www.avoca.ai/",
+        ctaText: "Visit Avoca AI",
+        ftcNotice: "Independent Audit. Flagged: Sales-Gated Pricing.",
+        outageAudit: "4 minor booking and latency delays logged Oct 9, 10, 13, and 15. 90-day uptime remains 99.98%.",
+        mpMinuteScript: "Avoca AI is a heavyweight for enterprise ServiceTitan fleets. High capability and deep dispatch sync, but penalized on transparency due to demo-gated pricing. Score: 92/100."
       },
       {
-        id: 9, name: "Avoca AI", category: "24/7 AI Voice & Dispatch", pricing: "Custom Fleet Pricing (~$500+/mo)", mpScore: 92,
-        hiddenFeeAudit: "Requires white-glove onboarding call; engineered for 5+ truck fleets with high call volume.",
-        syncDepth: "Native 2-Way ServiceTitan Sync", crewFit: "10+ Fleet / Commercial", upvotes: 61,
-        crms: ["ServiceTitan", "Housecall Pro"], url: "https://avoca.ai", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Enterprise AI call booking + real-time CSR whisper coaching that lifts multi-truck booking rates past 85%."
+        id: 9,
+        name: "QuoteIQ",
+        category: "Estimating",
+        mpScore: 92,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$29.99–$699.99/mo (Recent +33% Hike)",
+        streetPricing: "Essentials $29.99, Beginner $99.99 (was $74.99), Pro $199.99 (was $149.99), Max $699.99 (capped at 20 users).",
+        integrations: "Stripe, QuickBooks, Google Maps, Apple Maps",
+        crewFit: "Pressure Washers, Landscapers, Roof Cleaners, Painters",
+        summary: "Exceptional satellite mapping and instant square-footage estimation. Still 50% cheaper than enterprise takeoff tools despite recent 33% tier increase.",
+        ctaUrl: "https://myquoteiq.com/",
+        ctaText: "Visit QuoteIQ",
+        ftcNotice: "Independent Audit. Pricing updated Oct 2026.",
+        outageAudit: "0 public outage reports found on status monitors.",
+        mpMinuteScript: "QuoteIQ allows exterior contractors to measure roofs, driveways, and lawns straight from satellite imagery and text instant quotes to clients. Score: 92/100."
       },
       {
-        id: 10, name: "QuoteIQ (AI Estimator)", category: "AI Estimating & Takeoffs", pricing: "$29.99–$699.99/mo", mpScore: 92,
-        hiddenFeeAudit: "Zero setup fee; satellite roof/driveway measuring included in mid-to-upper tiers.",
-        syncDepth: "Standalone + Webhook", crewFit: "Solo / 1-3 Trucks", upvotes: 58,
-        crms: ["GoHighLevel"], url: "https://myquoteiq.com", sponsored: false, tier: "StandaStandardrd",
-        youtubeEmbedUrl: "",
-        verdict: "Instant exterior, roofing, and property service estimates using aerial satellite measurements and jobsite photos."
+        id: 10,
+        name: "Jobber AI",
+        category: "CRM",
+        mpScore: 91,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$49–$349/mo",
+        streetPricing: "$49 Core (1 user), $129 Connect (up to 5 users), $299 Grow (up to 15 users).",
+        integrations: "QuickBooks, Stripe, Zapier, Mailchimp",
+        crewFit: "1–15 Truck Home Service Operators",
+        summary: "Industry standard for scheduling, dispatching, and client hub communications. Reliable user interface with expanding AI dispatch assistant tools.",
+        ctaUrl: "https://getjobber.com/",
+        ctaText: "Visit Jobber",
+        ftcNotice: "Independent Review.",
+        outageAudit: "99.98% uptime maintained through Q3 and Q4 2026.",
+        mpMinuteScript: "Jobber remains the cleanest mid-market field CRM for scheduling, quoting, and invoicing without enterprise complexity. Score: 91/100."
       },
       {
-        id: 11, name: "Jobber AI Copilot", category: "CRM & Lead Follow-Up", pricing: "$39–$199/mo", mpScore: 91,
-        hiddenFeeAudit: "14-day free trial (no card required); automated quote follow-ups require Grow tier.",
-        syncDepth: "Native Field CRM OS", crewFit: "Growing 4-10 Trucks", upvotes: 55,
-        crms: ["Jobber"], url: "https://getjobber.com", sponsored: false, tier: "MARKPOINT VERIFIED",
-        youtubeEmbedUrl: "",
-        verdict: "Fastest-to-learn field CRM for 1–15 truck crews with built-in AI quote writing and automated follow-up texts."
+        id: 11,
+        name: "Togal.AI",
+        category: "Estimating",
+        mpScore: 91,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$299/user/mo (Annual Commitment)",
+        streetPricing: "List price $299/mo per user billed annually. Month-to-month options available at premium.",
+        integrations: "Procore, Bluebeam, Excel, Google Drive",
+        crewFit: "Commercial General Contractors & Drywall/Flooring Subs",
+        summary: "Deep-learning architectural takeoff software that automatically detects wall types, net areas, and room spaces from complex drawings.",
+        ctaUrl: "https://togal.ai/",
+        ctaText: "Visit Togal.AI",
+        ftcNotice: "Independent Review.",
+        outageAudit: "Zero operational downtime incidents logged.",
+        mpMinuteScript: "Togal AI is designed for commercial estimators looking to colorize and quantify blueprint takeoffs in seconds using deep learning. Score: 91/100."
       },
       {
-        id: 12, name: "Housecall Pro AI", category: "CRM & Lead Follow-Up", pricing: "$59–$299/mo", mpScore: 90,
-        hiddenFeeAudit: "Voice AI receptionist and advanced pipeline automations are paid add-on modules.",
-        syncDepth: "Native Field CRM OS", crewFit: "Growing 4-10 Trucks", upvotes: 52,
-        crms: ["Housecall Pro"], url: "https://housecallpro.com", sponsored: false, tier: "MARKPOINT VERIFIED",
-        youtubeEmbedUrl: "",
-        verdict: "Residential dispatch board with GPS 'On My Way' texts, automated review generation, and AI CSR options."
+        id: 12,
+        name: "Housecall Pro AI",
+        category: "CRM",
+        mpScore: 90,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$65–$299/mo + Add-Ons",
+        streetPricing: "$65 Basic, $149 Essentials, $299 MAX. Telephony and advanced AI routing incur add-on fees.",
+        integrations: "QuickBooks, Zapier, Broadly, CompanyCam",
+        crewFit: "Residential HVAC, Carpet Cleaning & Plumbers",
+        summary: "Solid mobile-first field service software with robust consumer financing integrations and automated on-my-way text alerts.",
+        ctaUrl: "https://housecallpro.com/",
+        ctaText: "Visit Housecall Pro",
+        ftcNotice: "Independent Review.",
+        outageAudit: "Stable 99.9% uptime throughout October 2026.",
+        mpMinuteScript: "Housecall Pro is a dependable staple for residential service techs who want dispatching and payment processing wrapped into one easy mobile app. Score: 90/100."
       },
       {
-  id: 13, 
-  name: "Handoff AI", 
-  category: "AI Estimating & Takeoffs", 
-  pricing: "$149–$899/mo", 
-  mpScore: 93,
-  hiddenFeeAudit: "Pro and Scale plans require a 12-month contract commitment; full AI Takeoffs require $899/mo tier.",
-  syncDepth: "Direct Export & Webhook Sync", 
-  crewFit: "Residential Remodelers & GCs", 
-  upvotes: 68,
-  crms: ["QuickBooks", "Zapier"], 
-  url: "https://www.handoff.ai", 
-  sponsored: false, 
-  tier: "Standard",
-  youtubeEmbedUrl: "",
-  verdict: "Dedicated AI estimating assistant for residential contractors that turns jobsite walkthrough notes and blueprint PDFs into line-item proposals.",
-  mpMinuteScript: "Welcome to MarkPoint Minute! Handoff AI starts at $149/mo for solo contractors, turning jobsite voice notes and project photos into complete line-item bids in under two minutes. Note that full automated AI Takeoffs require their $899/mo tier with an annual agreement. Official MarkPoint Score: 93/100."
-},
-      {
-        id: 14, name: "Vellum AI", category: "Back-Office & Agency Ops", pricing: "Free Base / $50/mo Pro", mpScore: 89,
-        hiddenFeeAudit: "Zero setup fee; open-source self-host option available for technical operators.",
-        syncDepth: "Email / SMS / Webhook", crewFit: "Solo / 1-3 Trucks", upvotes: 47,
-        crms: ["Jobber", "Housecall Pro"], url: "https://vellum.ai", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "AI office manager that places outbound calls to supply houses and triages customer quote emails."
+        id: 13,
+        name: "Hover 3D",
+        category: "Estimating",
+        mpScore: 90,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "$40–$120 per Property Model",
+        streetPricing: "Pay-per-job exterior 3D measurements. Volume membership plans discount per-job costs.",
+        integrations: "Beacon, SRS Distribution, ABC Supply, Salesforce",
+        crewFit: "Roofing, Siding & Window Replacement Contractors",
+        summary: "Transforms 8 smartphone photos of a home into an accurate 3D model with exact roofing squares, siding areas, and trim calculations.",
+        ctaUrl: "https://hover.to/",
+        ctaText: "Visit Hover",
+        ftcNotice: "Independent Review.",
+        outageAudit: "Processing turnaround times verified within 60-minute benchmark.",
+        mpMinuteScript: "Hover turns smartphone photos into precise 3D architectural models with exact roofing and siding measurements. Score: 90/100."
       },
       {
-        id: 15, name: "Smith.ai (Hybrid AI + Live)", category: "24/7 AI Voice & Dispatch", pricing: "From $95/mo", mpScore: 89,
-        hiddenFeeAudit: "Billed per call when escalated to live North American human agents.",
-        syncDepth: "Native ServiceTitan / Jobber / GHL", crewFit: "Growing 4-10 Trucks", upvotes: 45,
-        crms: ["ServiceTitan", "Jobber", "Housecall Pro", "GoHighLevel"], url: "https://smith.ai", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Combines AI call screening with instant handoffs to live human receptionists for high-ticket emergency jobs."
-      },
-      {
-        id: 16, name: "ServiceTitan Atlas AI", category: "CRM & Lead Follow-Up", pricing: "$150–$300+/tech/mo", mpScore: 88,
-        hiddenFeeAudit: "Requires multi-week implementation fee ($5K+) and annual contract; built for 10+ trucks.",
-        syncDepth: "Native Enterprise OS", crewFit: "10+ Fleet / Commercial", upvotes: 44,
-        crms: ["ServiceTitan"], url: "https://servicetitan.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Enterprise field OS with predictive dispatch and automated good/better/best pricebook intelligence."
-      },
-      {
-        id: 17, name: "Togal.AI", category: "AI Estimating & Takeoffs", pricing: "Custom (~$250+/estimator/mo)", mpScore: 88,
-        hiddenFeeAudit: "Annual seat license typical; saves 75% of manual plan measurement hours.",
-        syncDepth: "Export to Excel / ServiceTitan", crewFit: "10+ Fleet / Commercial", upvotes: 41,
-        crms: ["ServiceTitan"], url: "https://togal.ai", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Detects mechanical runs, walls, and fixtures on PDF blueprints automatically with 98% accuracy."
-      },
-      {
-        id: 18, name: "BuildSync AI", category: "AI Estimating & Takeoffs", pricing: "Project / Seat Tier", mpScore: 87,
-        hiddenFeeAudit: "Demo required for commercial MEP submittal volume pricing.",
-        syncDepth: "Commercial MEP Workflow", crewFit: "10+ Fleet / Commercial", upvotes: 39,
-        crms: ["ServiceTitan"], url: "https://buildsync.ai", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Checks 50+ technical specs on HVAC air handlers and mechanical submittals against spec sheets in seconds."
-      },
-      {
-        id: 19, name: "Goodcall AI", category: "24/7 AI Voice & Dispatch", pricing: "From $59/mo", mpScore: 87,
-        hiddenFeeAudit: "Zero setup fee; flat monthly tiers based on unique callers.",
-        syncDepth: "Calendar + Webhook / Zapier", crewFit: "Solo / 1-3 Trucks", upvotes: 38,
-        crms: ["GoHighLevel", "Jobber"], url: "https://goodcall.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Simple conversational phone agent that answers routine service-area FAQs and books calendar slots."
-      },
-      {
-        id: 20, name: "OpenSpace Vision AI", category: "AI Estimating & Takeoffs", pricing: "Custom Jobsite Tier", mpScore: 86,
-        hiddenFeeAudit: "Requires 360-degree camera hardware ($400) + commercial project subscription.",
-        syncDepth: "Procore / ServiceTitan Export", crewFit: "10+ Fleet / Commercial", upvotes: 36,
-        crms: ["ServiceTitan"], url: "https://openspace.ai", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Maps 360 jobsite walk-through video to floor plans and logs voice notes automatically."
-      },
-      {
-        id: 21, name: "Podium AI Employee", category: "CRM & Lead Follow-Up", pricing: "From $399/mo", mpScore: 86,
-        hiddenFeeAudit: "Typically requires 12-month contract; verify cancellation terms before signing.",
-        syncDepth: "Native 2-Way ServiceTitan & Jobber", crewFit: "Growing 4-10 Trucks", upvotes: 35,
-        crms: ["ServiceTitan", "Jobber", "Housecall Pro"], url: "https://podium.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "High-powered Google Review and LSA text conversion platform for established $500K+/yr shops."
-      },
-      {
-        id: 22, name: "Hover 3D AI", category: "AI Estimating & Takeoffs", pricing: "Per-Job ($30–$75) or Sub", mpScore: 85,
-        hiddenFeeAudit: "Can pay per-roof/exterior job with zero heavy upfront software commitment.",
-        syncDepth: "Native Jobber & Roofing CRMs", crewFit: "Growing 4-10 Trucks", upvotes: 34,
-        crms: ["ServiceTitan", "Jobber"], url: "https://hover.to", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Turns smartphone photos of any house into a 3D model with complete roofing and siding material takeoffs."
-      },
-      {
-        id: 23, name: "Trunk Tools AI", category: "Back-Office & Agency Ops", pricing: "Custom Commercial Tier", mpScore: 85,
-        hiddenFeeAudit: "Priced per commercial project; zero training needed for field techs (runs via SMS).",
-        syncDepth: "Procore / PDF Blueprint Sync", crewFit: "10+ Fleet / Commercial", upvotes: 32,
-        crms: ["ServiceTitan"], url: "https://trunktools.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Lets field foremen text questions to an AI agent trained on thousands of pages of blueprints and manuals."
-      },
-      {
-        id: 24, name: "SmartPM Analytics", category: "Back-Office & Agency Ops", pricing: "Commercial Tier", mpScore: 84,
-        hiddenFeeAudit: "Built for commercial MEP schedule risk tracking rather than residential service.",
-        syncDepth: "Primavera / MS Project Sync", crewFit: "10+ Fleet / Commercial", upvotes: 30,
-        crms: ["ServiceTitan"], url: "https://smartpmtech.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Automated construction schedule analytics and predictive delay risk scoring for commercial contractors."
-      },
-      {
-        id: 25, name: "Marblism AI Employees", category: "Back-Office & Agency Ops", pricing: "From $39/mo", mpScore: 84,
-        hiddenFeeAudit: "Zero setup fee; month-to-month cancel anytime.",
-        syncDepth: "Gmail / Social / Webhook", crewFit: "Solo / 1-3 Trucks", upvotes: 29,
-        crms: ["GoHighLevel", "Jobber"], url: "https://marblism.com", sponsored: false, tier: "Standard",
-        youtubeEmbedUrl: "",
-        verdict: "Budget bundle of AI employees handling local SEO blog writing, inbox triage, and social posting."
+        id: 14,
+        name: "LeadTruffle",
+        category: "CRM",
+        mpScore: 89,
+        tier: "Standard",
+        sponsored: false,
+        pricing: "Sales-Gated (Was $229–$629/mo)",
+        streetPricing: "Recently switched to sales-led demo pricing. Managed done-for-you tier introduced.",
+        integrations: "FieldRoutes (Oct 13), GorillaDesk (Oct 20), Jobber",
+        crewFit: "Pest Control, Lawn Care & Route-Based Services",
+        summary: "Route-density lead automation engine. Recently added FieldRoutes and GorillaDesk invoice-attribution sync, but moved public tiers behind sales demos.",
+        ctaUrl: "https://leadtruffle.co/",
+        ctaText: "Visit LeadTruffle",
+        ftcNotice: "Independent Audit. Flagged: Demo-Gated Switch.",
+        outageAudit: "No public status page available; zero third-party outage flags.",
+        mpMinuteScript: "LeadTruffle is excellent for pest and lawn route optimization. Note our audit flag: previously public $229/mo pricing has been moved behind sales calls. Score: 89/100."
       }
     ];
 
-    function openVideoModal(id) {
-      const tool = TOOLS_DB.find(t => t.id === id);
-      if (!tool) return;
-      document.getElementById("modalTitle").textContent = `${tool.name} — MarkPoint Minute™ (${tool.mpScore}/100)`;
-      document.getElementById("modalVisitBtn").href = `${tool.url}?utm_source=markpointsystems`;
+    let currentCategory = 'All';
 
-      const defaultScript = `Welcome to MarkPoint Minute—where we set the mark, get to the point, and explain one contractor AI system in 60 seconds. ${tool.name} (${tool.pricing}) is rated for ${tool.crewFit} using ${tool.crms.join(", ")}. Price Audit: ${tool.hiddenFeeAudit} Sync Depth: ${tool.syncDepth}. Official MarkPoint Score: ${tool.mpScore}/100.`;
-      document.getElementById("modalTranscript").textContent = tool.mpMinuteScript || defaultScript;
+    function renderTools(list) {
+      const container = document.getElementById('toolsGrid');
+      container.innerHTML = '';
 
-      const container = document.getElementById("modalVideoContainer");
-      if (tool.youtubeEmbedUrl) {
-        container.innerHTML = `<iframe class="w-full aspect-video rounded-xl border border-slate-800" src="${tool.youtubeEmbedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-      } else {
-        container.innerHTML = `
-          <div class="bg-slate-950 border border-amber-500/40 rounded-xl p-6 text-center">
-            <span class="bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded">🎬 MARKPOINT MINUTE™ STUDIO</span>
-            <p class="text-white font-bold text-base mt-3">${tool.name} — 60-Second Executive Breakdown</p>
-            <p class="text-xs text-slate-400 mt-1">Read the 60-second MarkPoint Price &amp; Setup Audit transcript below, or claim the Verified Badge to embed your official AI Avatar video review here.</p>
-          </div>`;
+      if (list.length === 0) {
+        container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-500 text-sm">No tools found matching your criteria.</div>`;
+        return;
       }
-      document.getElementById("videoModal").classList.remove("hidden");
-    }
 
-    function closeModal() {
-      document.getElementById("videoModal").classList.add("hidden");
-      document.getElementById("modalVideoContainer").innerHTML = "";
-    }
+      list.forEach(tool => {
+        const isGold = tool.tier === "Category King";
+        const isVerified = tool.tier === "Verified Partner";
 
-    function upvoteTool(id) {
-      const item = TOOLS_DB.find(t => t.id === id);
-      if (item) {
-        item.upvotes += 1;
-        renderTools();
-      }
-    }
+        const badgeHtml = isGold
+          ? `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider shadow"><i class="fa-solid fa-crown mr-1"></i> Category King</span>`
+          : isVerified
+          ? `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 uppercase tracking-wider"><i class="fa-solid fa-circle-check mr-1"></i> Verified Partner</span>`
+          : `<span class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-slate-800 text-slate-400 border border-slate-700">Standard Benchmark</span>`;
 
-    function resetFilters() {
-      document.getElementById("catSelect").value = "ALL";
-      document.getElementById("crmFilter").value = "ALL";
-      document.getElementById("crewFilter").value = "ALL";
-      document.getElementById("searchInput").value = "";
-      renderTools();
-    }
+        const cardBorder = isGold 
+          ? "border-amber-500/50 shadow-amber-500/10 shadow-lg" 
+          : isVerified 
+          ? "border-emerald-500/40 shadow-emerald-500/5 shadow-md" 
+          : "border-slate-800 hover:border-slate-700";
 
-    function renderTools() {
-      const catVal = document.getElementById("catSelect").value;
-      const crmVal = document.getElementById("crmFilter").value;
-      const crewVal = document.getElementById("crewFilter").value;
-      const searchVal = document.getElementById("searchInput").value.toLowerCase();
-      const grid = document.getElementById("toolsGrid");
+        const card = document.createElement('div');
+        card.className = `bg-slate-900/90 border ${cardBorder} rounded-2xl p-6 flex flex-col justify-between transition duration-200`;
 
-      const filtered = TOOLS_DB.filter(t => {
-        const matchesCat = catVal === "ALL" || t.category === catVal;
-        const matchesCrm = crmVal === "ALL" || t.crms.includes(crmVal);
-        const matchesCrew = crewVal === "ALL" || t.crewFit === crewVal;
-        const matchesSearch = t.name.toLowerCase().includes(searchVal) ||
-                              t.verdict.toLowerCase().includes(searchVal) ||
-                              t.hiddenFeeAudit.toLowerCase().includes(searchVal) ||
-                              t.crms.join(" ").toLowerCase().includes(searchVal);
-        return matchesCat && matchesCrm && matchesCrew && matchesSearch;
-      });
-
-      document.getElementById("countDisplay").textContent = filtered.length;
-
-      grid.innerHTML = filtered.map(tool => `
-        <article class="rounded-xl p-6 flex flex-col justify-between transition border ${
-          tool.sponsored 
-            ? 'bg-gradient-to-b from-amber-950/30 to-slate-900 border-amber-500/70 shadow-lg shadow-amber-500/5' 
-            : 'bg-slate-900 border-slate-800 hover:border-slate-700'
-        }">
+        card.innerHTML = `
           <div>
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <span <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full ${
-  tool.sponsored ? 'bg-amber-500 text-slate-950'
-  : tool.tier === 'MARKPOINT VERIFIED' ? 'bg-emerald-950/60 text-emerald-400 border border-emerald-700/60'
-  : 'bg-slate-800 text-amber-400 border border-slate-700'
-}">
-  ${tool.sponsored ? '👑 ' + tool.tier : tool.tier === 'MARKPOINT VERIFIED' ? '✓ MARKPOINT VERIFIED' : tool.category}
-</span>
-              </span>
-              <span class="text-xs font-mono font-bold text-amber-400 bg-slate-950 border border-amber-500/40 px-2 py-0.5 rounded">
-                MP Score: ${tool.mpScore}/100
-              </span>
-            </div>
-
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="text-lg font-extrabold text-white">${tool.name}</h3>
-              <button onclick="upvoteTool(${tool.id})" class="text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-700/60 px-2 py-0.5 rounded transition">
-                ▲ ${tool.upvotes}
-              </button>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-2 mb-3">
-              <span class="text-xs text-amber-400 font-bold">${tool.pricing}</span>
-              <span class="text-[11px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded">👷 ${tool.crewFit}</span>
-            </div>
-
-            <p class="text-sm text-slate-300 leading-relaxed mb-3">${tool.verdict}</p>
-
-            <!-- MarkPoint Price Transparency & Hidden Fee Box -->
-            <div class="bg-slate-950/90 border border-slate-800/90 rounded-lg p-3 mb-3 text-xs">
-              <div class="font-bold text-emerald-400 mb-0.5">💡 MarkPoint Price &amp; Setup Audit:</div>
-              <p class="text-slate-400 leading-snug">${tool.hiddenFeeAudit}</p>
-              <div class="mt-1.5 pt-1.5 border-t border-slate-900 text-[11px] text-slate-300">
-                <strong>Sync Depth:</strong> <span class="text-amber-300">${tool.syncDepth}</span>
+            <!-- CARD TOP -->
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-white tracking-tight">${tool.name}</h3>
+                <span class="text-xs text-slate-400">${tool.category}</span>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-black text-amber-400">${tool.mpScore}<span class="text-xs text-slate-500 font-normal">/100</span></div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider">MP Score</div>
               </div>
             </div>
 
-            <!-- NEW: Watch MarkPoint Minute (1:00) Button -->
-            <button onclick="openVideoModal(${tool.id})" class="w-full mb-4 bg-slate-800/90 hover:bg-slate-800 border border-amber-500/40 text-amber-400 font-bold text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-2 transition">
-              <span>🎬 Watch MarkPoint Minute™ (1:00)</span>
-            </button>
-          </div>
-
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              ${tool.crms.map(crm => `
-                <span class="text-[11px] bg-slate-950 text-slate-400 border border-slate-800 px-2 py-0.5 rounded">
-                  ✓ ${crm}
-                </span>
-              `).join('')}
+            <div class="mb-4">
+              ${badgeHtml}
             </div>
 
-            <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
-              <a href="${tool.url}?utm_source=markpointsystems" target="_blank" rel="noopener" 
-                class="text-xs font-bold text-amber-400 hover:text-amber-300">
-                Check Live System &rarr;
-              </a>
-              <a href="submit.html" class="text-[11px] text-slate-500 hover:text-slate-300">
-                Claim MarkPoint Badge &uarr;
-              </a>
+            <!-- CORE METRICS -->
+            <div class="space-y-2.5 text-xs text-slate-300 border-t border-b border-slate-800/80 py-3 mb-4">
+              <div><strong class="text-slate-400">Published Pricing:</strong> <span class="text-white">${tool.pricing}</span></div>
+              <div><strong class="text-slate-400">Street Reality:</strong> <span class="text-slate-200">${tool.streetPricing}</span></div>
+              <div><strong class="text-slate-400">Key Integrations:</strong> <span class="text-slate-300">${tool.integrations}</span></div>
+              <div><strong class="text-slate-400">Best Crew Fit:</strong> <span class="text-slate-300">${tool.crewFit}</span></div>
+            </div>
+
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">${tool.summary}</p>
+
+            <!-- 60-SEC AUDIT SCRIPT -->
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-400 mb-4">
+              <strong class="text-amber-400 block mb-1"><i class="fa-solid fa-stopwatch mr-1"></i> MarkPoint 60-Sec Audit:</strong>
+              ${tool.mpMinuteScript}
+            </div>
+
+            <!-- OUTAGE LOG -->
+            <div class="text-[11px] text-slate-500 mb-4">
+              <strong class="text-slate-400">Status & Outage Audit:</strong> ${tool.outageAudit}
             </div>
           </div>
-        </article>
-      `).join('');
+
+          <!-- CARD FOOTER / CTA -->
+          <div class="pt-2 border-t border-slate-800">
+            <a href="${tool.ctaUrl}" target="_blank" rel="noopener sponsored" class="block w-full text-center ${isGold ? 'bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold' : 'bg-slate-800 hover:bg-slate-700 text-white font-semibold'} py-2.5 px-4 rounded-xl text-xs transition">
+              ${tool.ctaText} →
+            </a>
+            <p class="text-[10px] text-slate-500 text-center mt-2">${tool.ftcNotice}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
     }
 
-    document.getElementById("catSelect").addEventListener("change", renderTools);
-    document.getElementById("crmFilter").addEventListener("change", renderTools);
-    document.getElementById("crewFilter").addEventListener("change", renderTools);
-    document.getElementById("searchInput").addEventListener("input", renderTools);
-
-    function handleNewsletterSubmit(e) {
-      e.preventDefault();
-      document.getElementById("newsletterMsg").classList.remove("hidden");
-      document.getElementById("subEmail").value = "";
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        if (btn.getAttribute('data-category') === cat) {
+          btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-amber-500 text-slate-950";
+        } else {
+          btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-bold transition bg-slate-900 text-slate-300 hover:bg-slate-800";
+        }
+      });
+      filterTools();
     }
 
-    renderTools();
+    function filterTools() {
+      const q = document.getElementById('toolSearch').value.toLowerCase();
+      const filtered = TOOLS_DATA.filter(t => {
+        const matchesCat = currentCategory === 'All' || 
+          (currentCategory === 'Voice AI' && t.category === 'Voice AI') ||
+          (currentCategory === 'CRM' && t.category === 'CRM') ||
+          (currentCategory === 'Estimating' && t.category === 'Estimating');
+
+        const matchesQuery = t.name.toLowerCase().includes(q) ||
+          t.summary.toLowerCase().includes(q) ||
+          t.integrations.toLowerCase().includes(q) ||
+          t.pricing.toLowerCase().includes(q);
+
+        return matchesCat && matchesQuery;
+      });
+      renderTools(filtered);
+    }
+
+    function runMpCalc() {
+      const calls = parseInt(document.getElementById('calcCalls').value, 10);
+      const ticket = parseInt(document.getElementById('calcTicket').value, 10);
+      const mins = parseInt(document.getElementById('calcMins').value, 10);
+
+      document.getElementById('calcCallsVal').textContent = calls + ' calls/wk';
+      document.getElementById('calcTicketVal').textContent = '$' + ticket.toLocaleString();
+      document.getElementById('calcMinsVal').textContent = mins + ' mins/mo';
+
+      const lostMonthly = Math.round(calls * 4 * 0.30 * ticket);
+      document.getElementById('calcLostRev').textContent = '$' + lostMonthly.toLocaleString() + ' / mo';
+
+      let elevenCost = 22;
+      if (mins <= 75) elevenCost = 6;
+      else if (mins <= 275) elevenCost = 22;
+      else if (mins <= 1238) elevenCost = 99;
+      else elevenCost = Math.round(99 + (mins - 1238) * 0.08);
+
+      document.getElementById('calcElevenCost').textContent = '~$' + elevenCost + ' / mo (+LLM/tel)';
+    }
+
+    // Initial Execution
+    renderTools(TOOLS_DATA);
+    runMpCalc();
   </script>
 </body>
 </html>
