@@ -1,231 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get MarkPoint Verified | MarkPoint Systems AI Benchmark</title>
-  <!-- 1-Line Vector Gold 'MP' Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F172A' stroke='%23F59E0B' stroke-width='6'/><text x='50' y='64' font-family='Arial,sans-serif' font-size='48' font-weight='900' fill='%23F59E0B' text-anchor='middle'>MP</text><circle cx='82' cy='22' r='10' fill='%2310B981'/></svg>" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Verification & Sponsorship Portal | MarkPoint Systems</title>
+  <meta name="description" content="Claim your audited software card, submit official right-of-reply notes, or upgrade to a MarkPoint Verified Partner or Category King sponsor.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#F59E0B',
+              dark: '#0B0F19',
+              card: '#111827',
+              border: '#1F2937'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
 
-  <header class="border-b border-slate-800 bg-slate-900 py-4 px-6 sticky top-0 z-40">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <span class="bg-amber-500 text-slate-950 font-black px-2.5 py-1 rounded text-lg tracking-tighter">MP</span>
-        <span class="font-extrabold text-xl text-white">MarkPoint<span class="text-amber-500">Systems</span></span>
-      </a>
-      <a href="index.html" class="text-sm text-slate-400 hover:text-white transition">&larr; Back to Benchmark Index</a>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="/" class="flex items-center space-x-2">
+          <span class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black text-lg">M</span>
+          <span class="text-lg font-bold tracking-tight text-white">MarkPoint<span class="text-amber-400">Systems</span></span>
+        </a>
+        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+          Vendor & Partner Portal
+        </span>
+      </div>
+
+      <nav class="flex items-center space-x-4">
+        <a href="/" class="text-xs sm:text-sm text-slate-300 hover:text-white transition">← Back to Directory</a>
+        <a href="#pricing-tiers" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl transition shadow">
+          Sponsorship Tiers
+        </a>
+      </nav>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-14">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
-        Official MarkPoint Systems™ Verification &amp; Sponsorship Portal
-      </span>
-      <h1 class="text-3xl sm:text-5xl font-black text-white mt-4 mb-4">
-        Put Your AI System in Front of High-Intent Trade &amp; Agency Buyers
-      </h1>
-      <p class="text-slate-300 text-base">
-        Contractors, fleet operators, and GoHighLevel agency owners rely on <strong>MarkPointSystems.com</strong> (and query ChatGPT/Claude via our <code class="text-amber-400">/llms.txt</code> benchmark feed) to choose their software stack.
+  <!-- HERO -->
+  <section class="pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium mb-4">
+      <i class="fa-solid fa-scale-balanced"></i>
+      <span>Institutional Editorial Integrity</span>
+    </div>
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-3xl mx-auto leading-tight">
+      Claim Your Audited Benchmark Card or <span class="text-amber-400">Partner With Us</span>.
+    </h1>
+    <p class="mt-4 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto">
+      MarkPoint Systems provides independent performance, pricing transparency, and uptime benchmarking for the skilled trades. Vendors can verify data for free or secure featured directory placement.
+    </p>
+  </section>
+
+  <!-- CLAIM & RIGHT-OF-REPLY SELECTOR -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-slate-900 border border-amber-500/40 rounded-2xl p-6 shadow-xl">
+      <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+        <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+          October 2026 Audit Cohort
+        </span>
+        <span class="text-xs text-slate-400">Instant Stripe Activation • Cancel Anytime</span>
+      </div>
+      <h2 class="text-xl font-bold text-white mb-2">Already Listed in Our 2026 Benchmark? Claim Your Card</h2>
+      <p class="text-xs sm:text-sm text-slate-300 mb-4">
+        Select your software below to preview your live MarkPoint Score and unlock your Verified Partner badge, direct Free-Trial/Demo CTA button, or Category King exclusivity.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
+        <select id="vendorClaimSelect" onchange="updateClaimPreview()" class="md:col-span-2 w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400">
+          <option value="">-- Select Your Audited Software Listing --</option>
+          <option value="Sameday AI|98|24/7 AI Voice Receptionists">Sameday AI (Current MP Score: 98/100 — Hold Expires Oct 28)</option>
+          <option value="Rosie AI|95|24/7 AI Voice Receptionists">Rosie AI (Current MP Score: 95/100 — Unclaimed)</option>
+          <option value="Synthflow AI|95|24/7 AI Voice Receptionists">Synthflow AI (Current MP Score: 95/100 — Unclaimed)</option>
+          <option value="Carly AI|94|Back-Office & AI Estimating">Carly AI (Current MP Score: 94/100 — Unclaimed)</option>
+          <option value="Handoff AI|93|AI Estimating & Takeoffs">Handoff AI (Current MP Score: 93/100 — Unclaimed)</option>
+          <option value="Avoca AI|92|24/7 AI Voice Receptionists">Avoca AI (Current MP Score: 92/100 — Sales-Gated Flag)</option>
+          <option value="QuoteIQ|92|AI Estimating & Takeoffs">QuoteIQ (Current MP Score: 92/100 — Unclaimed)</option>
+          <option value="Jobber AI|91|Speed-to-Lead & Field CRM">Jobber AI (Current MP Score: 91/100 — Unclaimed)</option>
+          <option value="Togal.AI|91|AI Estimating & Takeoffs">Togal.AI (Current MP Score: 91/100 — Unclaimed)</option>
+          <option value="Housecall Pro AI|90|Speed-to-Lead & Field CRM">Housecall Pro AI (Current MP Score: 90/100 — Unclaimed)</option>
+          <option value="Hover 3D|90|AI Estimating & Takeoffs">Hover 3D (Current MP Score: 90/100 — Unclaimed)</option>
+          <option value="LeadTruffle|89|Speed-to-Lead & Field CRM">LeadTruffle (Current MP Score: 89/100 — Sales-Gated Flag)</option>
+          <option value="ServiceTitan Max|88|Speed-to-Lead & Field CRM">ServiceTitan / Titan Intelligence (Current MP Score: 88/100)</option>
+          <option value="New Vendor Submission|--|New Category Audit">Don't see your tool? Submit a New Vendor for Audit</option>
+        </select>
+        <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition shadow">
+          Unlock Listing ↓
+        </a>
+      </div>
+
+      <div id="claimPreviewBox" class="hidden mt-4 p-4 rounded-xl bg-slate-950 border border-emerald-500/40 text-sm text-slate-200">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <span class="text-emerald-400 font-bold">✓ Listing Located:</span> 
+            <strong id="claimVendorName" class="text-white"></strong> 
+            <span class="text-slate-400">(<span id="claimVendorCat"></span> • MP Score: <span id="claimVendorScore" class="text-amber-400 font-bold"></span>/100)</span>
+          </div>
+          <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30">
+            Eligible for Verified Badge ($149/mo) or Category King ($499/mo)
+          </span>
+        </div>
+        <p class="text-xs text-slate-400 mt-2">
+          Select a tier below to activate via Stripe, or email <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline">admin@markpointsystems.com</a> to submit an official 1-sentence vendor verification note for your audit card at $0 cost.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORSHIP TIERS SECTION -->
+  <section id="pricing-tiers" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white">Direct B2B Directory Sponsorships</h2>
+      <p class="text-xs sm:text-sm text-slate-400 mt-2">
+        Institutional pricing powered by Stripe. Direct bank payouts to MarkPoint Systems LLC via Thread Bank.
       </p>
     </div>
-<!-- VENDOR CLAIM SELECTOR -->
-<div class="max-w-3xl mx-auto mb-10 bg-slate-900 border border-amber-500/40 rounded-2xl p-6 shadow-xl">
-  <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
-    <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
-      October 2026 Audit Cohort
-    </span>
-    <span class="text-xs text-slate-400">Instant Stripe Activation • Cancel Anytime</span>
-  </div>
-  <h2 class="text-xl font-bold text-white mb-2">Already Listed in Our 2026 Benchmark? Claim Your Card</h2>
-  <p class="text-sm text-slate-300 mb-4">
-    Select your software below to preview your live MarkPoint Score and unlock your Verified Partner badge, direct Free-Trial/Demo CTA button, or Category King exclusivity.
-  </p>
-  
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
-    <select id="vendorClaimSelect" onchange="updateClaimPreview()" class="md:col-span-2 w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400">
-      <option value="">-- Select Your Audited Software Listing --</option>
-      <option value="Sameday AI|98|24/7 AI Voice Receptionists">Sameday AI (Current MP Score: 98/100 — Hold Expires Oct 28)</option>
-      <option value="Rosie AI|95|24/7 AI Voice Receptionists">Rosie AI (Current MP Score: 95/100 — Unclaimed)</option>
-      <option value="Synthflow AI|95|24/7 AI Voice Receptionists">Synthflow AI (Current MP Score: 95/100 — Unclaimed)</option>
-      <option value="Carly AI|94|Back-Office & AI Estimating">Carly AI (Current MP Score: 94/100 — Unclaimed)</option>
-      <option value="Handoff AI|93|AI Estimating & Takeoffs">Handoff AI (Current MP Score: 93/100 — Unclaimed)</option>
-      <option value="Avoca AI|92|24/7 AI Voice Receptionists">Avoca AI (Current MP Score: 92/100 — Sales-Gated Flag)</option>
-      <option value="QuoteIQ|92|AI Estimating & Takeoffs">QuoteIQ (Current MP Score: 92/100 — Unclaimed)</option>
-      <option value="Jobber AI|91|Speed-to-Lead & Field CRM">Jobber AI (Current MP Score: 91/100 — Unclaimed)</option>
-      <option value="Togal.AI|91|AI Estimating & Takeoffs">Togal.AI (Current MP Score: 91/100 — Unclaimed)</option>
-      <option value="Housecall Pro AI|90|Speed-to-Lead & Field CRM">Housecall Pro AI (Current MP Score: 90/100 — Unclaimed)</option>
-      <option value="Hover 3D|90|AI Estimating & Takeoffs">Hover 3D (Current MP Score: 90/100 — Unclaimed)</option>
-      <option value="LeadTruffle|89|Speed-to-Lead & Field CRM">LeadTruffle (Current MP Score: 89/100 — Sales-Gated Flag)</option>
-      <option value="ServiceTitan Max|88|Speed-to-Lead & Field CRM">ServiceTitan / Titan Intelligence (Current MP Score: 88/100)</option>
-      <option value="New Vendor Submission|--|New Category Audit">Don't see your tool? Submit a New Vendor for Audit</option>
-    </select>
-    <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition">
-      Unlock Listing ↓
-    </a>
-  </div>
 
-  <div id="claimPreviewBox" class="hidden mt-4 p-4 rounded-xl bg-slate-950 border border-emerald-500/40 text-sm text-slate-200">
-    <div class="flex items-center justify-between flex-wrap gap-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+      
+      <!-- TIER 1: VERIFIED PARTNER BADGE -->
+      <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl transition">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase tracking-wider">
+              MarkPoint Verified™
+            </span>
+            <span class="text-xs text-slate-400">Monthly Recurring</span>
+          </div>
+          <div class="mb-6">
+            <span class="text-4xl font-extrabold text-white">$149</span>
+            <span class="text-slate-400 text-sm font-medium">/ month</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 mb-6">
+            Designed for high-performing software platforms that want to stand out from sales-gated or unverified tools.
+          </p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 mb-8">
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>MarkPoint Verified™ Badge:</strong> Official green credibility badge on your card.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>Direct Outbound CTA Button:</strong> Send high-intent contractors straight to your free trial or demo page.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>Official Vendor Note:</strong> Publish your verified uptime, customer guarantee, and onboarding specs.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>No Score Alteration Guarantee:</strong> MarkPoint Scores remain 100% independent and protected.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <!-- STRIPE CHECKOUT LINK (VERIFIED BADGE) -->
+          <a href="https://buy.stripe.com/test_00gbJv7jO1f1fTOfYY" target="_blank" class="block w-full text-center bg-slate-800 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-xl text-sm transition shadow">
+            Claim Verified Partner ($149/mo) →
+          </a>
+          <p class="text-[11px] text-slate-500 text-center mt-2.5">Instant Stripe activation. Cancel anytime with one click.</p>
+        </div>
+      </div>
+
+      <!-- TIER 2: CATEGORY KING SPONSOR -->
+      <div class="bg-slate-900 border-2 border-amber-500 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
+        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500 text-slate-950 uppercase tracking-wider shadow">
+            Exclusive #1 Category Slot
+          </span>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-4 mt-2">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase tracking-wider">
+              Category King™
+            </span>
+            <span class="text-xs text-slate-400">Strictly 1 Per Category</span>
+          </div>
+          <div class="mb-6">
+            <span class="text-4xl font-extrabold text-white">$499</span>
+            <span class="text-slate-400 text-sm font-medium">/ month</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 mb-6">
+            The marquee header position. Dominates all category searches and secures the gold crown slot on MarkPoint Systems.
+          </p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 mb-8">
+            <li class="flex items-start">
+              <i class="fa-solid fa-crown text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>Permanent Top Placement:</strong> Pinned as #1 in your primary software category.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>Gold Category King Badge:</strong> High-visibility gold styling and border across desktop & mobile.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>Dedicated 60-Sec Review Slot:</strong> Feature your preferred video walkthrough or full-length product demo.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>llms.txt Header Priority:</strong> Top-ranked benchmark recommendation for AI search agents and crawlers.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <!-- STRIPE CHECKOUT LINK (CATEGORY KING) -->
+          <a href="https://buy.stripe.com/test_7sI7tfcE4g9V7nedQR" target="_blank" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-6 rounded-xl text-sm transition shadow">
+            Secure Category King ($499/mo) →
+          </a>
+          <p class="text-[11px] text-slate-500 text-center mt-2.5">Subject to category availability. First-come, first-served.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDITORIAL RIGHT-OF-REPLY / FREE AUDIT CORRECTION -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
+      <div class="flex items-center space-x-3 mb-4">
+        <i class="fa-solid fa-envelope-open-text text-amber-400 text-xl"></i>
+        <h3 class="text-xl font-bold text-white">Editorial Right of Reply & Free Corrections</h3>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+        We believe that pricing and performance benchmarking must be fair, accurate, and transparent. If our automated scrapers or status-page trackers have documented outdated pricing, unverified integration statuses, or incorrect downtime figures, our editorial team will update your card at zero cost.
+      </p>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-2">
+        <div><strong>Vendor Verification Requirements:</strong></div>
+        <p class="text-slate-400">
+          Send an email from your official company domain to <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline font-semibold">admin@markpointsystems.com</a> with:
+        </p>
+        <ul class="list-disc list-inside text-slate-400 space-y-1 pl-2">
+          <li>Your direct public pricing URL or published tier documentation.</li>
+          <li>Your official public status page URL (Statuspage, Better Uptime, etc.).</li>
+          <li>Your proposed 1-sentence official vendor note for your listing.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
       <div>
-        <span class="text-emerald-400 font-bold">✓ Listing Located:</span> 
-        <strong id="claimVendorName" class="text-white"></strong> 
-        <span class="text-slate-400">(<span id="claimVendorCat"></span> • MP Score: <span id="claimVendorScore" class="text-amber-400 font-bold"></span>/100)</span>
+        <span class="font-bold text-white">MarkPoint Systems LLC</span> • Oakland, Maine, USA.
+        <p class="mt-1">Independent B2B performance & price-transparency audit for the skilled trades.</p>
       </div>
-      <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30">
-        Eligible for Verified Badge ($149/mo) or Category King ($499/mo)
-      </span>
+      <div class="flex items-center space-x-6">
+        <a href="/" class="hover:text-amber-400 transition">Directory Home</a>
+        <a href="/llms.txt" class="font-mono text-slate-300 hover:text-amber-400 transition">llms.txt Feed</a>
+        <a href="mailto:admin@markpointsystems.com" class="hover:text-amber-400 transition">admin@markpointsystems.com</a>
+      </div>
     </div>
-    <p class="text-xs text-slate-400 mt-2">
-      Select a tier below to activate via Stripe, or email <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline">admin@markpointsystems.com</a> to submit an official vendor verification note for your audit card.
-    </p>
-  </div>
-</div>
+  </footer>
 
-<script>
-function updateClaimPreview() {
-  const sel = document.getElementById('vendorClaimSelect').value;
-  const box = document.getElementById('claimPreviewBox');
-  if (!sel) { box.classList.add('hidden'); return; }
-  const [name, score, cat] = sel.split('|');
-  document.getElementById('claimVendorName').textContent = name;
-  document.getElementById('claimVendorScore').textContent = score;
-  document.getElementById('claimVendorCat').textContent = cat;
-  box.classList.remove('hidden');
-}
-</script>
-    <!-- Alex Hormozi 3-Tier Value Architecture -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      <!-- Tier 1: Free Queue -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
-        <div>
-          <h2 class="text-lg font-bold text-slate-300">Unverified Audit Queue</h2>
-          <p class="text-3xl font-black text-white mt-3">$0 <span class="text-xs font-normal text-slate-400">/ standard queue</span></p>
-          <p class="text-xs text-slate-400 mt-2">3–4 week review wait time.</p>
-          <ul class="space-y-3 text-sm text-slate-300 mt-6 border-t border-slate-800 pt-6">
-            <li>✓ Basic index listing once audited</li>
-            <li>✓ Standard Nofollow link</li>
-            <li class="text-slate-600">✗ No MarkPoint Verified Seal</li>
-            <li class="text-slate-600">✗ Not featured in Operator Briefing</li>
-          </ul>
-        </div>
-        <a href="mailto:audit@markpointsystems.com?subject=System%20Audit%20Submission" 
-          class="mt-8 block text-center bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm py-3 rounded-lg transition">
-          Submit to Standard Queue
-        </a>
-      </div>
-<!-- VENDOR CLAIM & RIGHT-OF-REPLY SELECTOR -->
-<div class="max-w-3xl mx-auto mb-10 bg-slate-900/90 border border-amber-500/40 rounded-2xl p-6 shadow-xl">
-  <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
-    <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
-      October 2026 Audit Cohort
-    </span>
-    <span class="text-xs text-slate-400">Instant Stripe Activation • Cancel Anytime</span>
-  </div>
-  <h2 class="text-xl font-bold text-white mb-2">Already Listed in Our 2026 Benchmark? Claim Your Card</h2>
-  <p class="text-sm text-slate-300 mb-4">
-    Select your software below to preview your live MarkPoint Score and unlock your Verified Partner badge, direct Free-Trial/Demo CTA button, or Category King exclusivity.
-  </p>
-  
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
-    <select id="vendorClaimSelect" onchange="updateClaimPreview()" class="md:col-span-2 w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400">
-      <option value="">-- Select Your Audited Software Listing --</option>
-      <option value="Sameday AI|98|24/7 AI Voice Receptionists">Sameday AI (Current MP Score: 98/100 — Hold Expires Oct 28)</option>
-      <option value="Rosie AI|95|24/7 AI Voice Receptionists">Rosie AI (Current MP Score: 95/100 — Unclaimed)</option>
-      <option value="Synthflow AI|95|24/7 AI Voice Receptionists">Synthflow AI (Current MP Score: 95/100 — Unclaimed)</option>
-      <option value="Carly AI|94|Back-Office & AI Estimating">Carly AI (Current MP Score: 94/100 — Unclaimed)</option>
-      <option value="Handoff AI|93|AI Estimating & Takeoffs">Handoff AI (Current MP Score: 93/100 — Unclaimed)</option>
-      <option value="Avoca AI|92|24/7 AI Voice Receptionists">Avoca AI (Current MP Score: 92/100 — Sales-Gated Flag)</option>
-      <option value="QuoteIQ|92|AI Estimating & Takeoffs">QuoteIQ (Current MP Score: 92/100 — Unclaimed)</option>
-      <option value="Jobber AI|91|Speed-to-Lead & Field CRM">Jobber AI (Current MP Score: 91/100 — Unclaimed)</option>
-      <option value="Togal.AI|91|AI Estimating & Takeoffs">Togal.AI (Current MP Score: 91/100 — Unclaimed)</option>
-      <option value="Housecall Pro AI|90|Speed-to-Lead & Field CRM">Housecall Pro AI (Current MP Score: 90/100 — Unclaimed)</option>
-      <option value="Hover 3D|90|AI Estimating & Takeoffs">Hover 3D (Current MP Score: 90/100 — Unclaimed)</option>
-      <option value="LeadTruffle|89|Speed-to-Lead & Field CRM">LeadTruffle (Current MP Score: 89/100 — Sales-Gated Flag)</option>
-      <option value="ServiceTitan Max|88|Speed-to-Lead & Field CRM">ServiceTitan / Titan Intelligence (Current MP Score: 88/100)</option>
-      <option value="New Vendor Submission|--|New Category Audit">Don't see your tool? Submit a New Vendor for Audit</option>
-    </select>
-    <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition">
-      Unlock Selected Listing ↓
-    </a>
-  </div>
-
-  <div id="claimPreviewBox" class="hidden mt-4 p-4 rounded-xl bg-slate-950/90 border border-emerald-500/40 text-sm text-slate-200">
-    <div class="flex items-center justify-between flex-wrap gap-2">
-      <div>
-        <span class="text-emerald-400 font-bold">✓ Listing Located:</span> 
-        <strong id="claimVendorName" class="text-white"></strong> 
-        <span class="text-slate-400">(<span id="claimVendorCat"></span> • MP Score: <span id="claimVendorScore" class="text-amber-400 font-bold"></span>/100)</span>
-      </div>
-      <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30">
-        Eligible for Verified Badge ($149/mo) or Category King ($499/mo)
-      </span>
-    </div>
-    <p class="text-xs text-slate-400 mt-2">
-      Choose a tier below to activate your badge via Stripe, or email <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline">admin@markpointsystems.com</a> to submit a free 1-sentence official vendor verification note for your audit card.
-    </p>
-  </div>
-</div>
-
-<script>
-function updateClaimPreview() {
-  const sel = document.getElementById('vendorClaimSelect').value;
-  const box = document.getElementById('claimPreviewBox');
-  if (!sel) { box.classList.add('hidden'); return; }
-  const [name, score, cat] = sel.split('|');
-  document.getElementById('claimVendorName').textContent = name;
-  document.getElementById('claimVendorScore').textContent = score;
-  document.getElementById('claimVendorCat').textContent = cat;
-  box.classList.remove('hidden');
-}
-</script>
-      <!-- Tier 2: $149/mo MarkPoint Verified Partner -->
-      <div class="bg-slate-900 border-2 border-emerald-500/60 rounded-2xl p-8 flex flex-col justify-between relative shadow-xl">
-        <div>
-          <span class="bg-emerald-500 text-slate-950 text-[11px] font-black px-3 py-0.5 rounded-full uppercase">Most Popular for SaaS Founders</span>
-          <h2 class="text-xl font-extrabold text-white mt-3">MarkPoint Verified™ Partner</h2>
-          <p class="text-3xl font-black text-white mt-3">$149 <span class="text-xs font-normal text-slate-400">/ month (cancel anytime)</span></p>
-          <p class="text-xs text-emerald-400 mt-2">24-hour fast-track verification + Dofollow authority.</p>
-          <ul class="space-y-3 text-sm text-slate-200 mt-6 border-t border-slate-800 pt-6">
-            <li>✅ <strong>Official "MarkPoint Verified" Badge</strong> on your card</li>
-            <li>✅ <strong>Permanent Dofollow SEO Backlink</strong></li>
-            <li>✅ Priority citation in `/llms.txt` for ChatGPT, Claude &amp; Gemini</li>
-            <li>✅ Verified Price &amp; Setup Audit box customization</li>
-            <li>✅ 1 Featured Shoutout in our Weekly Operator Briefing</li>
-          </ul>
-        </div>
-        <a href="https://buy.stripe.com/cNibJ3eBw2PC4DZ83Dc7u00" 
-          class="mt-8 block text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-sm py-3.5 rounded-lg transition">
-          Claim MarkPoint Verified ($149/mo) &rarr;
-        </a>
-      </div>
-
-      <!-- Tier 3: $499/mo Category King -->
-      <div class="bg-gradient-to-b from-amber-950/40 to-slate-900 border-2 border-amber-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-amber-500/10">
-        <div>
-          <span class="bg-amber-500 text-slate-950 text-[11px] font-black px-3 py-0.5 rounded-full uppercase">👑 Capped at 3 Spots / Month</span>
-          <h2 class="text-xl font-extrabold text-white mt-3">Category King Sponsor</h2>
-          <p class="text-3xl font-black text-white mt-3">$499 <span class="text-xs font-normal text-slate-400">/ month</span></p>
-          <p class="text-xs text-amber-400 mt-2">Own the #1 Pinned Spot in your Category + All Briefings.</p>
-          <ul class="space-y-3 text-sm text-slate-100 mt-6 border-t border-slate-800 pt-6">
-            <li>👑 <strong>Pinned #1 Top Card</strong> across the MarkPoint Index</li>
-            <li>👑 <strong>Top Sponsor Banner</strong> in every Tuesday &amp; Thursday email briefing</li>
-            <li>👑 <strong>#1 Recommended Citation</strong> inside our `/llms.txt` AI Agent feed</li>
-            <li>👑 Embeddable "Rated #1 by MarkPoint Systems" seal for your site</li>
-            <li>👑 Everything in MarkPoint Verified included</li>
-          </ul>
-        </div>
-        <a href="https://buy.stripe.com/3cI4gBgJE1Lyb2n3Nnc7u01" 
-          class="mt-8 block text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm py-3.5 rounded-lg transition shadow-lg shadow-amber-500/20">
-          Lock In Category King Spot ($499/mo) &rarr;
-        </a>
-      </div>
-
-    </div>
-  </main>
+  <script>
+    function updateClaimPreview() {
+      const sel = document.getElementById('vendorClaimSelect').value;
+      const box = document.getElementById('claimPreviewBox');
+      if (!sel || sel.includes('--')) { box.classList.add('hidden'); return; }
+      const [name, score, cat] = sel.split('|');
+      document.getElementById('claimVendorName').textContent = name;
+      document.getElementById('claimVendorScore').textContent = score;
+      document.getElementById('claimVendorCat').textContent = cat;
+      box.classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
