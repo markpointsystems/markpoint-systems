@@ -36,16 +36,12 @@
   <header class="sticky top-0 z-50 bg-[#090D16]/95 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="/" class="flex items-center space-x-3 group">
-        <!-- Custom Gold & Emerald MP Crosshair Checkmark SVG (Zero external image weight) -->
         <svg class="w-10 h-10 flex-shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="64" height="64" rx="14" fill="#111827" stroke="#374151" stroke-width="1.5"/>
-          <!-- Gold MP Monogram -->
           <path d="M10 46V18H16L24 31L32 18H38V46H32.5V27.5L24 41L15.5 27.5V46H10Z" fill="url(#goldGrad)"/>
           <path d="M41 46V18H50C54.5 18 57.5 20.8 57.5 25.5C57.5 30.2 54.5 33 50 33H46.5V46H41ZM46.5 28.5H49.5C51.5 28.5 52.5 27.3 52.5 25.5C52.5 23.7 51.5 22.5 49.5 22.5H46.5V28.5Z" fill="url(#goldGrad)"/>
-          <!-- Emerald Target Crosshair -->
           <circle cx="48.5" cy="25.5" r="3" stroke="#10B981" stroke-width="1.4"/>
           <circle cx="48.5" cy="25.5" r="1" fill="#10B981"/>
-          <!-- Emerald Verification Checkmark -->
           <path d="M36 36.5L43 43.5L58 24" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
           <defs>
             <linearGradient id="goldGrad" x1="10" y1="18" x2="56" y2="46" gradientUnits="userSpaceOnUse">
@@ -74,7 +70,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (Fix #1: Clear Owner Action + Clean Headline Wrap) -->
+  <!-- HERO SECTION -->
   <section class="relative pt-10 pb-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center">
     <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold mb-5">
       <i class="fa-solid fa-shield-halved"></i>
@@ -89,34 +85,33 @@
       Skip the 45-minute "Book a Demo" sales traps. Compare real monthly street costs, contract lock-ins, and verified uptime for HVAC, plumbing, electrical, and roofing AI tools.
     </p>
 
-    <!-- Primary & Secondary Owner Actions -->
     <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3.5">
       <a href="#benchmark" class="w-full sm:w-auto inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm sm:text-base font-extrabold px-7 py-3.5 rounded-xl transition shadow-lg shadow-amber-500/15">
-        Compare the 15 Audited Tools ↓
+        Compare the 16 Audited Tools ↓
       </a>
       <a href="#calculator" class="w-full sm:w-auto inline-flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 text-sm font-bold px-6 py-3.5 rounded-xl transition">
         <i class="fa-solid fa-calculator text-emerald-400 mr-2"></i> Run Missed-Call Calculator
       </a>
     </div>
 
-    <!-- Clickable Jump Pills (Not dead text) -->
+    <!-- Clickable Jump Pills -->
     <div class="mt-7 flex flex-wrap justify-center gap-2 sm:gap-3 text-xs font-semibold">
-      <button onclick="jumpToTrade('HVAC')" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition">
+      <button type="button" onclick="jumpToTrade('HVAC')" class="px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 active:scale-95 text-slate-200 border border-slate-700 transition cursor-pointer">
         <i class="fa-solid fa-temperature-half text-amber-400 mr-1.5"></i> HVAC Tools
       </button>
-      <button onclick="jumpToTrade('Plumbing')" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition">
+      <button type="button" onclick="jumpToTrade('Plumbing')" class="px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 active:scale-95 text-slate-200 border border-slate-700 transition cursor-pointer">
         <i class="fa-solid fa-faucet-drip text-sky-400 mr-1.5"></i> Plumbing Tools
       </button>
-      <button onclick="jumpToTrade('Electrical')" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition">
+      <button type="button" onclick="jumpToTrade('Electrical')" class="px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 active:scale-95 text-slate-200 border border-slate-700 transition cursor-pointer">
         <i class="fa-solid fa-bolt text-yellow-400 mr-1.5"></i> Electrical Tools
       </button>
-      <button onclick="jumpToTrade('Roofing')" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition">
+      <button type="button" onclick="jumpToTrade('Roofing')" class="px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 active:scale-95 text-slate-200 border border-slate-700 transition cursor-pointer">
         <i class="fa-solid fa-house-chimney text-emerald-400 mr-1.5"></i> Roofing &amp; Exterior
       </button>
     </div>
   </section>
 
-  <!-- CALCULATOR SECTION (Fix #3: Exact Numeric Inputs, Transparent Tier Math, Adjustable Book Rate, Net Cost Line) -->
+  <!-- CALCULATOR SECTION -->
   <section id="calculator" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
     <div class="bg-slate-900 border border-slate-700/80 rounded-2xl p-5 sm:p-7 shadow-2xl">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5 pb-4 border-b border-slate-800">
@@ -135,69 +130,64 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
-        <!-- COL 1: Numeric + Slider Inputs (5 cols) -->
+        <!-- COL 1: Numeric + Slider Inputs -->
         <div class="lg:col-span-5 bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between space-y-4">
           
-          <!-- Input 1: Missed Calls -->
           <div>
             <div class="flex justify-between items-center text-xs sm:text-sm font-bold text-slate-200 mb-1.5">
               <label for="calcCallsNum">Missed / After-Hours Calls per Week:</label>
               <div class="flex items-center space-x-1">
-                <input id="calcCallsNum" type="number" min="1" max="100" value="6" oninput="syncCalc('calls', 'num')" class="w-16 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
+                <input id="calcCallsNum" type="number" min="1" max="100" value="6" oninput="syncCalc('calls', 'num')" onchange="syncCalc('calls', 'num')" class="w-16 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
                 <span class="text-xs text-slate-300">/wk</span>
               </div>
             </div>
-            <input id="calcCalls" type="range" min="1" max="40" step="1" value="6" oninput="syncCalc('calls', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
+            <input id="calcCalls" type="range" min="1" max="40" step="1" value="6" oninput="syncCalc('calls', 'slider')" onchange="syncCalc('calls', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
           </div>
 
-          <!-- Input 2: Average Ticket -->
           <div>
             <div class="flex justify-between items-center text-xs sm:text-sm font-bold text-slate-200 mb-1.5">
               <label for="calcTicketNum">Average Job Ticket Value ($):</label>
               <div class="flex items-center space-x-1">
                 <span class="text-xs text-slate-300">$</span>
-                <input id="calcTicketNum" type="number" min="100" max="25000" step="50" value="650" oninput="syncCalc('ticket', 'num')" class="w-24 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
+                <input id="calcTicketNum" type="number" min="100" max="25000" step="50" value="650" oninput="syncCalc('ticket', 'num')" onchange="syncCalc('ticket', 'num')" class="w-24 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
               </div>
             </div>
-            <input id="calcTicket" type="range" min="150" max="5000" step="50" value="650" oninput="syncCalc('ticket', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
+            <input id="calcTicket" type="range" min="150" max="5000" step="50" value="650" oninput="syncCalc('ticket', 'slider')" onchange="syncCalc('ticket', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
           </div>
 
-          <!-- Input 3: Booking Conversion Rate -->
           <div>
             <div class="flex justify-between items-center text-xs sm:text-sm font-bold text-slate-200 mb-1.5">
               <label for="calcRateNum">Close Rate on Answered Calls (%):</label>
               <div class="flex items-center space-x-1">
-                <input id="calcRateNum" type="number" min="5" max="90" step="5" value="30" oninput="syncCalc('rate', 'num')" class="w-16 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
+                <input id="calcRateNum" type="number" min="5" max="90" step="5" value="30" oninput="syncCalc('rate', 'num')" onchange="syncCalc('rate', 'num')" class="w-16 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
                 <span class="text-xs text-slate-300">%</span>
               </div>
             </div>
-            <input id="calcRate" type="range" min="10" max="60" step="5" value="30" oninput="syncCalc('rate', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
+            <input id="calcRate" type="range" min="10" max="60" step="5" value="30" oninput="syncCalc('rate', 'slider')" onchange="syncCalc('rate', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
           </div>
 
-          <!-- Input 4: Monthly Voice Minutes -->
           <div>
             <div class="flex justify-between items-center text-xs sm:text-sm font-bold text-slate-200 mb-1.5">
               <label for="calcMinsNum">Est. AI Phone Minutes per Month:</label>
               <div class="flex items-center space-x-1">
-                <input id="calcMinsNum" type="number" min="25" max="5000" step="25" value="250" oninput="syncCalc('mins', 'num')" class="w-20 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
+                <input id="calcMinsNum" type="number" min="25" max="5000" step="25" value="250" oninput="syncCalc('mins', 'num')" onchange="syncCalc('mins', 'num')" class="w-20 bg-slate-900 border border-slate-600 rounded-lg px-2 py-1 text-right text-amber-400 font-extrabold text-sm focus:outline-none focus:border-amber-400">
                 <span class="text-xs text-slate-300">min</span>
               </div>
             </div>
-            <input id="calcMins" type="range" min="50" max="1500" step="25" value="250" oninput="syncCalc('mins', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
+            <input id="calcMins" type="range" min="50" max="1500" step="25" value="250" oninput="syncCalc('mins', 'slider')" onchange="syncCalc('mins', 'slider')" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-800 rounded-lg">
           </div>
         </div>
 
-        <!-- COL 2: Transparent Cost & Net Comparison (4 cols) -->
+        <!-- COL 2: Transparent Cost & Net Comparison -->
         <div class="lg:col-span-4 bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between space-y-4">
           <div class="border-b border-slate-800 pb-3">
             <div class="text-xs text-slate-300 uppercase font-bold tracking-wide">Doing Nothing Costs You:</div>
-            <div id="calcLostRev" class="text-3xl font-black text-rose-400 mt-1">$5,070 / mo</div>
+            <div id="calcLostRev" class="text-3xl font-black text-rose-400 mt-1">$5,066 / mo</div>
             <div class="text-xs text-slate-300 mt-1">
               (<span id="calcLostJobs" class="text-white font-bold">7.8</span> booked jobs lost/mo at <span id="calcRateLabel">30%</span> close rate)
             </div>
           </div>
 
-          <!-- Transparent Tier Math Breakdown -->
           <div class="space-y-2.5 text-xs">
             <div class="text-slate-300 font-bold uppercase tracking-wider text-[11px]">Monthly Tool Cost at <span id="calcMinsHeader" class="text-amber-400">250</span> Mins:</div>
             
@@ -207,7 +197,7 @@
                 <span id="calcElevenCost" class="text-emerald-400">~$20 / mo</span>
               </div>
               <div id="calcElevenFormula" class="text-[11px] text-slate-300 mt-0.5">
-                Math: 250 mins × $0.08/min (or $22 Creator plan w/ 275m)
+                Math: 250m × $0.08/m = $20 (Fits $22 Creator plan w/ 275m)
               </div>
             </div>
 
@@ -227,15 +217,14 @@
             </div>
           </div>
 
-          <!-- Explicit Net Line (Mister Fix #3) -->
           <div class="bg-emerald-950/30 border border-emerald-500/40 rounded-xl p-3 text-xs">
             <div id="calcNetSummary" class="text-emerald-300 font-bold leading-snug">
-              Net Verdict: Doing nothing costs $5,070/mo. Fixing it with GoHighLevel + ElevenAgents costs ~$117/mo (Net gain: +$4,953/mo).
+              Net Verdict: Doing nothing loses $5,066/mo. Fixing it with GoHighLevel ($97) + ElevenAgents (~$20) costs ~$117/mo — saving you +$4,949/mo net.
             </div>
           </div>
         </div>
 
-        <!-- COL 3: Actionable Self-Serve CTAs (3 cols) -->
+        <!-- COL 3: Actionable Self-Serve CTAs -->
         <div class="lg:col-span-3 bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between space-y-3">
           <div>
             <div class="text-xs font-extrabold uppercase tracking-wider text-slate-200 mb-1">Test Self-Serve Stack</div>
@@ -268,13 +257,12 @@
   <!-- MAIN BENCHMARK SECTION -->
   <main id="benchmark" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex-grow">
 
-    <!-- SECTION HEADING & METHODOLOGY EXPLAINER (Fix #4: Explain the 88–99 Score Range) -->
     <div class="mb-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-4">
         <div>
           <span class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Step 2: Compare Audited Vendors</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
-            Q4 2026 Contractor AI Benchmark Directory (15 Tools)
+            Q4 2026 Contractor AI Benchmark Directory (16 Tools)
           </h2>
         </div>
         <div class="text-xs text-slate-300">
@@ -289,7 +277,7 @@
           Why Scores Range From 88 to 99 (How the 100-Point MarkPoint Score Works):
         </div>
         <p class="text-slate-300 mb-3 leading-relaxed">
-          We only list proven contractor software (we reject vaporware, which is why all 15 tools score 88+). Where tools lose points is on <strong>pricing secrecy, multi-year lock-ins, and status outages</strong>:
+          We only list proven contractor software (we reject vaporware, which is why all 16 tools score 88+). Where tools lose points is on <strong>pricing secrecy, multi-year lock-ins, and status outages</strong>:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2 border-t border-slate-800 text-xs">
           <div class="bg-slate-950 p-2.5 rounded-lg border border-slate-800/80">
@@ -312,7 +300,7 @@
       </div>
     </div>
 
-    <!-- FILTER & SORT CONTROL BAR (Fix #2: Trade Filters, Category Filters, Price Sort, Result Count, Reset) -->
+    <!-- FILTER & SORT CONTROL BAR -->
     <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-5 mb-8 space-y-4">
       
       <!-- Row 1: Filter by Contractor Trade -->
@@ -320,32 +308,30 @@
         <span class="text-xs font-extrabold text-slate-200 uppercase tracking-wider whitespace-nowrap mr-1">
           <i class="fa-solid fa-helmet-safety text-amber-400 mr-1"></i> Your Trade:
         </span>
-        <button onclick="setTradeFilter('All')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap" data-trade="All">All Trades (15)</button>
-        <button onclick="setTradeFilter('HVAC')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap" data-trade="HVAC">HVAC</button>
-        <button onclick="setTradeFilter('Plumbing')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap" data-trade="Plumbing">Plumbing</button>
-        <button onclick="setTradeFilter('Electrical')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap" data-trade="Electrical">Electrical</button>
-        <button onclick="setTradeFilter('Roofing')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap" data-trade="Roofing">Roofing &amp; Exterior</button>
+        <button type="button" onclick="setTradeFilter('All')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap cursor-pointer" data-trade="All">All Trades (16)</button>
+        <button type="button" onclick="setTradeFilter('HVAC')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer" data-trade="HVAC">HVAC</button>
+        <button type="button" onclick="setTradeFilter('Plumbing')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer" data-trade="Plumbing">Plumbing</button>
+        <button type="button" onclick="setTradeFilter('Electrical')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer" data-trade="Electrical">Electrical</button>
+        <button type="button" onclick="setTradeFilter('Roofing')" class="trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer" data-trade="Roofing">Roofing &amp; Exterior</button>
       </div>
 
-      <!-- Row 2: Filter by Job / Software Type + Search + Price/Score Sort -->
+      <!-- Row 2: Filter by Function + Search + Price/Score Sort -->
       <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 pt-3 border-t border-slate-800">
         
         <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar pb-1 lg:pb-0">
           <span class="text-xs font-extrabold text-slate-200 uppercase tracking-wider whitespace-nowrap mr-1">Function:</span>
-          <button onclick="setCategoryFilter('All')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap" data-category="All">All Functions</button>
-          <button onclick="setCategoryFilter('Voice AI')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap" data-category="Voice AI">24/7 Phone Answering</button>
-          <button onclick="setCategoryFilter('CRM')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap" data-category="CRM">CRM, Text-Back &amp; Chat</button>
-          <button onclick="setCategoryFilter('Estimating')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap" data-category="Estimating">AI Estimating &amp; Takeoffs</button>
+          <button type="button" onclick="setCategoryFilter('All')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap cursor-pointer" data-category="All">All Functions</button>
+          <button type="button" onclick="setCategoryFilter('Voice AI')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer" data-category="Voice AI">24/7 Phone Answering</button>
+          <button type="button" onclick="setCategoryFilter('CRM')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer" data-category="CRM">CRM, Text-Back &amp; Chat</button>
+          <button type="button" onclick="setCategoryFilter('Estimating')" class="cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer" data-category="Estimating">AI Estimating &amp; Takeoffs</button>
         </div>
 
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-          <!-- Search Box -->
           <div class="relative flex-grow sm:w-56">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
             <input type="text" id="toolSearch" oninput="applyAllFilters()" placeholder="Search tool, ServiceTitan..." class="w-full bg-slate-950 border border-slate-700 rounded-xl pl-8 pr-3 py-2 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400">
           </div>
 
-          <!-- Sort Dropdown (Includes Price Low-to-High & High-to-Low!) -->
           <select id="toolSort" onchange="applyAllFilters()" aria-label="Sort tools" class="bg-slate-950 border border-slate-700 text-slate-100 font-semibold text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-amber-400 cursor-pointer">
             <option value="score">Sort: Highest MP Score</option>
             <option value="price-asc">Sort: Lowest Starting Price ($)</option>
@@ -358,25 +344,24 @@
       <!-- Row 3: Live Filter Status Bar & Clear Button -->
       <div class="flex items-center justify-between pt-2 border-t border-slate-800/80 text-xs">
         <div id="resultsCount" class="text-slate-200 font-semibold">
-          Showing all <span class="text-amber-400 font-bold">15</span> audited contractor tools
+          Showing all <span class="text-amber-400 font-bold">16</span> audited contractor tools
         </div>
-        <button id="clearFiltersBtn" onclick="resetAllFilters()" class="hidden inline-flex items-center px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 font-bold transition">
+        <button type="button" id="clearFiltersBtn" onclick="resetAllFilters()" class="hidden inline-flex items-center px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 font-bold transition cursor-pointer">
           <i class="fa-solid fa-xmark mr-1.5"></i> Clear All Filters
         </button>
       </div>
     </div>
 
-    <!-- DIRECTORY CARDS GRID (15 Tools) -->
+    <!-- DIRECTORY CARDS GRID -->
     <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Populated by JavaScript -->
     </div>
 
   </main>
 
-  <!-- CLOSING ACTION + TRANSPARENCY BLOCK (Fix #5 & Flow Fix) -->
+  <!-- CLOSING ACTION + TRANSPARENCY BLOCK -->
   <section id="transparency" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 space-y-6">
     
-    <!-- Not Sure Where To Start CTA -->
     <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-amber-950/30 border border-amber-500/40 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
       <div>
         <span class="text-xs font-extrabold uppercase tracking-wider text-amber-400">Not Sure Where to Start?</span>
@@ -392,7 +377,6 @@
       </a>
     </div>
 
-    <!-- Plain-English "How We Make Money" Institutional Trust Box -->
     <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
       <div class="flex items-center space-x-3 mb-3">
         <i class="fa-solid fa-file-shield text-emerald-400 text-xl"></i>
@@ -434,7 +418,7 @@
     </div>
   </footer>
 
-  <!-- BENCHMARK DATA & INTERACTIVE ENGINE -->
+  <!-- BENCHMARK DATA & INTERACTIVE ENGINE (100% Syntax Verified) -->
   <script>
     const TOOLS_DATA = [
       {
@@ -691,7 +675,7 @@
         streetPricing: "$65 Basic (1 user), $149–$189 Essentials (5 users), $299+ MAX. Voice/CSR AI features cost extra.",
         integrations: "QuickBooks, CompanyCam, Zapier, Wisetack Financing",
         crewFit: "1–15 Truck HVAC, Plumbing & Electrical Shops",
-        summary: "Battle-tested mobile dispatch app with strong technician GPS tracking, "On My Way" texts, and built-in homeowner financing.",
+        summary: "Battle-tested mobile dispatch app with strong technician GPS tracking, automated 'On My Way' texts, and built-in homeowner financing.",
         ctaUrl: "https://housecallpro.com/",
         ctaText: "Visit Housecall Pro",
         ftcNotice: "Independent Audit • No Affiliate Relationship.",
@@ -764,13 +748,14 @@
 
     function renderTools(list) {
       const container = document.getElementById('toolsGrid');
+      if (!container) return;
       container.innerHTML = '';
 
       if (list.length === 0) {
         container.innerHTML = `
           <div class="col-span-full py-12 px-4 text-center bg-slate-900 border border-slate-800 rounded-2xl">
             <p class="text-slate-200 font-bold text-base mb-2">No tools matched your exact filter combination.</p>
-            <button onclick="resetAllFilters()" class="mt-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs transition">
+            <button type="button" onclick="resetAllFilters()" class="mt-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs transition cursor-pointer">
               Reset All Filters
             </button>
           </div>`;
@@ -779,14 +764,12 @@
 
       list.forEach(tool => {
         const hasCrown = Boolean(tool.categoryCrown);
-        const isSalesGated = tool.priceTransparency.includes("Sales-Gated");
+        const isSalesGated = tool.priceTransparency.indexOf("Sales-Gated") !== -1;
 
-        // Objective Price Transparency Badge (Replaces confusing "Verified Partner" badge on ads)
         const transparencyBadge = isSalesGated
           ? `<span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-rose-500/15 text-rose-300 border border-rose-500/30"><i class="fa-solid fa-lock mr-1"></i> ${tool.priceTransparency}</span>`
           : `<span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30"><i class="fa-solid fa-check mr-1"></i> ${tool.priceTransparency}</span>`;
 
-        // Category Crown Badge (Explicitly states which category it leads)
         const crownHtml = hasCrown
           ? `<div class="mb-2"><span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-extrabold bg-amber-500 text-slate-950 uppercase tracking-wide shadow"><i class="fa-solid fa-crown mr-1"></i> ${tool.categoryCrown}</span></div>`
           : '';
@@ -805,8 +788,6 @@
         card.innerHTML = `
           <div>
             ${crownHtml}
-
-            <!-- CARD TOP: Name + Score -->
             <div class="flex items-start justify-between gap-3 mb-3">
               <div>
                 <h3 class="text-lg sm:text-xl font-extrabold text-white tracking-tight leading-snug">${tool.name}</h3>
@@ -820,12 +801,10 @@
               </div>
             </div>
 
-            <!-- TRADE TAGS -->
             <div class="flex flex-wrap gap-1 mb-3">
               ${tradePills}
             </div>
 
-            <!-- CORE AUDIT FACTS (High Contrast Slate-200/White for Outdoor Glare) -->
             <div class="space-y-2 text-xs bg-slate-950 p-3.5 rounded-xl border border-slate-800 mb-3.5">
               <div>
                 <span class="text-slate-300 font-bold">Published Price:</span>
@@ -845,19 +824,16 @@
               </div>
             </div>
 
-            <!-- SINGLE CONCISE VERDICT (No duplicate 60-sec box) -->
             <p class="text-xs sm:text-[13px] text-slate-200 leading-relaxed mb-3.5">
               ${tool.summary}
             </p>
 
-            <!-- HIGH-CONTRAST OUTAGE LOG -->
             <div class="text-xs text-slate-200 bg-slate-950/90 px-3 py-2 rounded-lg border border-slate-800 mb-4">
               <i class="fa-solid fa-heart-pulse text-emerald-400 mr-1"></i>
               <strong class="text-white">Oct 2026 Status Audit:</strong> ${tool.outageAudit}
             </div>
           </div>
 
-          <!-- PINNED BOTTOM CTA (Uniform alignment across row) -->
           <div class="pt-3 border-t border-slate-800 mt-auto">
             <a href="${tool.ctaUrl}" target="_blank" rel="noopener ${tool.isAffiliate ? 'sponsored' : ''}" class="block w-full text-center ${hasCrown || tool.isAffiliate ? 'bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold' : 'bg-slate-800 hover:bg-slate-700 text-white font-bold border border-slate-700'} py-3 px-4 rounded-xl text-xs transition shadow">
               ${tool.ctaText} →
@@ -872,16 +848,17 @@
 
     function jumpToTrade(trade) {
       setTradeFilter(trade);
-      document.getElementById('benchmark').scrollIntoView({ behavior: 'smooth' });
+      const bench = document.getElementById('benchmark');
+      if (bench) bench.scrollIntoView({ behavior: 'smooth' });
     }
 
     function setTradeFilter(trade) {
       currentTrade = trade;
       document.querySelectorAll('.trade-btn').forEach(btn => {
         if (btn.getAttribute('data-trade') === trade) {
-          btn.className = "trade-btn px-3.5 py-2 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap";
+          btn.className = "trade-btn px-3.5 py-2 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap cursor-pointer";
         } else {
-          btn.className = "trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap";
+          btn.className = "trade-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer";
         }
       });
       applyAllFilters();
@@ -891,26 +868,28 @@
       currentCategory = cat;
       document.querySelectorAll('.cat-btn').forEach(btn => {
         if (btn.getAttribute('data-category') === cat) {
-          btn.className = "cat-btn px-3 py-1.5 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap";
+          btn.className = "cat-btn px-3 py-1.5 rounded-xl text-xs font-extrabold transition bg-amber-500 text-slate-950 whitespace-nowrap cursor-pointer";
         } else {
-          btn.className = "cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap";
+          btn.className = "cat-btn px-3 py-1.5 rounded-xl text-xs font-bold transition bg-slate-950 text-slate-200 hover:bg-slate-800 border border-slate-700 whitespace-nowrap cursor-pointer";
         }
       });
       applyAllFilters();
     }
 
     function applyAllFilters() {
-      const q = document.getElementById('toolSearch').value.trim().toLowerCase();
-      const sort = document.getElementById('toolSort').value;
+      const searchEl = document.getElementById('toolSearch');
+      const sortEl = document.getElementById('toolSort');
+      const q = searchEl ? searchEl.value.trim().toLowerCase() : '';
+      const sort = sortEl ? sortEl.value : 'score';
 
       let filtered = TOOLS_DATA.filter(t => {
         const matchesCat = currentCategory === 'All' || t.category === currentCategory;
-        const matchesTrade = currentTrade === 'All' || (t.trades && t.trades.includes(currentTrade));
+        const matchesTrade = currentTrade === 'All' || (t.trades && t.trades.indexOf(currentTrade) !== -1);
         const matchesQuery = !q ||
-          t.name.toLowerCase().includes(q) ||
-          t.summary.toLowerCase().includes(q) ||
-          t.integrations.toLowerCase().includes(q) ||
-          t.streetPricing.toLowerCase().includes(q);
+          t.name.toLowerCase().indexOf(q) !== -1 ||
+          t.summary.toLowerCase().indexOf(q) !== -1 ||
+          t.integrations.toLowerCase().indexOf(q) !== -1 ||
+          t.streetPricing.toLowerCase().indexOf(q) !== -1;
         return matchesCat && matchesTrade && matchesQuery;
       });
 
@@ -928,29 +907,34 @@
       const clearBtn = document.getElementById('clearFiltersBtn');
       const isFiltered = currentCategory !== 'All' || currentTrade !== 'All' || q !== '';
 
-      countEl.innerHTML = `Showing <span class="text-amber-400 font-extrabold">${filtered.length}</span> of ${TOOLS_DATA.length} audited tools` +
-        (currentTrade !== 'All' ? ` for <strong class="text-white">${currentTrade}</strong>` : '') +
-        (currentCategory !== 'All' ? ` in <strong class="text-white">${currentCategory}</strong>` : '');
+      if (countEl) {
+        countEl.innerHTML = `Showing <span class="text-amber-400 font-extrabold">${filtered.length}</span> of ${TOOLS_DATA.length} audited tools` +
+          (currentTrade !== 'All' ? ` for <strong class="text-white">${currentTrade}</strong>` : '') +
+          (currentCategory !== 'All' ? ` in <strong class="text-white">${currentCategory}</strong>` : '');
+      }
 
-      if (isFiltered) {
-        clearBtn.classList.remove('hidden');
-      } else {
-        clearBtn.classList.add('hidden');
+      if (clearBtn) {
+        if (isFiltered) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
       }
 
       renderTools(filtered);
     }
 
     function resetAllFilters() {
-      document.getElementById('toolSearch').value = '';
-      document.getElementById('toolSort').value = 'score';
+      const searchEl = document.getElementById('toolSearch');
+      const sortEl = document.getElementById('toolSort');
+      if (searchEl) searchEl.value = '';
+      if (sortEl) sortEl.value = 'score';
       currentTrade = 'All';
       currentCategory = 'All';
       setTradeFilter('All');
       setCategoryFilter('All');
     }
 
-    /* Calculator Two-Way Sync & Transparent Math */
     function syncCalc(field, source) {
       const map = {
         calls: ['calcCalls', 'calcCallsNum'],
@@ -958,23 +942,28 @@
         rate: ['calcRate', 'calcRateNum'],
         mins: ['calcMins', 'calcMinsNum']
       };
-      const [sliderId, numId] = map[field];
+      const pair = map[field];
+      if (!pair) return;
+      const sliderEl = document.getElementById(pair[0]);
+      const numEl = document.getElementById(pair[1]);
+      if (!sliderEl || !numEl) return;
+
       if (source === 'slider') {
-        document.getElementById(numId).value = document.getElementById(sliderId).value;
+        numEl.value = sliderEl.value;
       } else {
-        const val = parseInt(document.getElementById(numId).value, 10);
+        const val = parseFloat(numEl.value);
         if (!isNaN(val)) {
-          document.getElementById(sliderId).value = val;
+          sliderEl.value = val;
         }
       }
       runMpCalc();
     }
 
     function runMpCalc() {
-      const calls = Math.max(0, parseInt(document.getElementById('calcCallsNum').value, 10) || 0);
-      const ticket = Math.max(0, parseInt(document.getElementById('calcTicketNum').value, 10) || 0);
-      const ratePct = Math.min(100, Math.max(1, parseInt(document.getElementById('calcRateNum').value, 10) || 30));
-      const mins = Math.max(0, parseInt(document.getElementById('calcMinsNum').value, 10) || 0);
+      const calls = Math.max(0, parseFloat(document.getElementById('calcCallsNum').value) || 0);
+      const ticket = Math.max(0, parseFloat(document.getElementById('calcTicketNum').value) || 0);
+      const ratePct = Math.min(100, Math.max(1, parseFloat(document.getElementById('calcRateNum').value) || 30));
+      const mins = Math.max(0, parseFloat(document.getElementById('calcMinsNum').value) || 0);
 
       const lostJobs = calls * 4.33 * (ratePct / 100);
       const lostRev = Math.round(lostJobs * ticket);
@@ -984,7 +973,6 @@
       document.getElementById('calcRateLabel').textContent = ratePct + '%';
       document.getElementById('calcMinsHeader').textContent = mins.toLocaleString();
 
-      // Transparent ElevenAgents Math (No unexplained jumps)
       const usageCost = Math.round(mins * 0.08);
       let planNote = '';
       if (mins <= 75) {
@@ -1000,18 +988,19 @@
       document.getElementById('calcElevenCost').textContent = '~$' + usageCost + ' / mo';
       document.getElementById('calcElevenFormula').textContent = planNote;
 
-      // Sameday tier comparison at higher minutes
       const fleetCostText = mins <= 500 ? '$449–$500+ / mo' : '$789+ / mo (1,000m Scale)';
       document.getElementById('calcFleetCost').textContent = fleetCostText;
 
-      // Net line comparing Doing Nothing vs Self-Serve Stack ($97 GHL + ElevenAgents usage)
       const stackCost = 97 + usageCost;
       const netGain = Math.max(0, lostRev - stackCost);
       document.getElementById('calcNetSummary').textContent =
         `Net Verdict: Doing nothing loses $${lostRev.toLocaleString()}/mo. Fixing it with GoHighLevel ($97) + ElevenAgents (~$${usageCost}) costs ~$${stackCost}/mo — saving you +$${netGain.toLocaleString()}/mo net.`;
     }
 
-    // Boot
+    window.addEventListener('DOMContentLoaded', function() {
+      applyAllFilters();
+      runMpCalc();
+    });
     applyAllFilters();
     runMpCalc();
   </script>
