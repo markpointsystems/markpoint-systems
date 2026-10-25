@@ -86,6 +86,71 @@
       <option value="New Vendor Submission|--|New Category Audit">Don't see your tool? Submit a New Vendor for Audit</option>
     </select>
     <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition">
+      <!-- VENDOR CLAIM SELECTOR -->
+<div class="max-w-3xl mx-auto mb-10 bg-slate-900 border border-amber-500/40 rounded-2xl p-6 shadow-xl">
+  <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+    <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+      October 2026 Audit Cohort
+    </span>
+    <span class="text-xs text-slate-400">Instant Stripe Activation • Cancel Anytime</span>
+  </div>
+  <h2 class="text-xl font-bold text-white mb-2">Already Listed in Our 2026 Benchmark? Claim Your Card</h2>
+  <p class="text-sm text-slate-300 mb-4">
+    Select your software below to preview your live MarkPoint Score and unlock your Verified Partner badge, direct Free-Trial/Demo CTA button, or Category King exclusivity.
+  </p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
+    <select id="vendorClaimSelect" onchange="updateClaimPreview()" class="md:col-span-2 w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400">
+      <option value="">-- Select Your Audited Software Listing --</option>
+      <option value="Sameday AI|98|24/7 AI Voice Receptionists">Sameday AI (Current MP Score: 98/100 — Hold Expires Oct 28)</option>
+      <option value="Rosie AI|95|24/7 AI Voice Receptionists">Rosie AI (Current MP Score: 95/100 — Unclaimed)</option>
+      <option value="Synthflow AI|95|24/7 AI Voice Receptionists">Synthflow AI (Current MP Score: 95/100 — Unclaimed)</option>
+      <option value="Carly AI|94|Back-Office & AI Estimating">Carly AI (Current MP Score: 94/100 — Unclaimed)</option>
+      <option value="Handoff AI|93|AI Estimating & Takeoffs">Handoff AI (Current MP Score: 93/100 — Unclaimed)</option>
+      <option value="Avoca AI|92|24/7 AI Voice Receptionists">Avoca AI (Current MP Score: 92/100 — Sales-Gated Flag)</option>
+      <option value="QuoteIQ|92|AI Estimating & Takeoffs">QuoteIQ (Current MP Score: 92/100 — Unclaimed)</option>
+      <option value="Jobber AI|91|Speed-to-Lead & Field CRM">Jobber AI (Current MP Score: 91/100 — Unclaimed)</option>
+      <option value="Togal.AI|91|AI Estimating & Takeoffs">Togal.AI (Current MP Score: 91/100 — Unclaimed)</option>
+      <option value="Housecall Pro AI|90|Speed-to-Lead & Field CRM">Housecall Pro AI (Current MP Score: 90/100 — Unclaimed)</option>
+      <option value="Hover 3D|90|AI Estimating & Takeoffs">Hover 3D (Current MP Score: 90/100 — Unclaimed)</option>
+      <option value="LeadTruffle|89|Speed-to-Lead & Field CRM">LeadTruffle (Current MP Score: 89/100 — Sales-Gated Flag)</option>
+      <option value="ServiceTitan Max|88|Speed-to-Lead & Field CRM">ServiceTitan / Titan Intelligence (Current MP Score: 88/100)</option>
+      <option value="New Vendor Submission|--|New Category Audit">Don't see your tool? Submit a New Vendor for Audit</option>
+    </select>
+    <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition">
+      Unlock Listing ↓
+    </a>
+  </div>
+
+  <div id="claimPreviewBox" class="hidden mt-4 p-4 rounded-xl bg-slate-950 border border-emerald-500/40 text-sm text-slate-200">
+    <div class="flex items-center justify-between flex-wrap gap-2">
+      <div>
+        <span class="text-emerald-400 font-bold">✓ Listing Located:</span> 
+        <strong id="claimVendorName" class="text-white"></strong> 
+        <span class="text-slate-400">(<span id="claimVendorCat"></span> • MP Score: <span id="claimVendorScore" class="text-amber-400 font-bold"></span>/100)</span>
+      </div>
+      <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30">
+        Eligible for Verified Badge ($149/mo) or Category King ($499/mo)
+      </span>
+    </div>
+    <p class="text-xs text-slate-400 mt-2">
+      Select a tier below to activate via Stripe, or email <a href="mailto:admin@markpointsystems.com" class="text-amber-400 underline">admin@markpointsystems.com</a> to submit an official vendor verification note for your audit card.
+    </p>
+  </div>
+</div>
+
+<script>
+function updateClaimPreview() {
+  const sel = document.getElementById('vendorClaimSelect').value;
+  const box = document.getElementById('claimPreviewBox');
+  if (!sel) { box.classList.add('hidden'); return; }
+  const [name, score, cat] = sel.split('|');
+  document.getElementById('claimVendorName').textContent = name;
+  document.getElementById('claimVendorScore').textContent = score;
+  document.getElementById('claimVendorCat').textContent = cat;
+  box.classList.remove('hidden');
+}
+</script>
       Unlock Selected Listing ↓
     </a>
   </div>
