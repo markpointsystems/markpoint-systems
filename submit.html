@@ -1,1 +1,328 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIiBjbGFzcz0ic2Nyb2xsLXNtb290aCI+CjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgPHRpdGxlPkNsYWltIFlvdXIgTGlzdGluZyB8IE1hcmtQb2ludCBWZXJpZmllZCBQYXJ0bmVyICYgQ2F0ZWdvcnkgS2luZzwvdGl0bGU+CiAgPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkNsYWltIHlvdXIgTWFya1BvaW50IGNhcmQsIHZlcmlmeSB5b3VyIHByaWNpbmcsIGFuZCBzcG9uc29yIHlvdXIgY2F0ZWdvcnk6IFZlcmlmaWVkIFBhcnRuZXIgJDE0OS9tbywgQ2F0ZWdvcnkgS2luZyAkNDk5L21vLiBTY29yZXMgYXJlIG5ldmVyIGZvciBzYWxlLiI+CiAgPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJDbGFpbSBZb3VyIExpc3RpbmcgfCBNYXJrUG9pbnQgVmVyaWZpZWQgUGFydG5lciAmIENhdGVnb3J5IEtpbmciPgogIDxtZXRhIHByb3BlcnR5PSJvZzpkZXNjcmlwdGlvbiIgY29udGVudD0iQ2xhaW0geW91ciBNYXJrUG9pbnQgY2FyZCwgdmVyaWZ5IHlvdXIgcHJpY2luZywgYW5kIHNwb25zb3IgeW91ciBjYXRlZ29yeTogVmVyaWZpZWQgUGFydG5lciAkMTQ5L21vLCBDYXRlZ29yeSBLaW5nICQ0OTkvbW8uIFNjb3JlcyBhcmUgbmV2ZXIgZm9yIHNhbGUuIj4KICA8bWV0YSBwcm9wZXJ0eT0ib2c6dHlwZSIgY29udGVudD0id2Vic2l0ZSI+CiAgPG1ldGEgcHJvcGVydHk9Im9nOnVybCIgY29udGVudD0iaHR0cHM6Ly9tYXJrcG9pbnRzeXN0ZW1zLmNvbS9zdWJtaXQuaHRtbCI+CiAgPG1ldGEgbmFtZT0idHdpdHRlcjpjYXJkIiBjb250ZW50PSJzdW1tYXJ5Ij4KICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG4udGFpbHdpbmRjc3MuY29tIj48L3NjcmlwdD4KICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL2ZvbnQtYXdlc29tZS82LjQuMC9jc3MvYWxsLm1pbi5jc3MiPgogIDxzY3JpcHQ+CiAgICBjb25zdCBTVFJJUEVfVkVSSUZJRURfMTQ5X1VSTCA9ICJodHRwczovL2J1eS5zdHJpcGUuY29tL2NOaWJKM2VCdzJQQzREWjgzRGM3dTAwIjsKICAgIGNvbnN0IFNUUklQRV9LSU5HXzQ5OV9VUkwgICAgID0gImh0dHBzOi8vYnV5LnN0cmlwZS5jb20vM2NJNGdCZ0pFMUx5YjJuM05uYzd1MDEiOwogIDwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5IGNsYXNzPSJiZy1bIzA5MEQxNl0gdGV4dC1zbGF0ZS0xMDAgbWluLWgtc2NyZWVuIGZsZXggZmxleC1jb2wgZm9udC1zYW5zIGFudGlhbGlhc2VkIHNlbGVjdGlvbjpiZy1hbWJlci01MDAgc2VsZWN0aW9uOnRleHQtc2xhdGUtOTUwIj4KCiAgPCEtLSBTVElDS1kgSEVBREVSIFdJVEggSU5MSU5FIE1QIEVNQkxFTSBTVkcgLS0+CiAgPGhlYWRlciBjbGFzcz0ic3RpY2t5IHRvcC0wIHotNTAgYmctWyMwOTBEMTZdLzk1IGJhY2tkcm9wLWJsdXItbWQgYm9yZGVyLWIgYm9yZGVyLXNsYXRlLTgwMCI+CiAgICA8ZGl2IGNsYXNzPSJtYXgtdy03eGwgbXgtYXV0byBweC00IHNtOnB4LTYgbGc6cHgtOCBoLTE2IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiI+CiAgICAgIDxhIGhyZWY9Ii8iIGNsYXNzPSJmbGV4IGl0ZW1zLWNlbnRlciBzcGFjZS14LTMgZ3JvdXAiPgogICAgICAgIDxzdmcgY2xhc3M9InctMTAgaC0xMCBmbGV4LXNocmluay0wIiB2aWV3Qm94PSIwIDAgNjQgNjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzExMTgyNyIgc3Ryb2tlPSIjMzc0MTUxIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICAgICAgPHBhdGggZD0iTTEwIDQ2VjE4SDE2TDI0IDMxTDMyIDE4SDM4VjQ2SDMyLjVWMjcuNUwyNCA0MUwxNS41IDI3LjVWNDZIMTBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkU3ViKSIvPgogICAgICAgICAgPHBhdGggZD0iTTQxIDQ2VjE4SDUwQzU0LjUgMTggNTcuNSAyMC44IDU3LjUgMjUuNUM1Ny41IDMwLjIgNTQuNSAzMyA1MCAzM0g0Ni41VjQ2SDQxWk00Ni41IDI4LjVINDkuNUM1MS41IDI4LjUgNTIuNSAyNy4zIDUyLjUgMjUuNUM1Mi41IDIzLjcgNTEuNSAyMi41IDQ5LjUgMjIuNUg0Ni41VjI4LjVaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkU3ViKSIvPgogICAgICAgICAgPGNpcmNsZSBjeD0iNDguNSIgY3k9IjI1LjUiIHI9IjMiIHN0cm9rZT0iIzEwQjk4MSIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KICAgICAgICAgIDxjaXJjbGUgY3g9IjQ4LjUiIGN5PSIyNS41IiByPSIxIiBmaWxsPSIjMTBCOTgxIi8+CiAgICAgICAgICA8cGF0aCBkPSJNMzYgMzYuNUw0MyA0My41TDU4IDI0IiBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnb2xkR3JhZFN1YiIgeDE9IjEwIiB5MT0iMTgiIHgyPSI1NiIgeTI9IjQ2IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZERTY4QSIvPgogICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjRjU5RTBCIi8+CiAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjQjQ1MzA5Ii8+CiAgICAgICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgICA8L2RlZnM+CiAgICAgICAgPC9zdmc+CiAgICAgICAgPGRpdiBjbGFzcz0iZmxleCBmbGV4LWNvbCI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJ0ZXh0LWJhc2Ugc206dGV4dC1sZyBmb250LWJsYWNrIHRyYWNraW5nLXdpZGVyIGxlYWRpbmctbm9uZSI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LWFtYmVyLTQwMCI+TUFSS1BPSU5UPC9zcGFuPiA8c3BhbiBjbGFzcz0idGV4dC1lbWVyYWxkLTQwMCI+U1k8L3NwYW4+PHNwYW4gY2xhc3M9InRleHQtd2hpdGUiPlNUPC9zcGFuPjxzcGFuIGNsYXNzPSJ0ZXh0LWVtZXJhbGQtNDAwIj5FTVM8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LVsxMHB4XSB0ZXh0LXNsYXRlLTMwMCB0cmFja2luZy13aWRlc3QgdXBwZXJjYXNlIG10LTAuNSBmb250LXNlbWlib2xkIj5WZW5kb3IgJmFtcDsgUGFydG5lciBQb3J0YWw8L3NwYW4+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvYT4KCiAgICAgIDxuYXYgY2xhc3M9ImZsZXggaXRlbXMtY2VudGVyIHNwYWNlLXgtNCI+CiAgICAgICAgPGEgaHJlZj0iLyIgY2xhc3M9InRleHQteHMgc206dGV4dC1zbSB0ZXh0LXNsYXRlLTIwMCBob3Zlcjp0ZXh0LWFtYmVyLTQwMCBmb250LXNlbWlib2xkIHRyYW5zaXRpb24iPuKGkCBCYWNrIHRvIERpcmVjdG9yeTwvYT4KICAgICAgICA8YSBocmVmPSIjcHJpY2luZy10aWVycyIgY2xhc3M9ImJnLWFtYmVyLTUwMCBob3ZlcjpiZy1hbWJlci00MDAgdGV4dC1zbGF0ZS05NTAgdGV4dC14cyBzbTp0ZXh0LXNtIGZvbnQtZXh0cmFib2xkIHB4LTQgcHktMiByb3VuZGVkLXhsIHRyYW5zaXRpb24gc2hhZG93Ij4KICAgICAgICAgIFNwb25zb3JzaGlwIFRpZXJzCiAgICAgICAgPC9hPgogICAgICA8L25hdj4KICAgIDwvZGl2PgogIDwvaGVhZGVyPgoKICA8IS0tIEhFUk8gLS0+CiAgPHNlY3Rpb24gY2xhc3M9InB0LTEyIHBiLTggcHgtNCBzbTpweC02IGxnOnB4LTggbWF4LXctNXhsIG14LWF1dG8gdGV4dC1jZW50ZXIiPgogICAgPGRpdiBjbGFzcz0iaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIHNwYWNlLXgtMiBweC0zLjUgcHktMS41IHJvdW5kZWQtZnVsbCBiZy1hbWJlci01MDAvMTAgYm9yZGVyIGJvcmRlci1hbWJlci01MDAvMzAgdGV4dC1hbWJlci0zMDAgdGV4dC14cyBmb250LWJvbGQgbWItNCI+CiAgICAgIDxpIGNsYXNzPSJmYS1zb2xpZCBmYS1zY2FsZS1iYWxhbmNlZCI+PC9pPgogICAgICA8c3Bhbj5JbnN0aXR1dGlvbmFsIEVkaXRvcmlhbCBJbnRlZ3JpdHkg4oCiIFNjb3JlcyBOZXZlciBTb2xkPC9zcGFuPgogICAgPC9kaXY+CiAgICA8aDEgY2xhc3M9InRleHQtM3hsIHNtOnRleHQtNXhsIGZvbnQtZXh0cmFib2xkIHRyYWNraW5nLXRpZ2h0IHRleHQtd2hpdGUgbWF4LXctM3hsIG14LWF1dG8gbGVhZGluZy10aWdodCI+CiAgICAgIENsYWltIFlvdXIgQXVkaXRlZCBCZW5jaG1hcmsgQ2FyZCBvciA8c3BhbiBjbGFzcz0idGV4dC1hbWJlci00MDAgd2hpdGVzcGFjZS1ub3dyYXAiPlBhcnRuZXIgV2l0aCBVcy48L3NwYW4+CiAgICA8L2gxPgogICAgPHAgY2xhc3M9Im10LTQgdGV4dC1zbSBzbTp0ZXh0LWJhc2UgdGV4dC1zbGF0ZS0yMDAgbWF4LXctMnhsIG14LWF1dG8iPgogICAgICBNYXJrUG9pbnQgU3lzdGVtcyBwcm92aWRlcyBpbmRlcGVuZGVudCBwZXJmb3JtYW5jZSwgcHJpY2luZyB0cmFuc3BhcmVuY3ksIGFuZCB1cHRpbWUgYmVuY2htYXJraW5nIGZvciB0aGUgc2tpbGxlZCB0cmFkZXMuIFZlbmRvcnMgY2FuIHZlcmlmeSBkYXRhIGZvciBmcmVlIG9yIHNlY3VyZSBmZWF0dXJlZCBkaXJlY3RvcnkgcGxhY2VtZW50LgogICAgPC9wPgogIDwvc2VjdGlvbj4KCiAgPCEtLSBDTEFJTSAmIFJJR0hULU9GLVJFUExZIFNFTEVDVE9SIC0tPgogIDxzZWN0aW9uIGNsYXNzPSJtYXgtdy00eGwgbXgtYXV0byBweC00IHNtOnB4LTYgbGc6cHgtOCBtYi0xMiI+CiAgICA8ZGl2IGNsYXNzPSJiZy1zbGF0ZS05MDAgYm9yZGVyIGJvcmRlci1hbWJlci01MDAvNDAgcm91bmRlZC0yeGwgcC02IHNoYWRvdy14bCI+CiAgICAgIDxkaXYgY2xhc3M9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBmbGV4LXdyYXAgZ2FwLTIgbWItMyI+CiAgICAgICAgPHNwYW4gY2xhc3M9InRleHQteHMgZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBweC0yLjUgcHktMSByb3VuZGVkIGJnLWFtYmVyLTUwMC8yMCB0ZXh0LWFtYmVyLTMwMCBib3JkZXIgYm9yZGVyLWFtYmVyLTUwMC8zMCI+CiAgICAgICAgICBPY3RvYmVyIDIwMjYgQXVkaXQgQ29ob3J0CiAgICAgICAgPC9zcGFuPgogICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LXhzIHRleHQtc2xhdGUtMzAwIGZvbnQtbWVkaXVtIj5JbnN0YW50IFN0cmlwZSBBY3RpdmF0aW9uIOKAoiBDYW5jZWwgQW55dGltZTwvc3Bhbj4KICAgICAgPC9kaXY+CiAgICAgIDxoMiBjbGFzcz0idGV4dC14bCBmb250LWJvbGQgdGV4dC13aGl0ZSBtYi0yIj5BbHJlYWR5IExpc3RlZCBpbiBPdXIgMjAyNiBCZW5jaG1hcms/IENsYWltIFlvdXIgQ2FyZDwvaDI+CiAgICAgIDxwIGNsYXNzPSJ0ZXh0LXhzIHNtOnRleHQtc20gdGV4dC1zbGF0ZS0yMDAgbWItNCI+CiAgICAgICAgU2VsZWN0IHlvdXIgc29mdHdhcmUgYmVsb3cgdG8gcHJldmlldyB5b3VyIGxpdmUgTWFya1BvaW50IFNjb3JlIGFuZCB1bmxvY2sgeW91ciBWZXJpZmllZCBQYXJ0bmVyIHBsYWNlbWVudCwgZGlyZWN0IEZyZWUtVHJpYWwvRGVtbyBDVEEgYnV0dG9uLCBvciBDYXRlZ29yeSBLaW5nIGV4Y2x1c2l2aXR5LgogICAgICA8L3A+CiAgICAgIAogICAgICA8ZGl2IGNsYXNzPSJncmlkIGdyaWQtY29scy0xIG1kOmdyaWQtY29scy0zIGdhcC0zIGl0ZW1zLWNlbnRlciI+CiAgICAgICAgPHNlbGVjdCBpZD0idmVuZG9yQ2xhaW1TZWxlY3QiIG9uY2hhbmdlPSJ1cGRhdGVDbGFpbVByZXZpZXcoKSIgY2xhc3M9Im1kOmNvbC1zcGFuLTIgdy1mdWxsIGJnLXNsYXRlLTk1MCBib3JkZXIgYm9yZGVyLXNsYXRlLTcwMCByb3VuZGVkLXhsIHB4LTQgcHktMyB0ZXh0LXdoaXRlIHRleHQtc20gZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOmJvcmRlci1hbWJlci00MDAgY3Vyc29yLXBvaW50ZXIiPgogICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj4tLSBTZWxlY3QgWW91ciBBdWRpdGVkIFNvZnR3YXJlIExpc3RpbmcgLS08L29wdGlvbj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9IlNhbWVkYXkgQUl8OTh8MjQvNyBBSSBWb2ljZSBSZWNlcHRpb25pc3RzIj5TYW1lZGF5IEFJIChDdXJyZW50IE1QIFNjb3JlOiA5OC8xMDAg4oCUIEhvbGQgRXhwaXJlcyBPY3QgMjgpPC9vcHRpb24+CiAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJSb3NpZSBBSXw5NXwyNC83IEFJIFZvaWNlIFJlY2VwdGlvbmlzdHMiPlJvc2llIEFJIChDdXJyZW50IE1QIFNjb3JlOiA5NS8xMDAg4oCUIFVuY2xhaW1lZCk8L29wdGlvbj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9IlN5bnRoZmxvdyBBSXw5NXwyNC83IEFJIFZvaWNlIFJlY2VwdGlvbmlzdHMiPlN5bnRoZmxvdyBBSSAoQ3VycmVudCBNUCBTY29yZTogOTUvMTAwIOKAlCBVbmNsYWltZWQpPC9vcHRpb24+CiAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJDYXJseSBBSXw5NHxCYWNrLU9mZmljZSAmIEFJIEVzdGltYXRpbmciPkNhcmx5IEFJIChDdXJyZW50IE1QIFNjb3JlOiA5NC8xMDAg4oCUIFVuY2xhaW1lZCk8L29wdGlvbj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9IkhhbmRvZmYgQUl8OTN8QUkgRXN0aW1hdGluZyAmIFRha2VvZmZzIj5IYW5kb2ZmIEFJIChDdXJyZW50IE1QIFNjb3JlOiA5My8xMDAg4oCUIFVuY2xhaW1lZCk8L29wdGlvbj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9IkF2b2NhIEFJfDkyfDI0LzcgQUkgVm9pY2UgUmVjZXB0aW9uaXN0cyI+QXZvY2EgQUkgKEN1cnJlbnQgTVAgU2NvcmU6IDkyLzEwMCDigJQgU2FsZXMtR2F0ZWQgRmxhZyk8L29wdGlvbj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9IlF1b3RlSVF8OTJ8QUkgRXN0aW1hdGluZyAmIFRha2VvZmZzIj5RdW90ZUlRIChDdXJyZW50IE1QIFNjb3JlOiA5Mi8xMDAg4oCUIFVuY2xhaW1lZCk8L29wdGlvbj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9IkpvYmJlciBBSXw5MXxTcGVlZC10by1MZWFkICYgRmllbGQgQ1JNIj5Kb2JiZXIgQUkgKEN1cnJlbnQgTVAgU2NvcmU6IDkxLzEwMCDigJQgVW5jbGFpbWVkKTwvb3B0aW9uPgogICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iVG9nYWwuQUl8OTF8QUkgRXN0aW1hdGluZyAmIFRha2VvZmZzIj5Ub2dhbC5BSSAoQ3VycmVudCBNUCBTY29yZTogOTEvMTAwIOKAlCBVbmNsYWltZWQpPC9vcHRpb24+CiAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJIb3VzZWNhbGwgUHJvIEFJfDkwfFNwZWVkLXRvLUxlYWQgJiBGaWVsZCBDUk0iPkhvdXNlY2FsbCBQcm8gQUkgKEN1cnJlbnQgTVAgU2NvcmU6IDkwLzEwMCDigJQgVW5jbGFpbWVkKTwvb3B0aW9uPgogICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iSG92ZXIgM0R8OTB8QUkgRXN0aW1hdGluZyAmIFRha2VvZmZzIj5Ib3ZlciAzRCAoQ3VycmVudCBNUCBTY29yZTogOTAvMTAwIOKAlCBVbmNsYWltZWQpPC9vcHRpb24+CiAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJMZWFkVHJ1ZmZsZXw4OXxTcGVlZC10by1MZWFkICYgRmllbGQgQ1JNIj5MZWFkVHJ1ZmZsZSAoQ3VycmVudCBNUCBTY29yZTogODkvMTAwIOKAlCBTYWxlcy1HYXRlZCBGbGFnKTwvb3B0aW9uPgogICAgICAgICAgPG9wdGlvbiB2YWx1ZT0iU2VydmljZVRpdGFuIE1heHw4OHxTcGVlZC10by1MZWFkICYgRmllbGQgQ1JNIj5TZXJ2aWNlVGl0YW4gLyBUaXRhbiBJbnRlbGxpZ2VuY2UgKEN1cnJlbnQgTVAgU2NvcmU6IDg4LzEwMCk8L29wdGlvbj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9Ik5ldyBWZW5kb3IgU3VibWlzc2lvbnwtLXxOZXcgQ2F0ZWdvcnkgQXVkaXQiPkRvbid0IHNlZSB5b3VyIHRvb2w/IFN1Ym1pdCBhIE5ldyBWZW5kb3IgZm9yIEF1ZGl0PC9vcHRpb24+CiAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgPGEgaHJlZj0iI3ByaWNpbmctdGllcnMiIGNsYXNzPSJ3LWZ1bGwgdGV4dC1jZW50ZXIgYmctYW1iZXItNTAwIGhvdmVyOmJnLWFtYmVyLTQwMCB0ZXh0LXNsYXRlLTk1MCBmb250LWV4dHJhYm9sZCBweS0zIHB4LTQgcm91bmRlZC14bCB0ZXh0LXNtIHRyYW5zaXRpb24gc2hhZG93Ij4KICAgICAgICAgIFVubG9jayBMaXN0aW5nIOKGkwogICAgICAgIDwvYT4KICAgICAgPC9kaXY+CgogICAgICA8ZGl2IGlkPSJjbGFpbVByZXZpZXdCb3giIGNsYXNzPSJoaWRkZW4gbXQtNCBwLTQgcm91bmRlZC14bCBiZy1zbGF0ZS05NTAgYm9yZGVyIGJvcmRlci1lbWVyYWxkLTUwMC80MCB0ZXh0LXNtIHRleHQtc2xhdGUtMjAwIj4KICAgICAgICA8ZGl2IGNsYXNzPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZmxleC13cmFwIGdhcC0yIj4KICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LWVtZXJhbGQtNDAwIGZvbnQtYm9sZCI+4pyTIExpc3RpbmcgTG9jYXRlZDo8L3NwYW4+IAogICAgICAgICAgICA8c3Ryb25nIGlkPSJjbGFpbVZlbmRvck5hbWUiIGNsYXNzPSJ0ZXh0LXdoaXRlIj48L3N0cm9uZz4gCiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LXNsYXRlLTMwMCI+KDxzcGFuIGlkPSJjbGFpbVZlbmRvckNhdCI+PC9zcGFuPiDigKIgTVAgU2NvcmU6IDxzcGFuIGlkPSJjbGFpbVZlbmRvclNjb3JlIiBjbGFzcz0idGV4dC1hbWJlci00MDAgZm9udC1ib2xkIj48L3NwYW4+LzEwMCk8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LXhzIGJnLWVtZXJhbGQtNTAwLzIwIHRleHQtZW1lcmFsZC0zMDAgcHgtMi41IHB5LTEgcm91bmRlZCBib3JkZXIgYm9yZGVyLWVtZXJhbGQtNTAwLzMwIGZvbnQtc2VtaWJvbGQiPgogICAgICAgICAgICBFbGlnaWJsZSBmb3IgVmVyaWZpZWQgUGFydG5lciAoJDE0OS9tbykgb3IgQ2F0ZWdvcnkgS2luZyAoJDQ5OS9tbykKICAgICAgICAgIDwvc3Bhbj4KICAgICAgICA8L2Rpdj4KICAgICAgICA8cCBjbGFzcz0idGV4dC14cyB0ZXh0LXNsYXRlLTMwMCBtdC0yIj4KICAgICAgICAgIFNlbGVjdCBhIHRpZXIgYmVsb3cgdG8gYWN0aXZhdGUgdmlhIFN0cmlwZSwgb3IgZW1haWwgPGEgaHJlZj0ibWFpbHRvOnZlbmRvcnNAbWFya3BvaW50c3lzdGVtcy5jb20iIGNsYXNzPSJ0ZXh0LWFtYmVyLTQwMCB1bmRlcmxpbmUgZm9udC1zZW1pYm9sZCI+dmVuZG9yc0BtYXJrcG9pbnRzeXN0ZW1zLmNvbTwvYT4gdG8gc3VibWl0IGFuIG9mZmljaWFsIDEtc2VudGVuY2UgdmVuZG9yIHZlcmlmaWNhdGlvbiBub3RlIGZvciB5b3VyIGF1ZGl0IGNhcmQgYXQgJDAgY29zdC4KICAgICAgICA8L3A+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgPC9zZWN0aW9uPgoKICA8IS0tIFNQT05TT1JTSElQIFRJRVJTIFNFQ1RJT04gLS0+CiAgPHNlY3Rpb24gaWQ9InByaWNpbmctdGllcnMiIGNsYXNzPSJtYXgtdy02eGwgbXgtYXV0byBweC00IHNtOnB4LTYgbGc6cHgtOCBtYi0xNiI+CiAgICA8ZGl2IGNsYXNzPSJ0ZXh0LWNlbnRlciBtYi0xMCI+CiAgICAgIDxoMiBjbGFzcz0idGV4dC0yeGwgc206dGV4dC0zeGwgZm9udC1leHRyYWJvbGQgdGV4dC13aGl0ZSI+RGlyZWN0IEIyQiBEaXJlY3RvcnkgU3BvbnNvcnNoaXBzPC9oMj4KICAgICAgPHAgY2xhc3M9InRleHQteHMgc206dGV4dC1zbSB0ZXh0LXNsYXRlLTMwMCBtdC0yIj4KICAgICAgICBTZWxmLXNlcnZlIG1vbnRobHkgYmlsbGluZyBwb3dlcmVkIGJ5IFN0cmlwZS4gQ2FuY2VsIGFueXRpbWUgd2l0aCBvbmUgY2xpY2suCiAgICAgIDwvcD4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9ImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLTIgZ2FwLTggaXRlbXMtc3RyZXRjaCBtYXgtdy00eGwgbXgtYXV0byI+CiAgICAgIAogICAgICA8IS0tIFRJRVIgMTogVkVSSUZJRUQgUEFSVE5FUiBCQURHRSAtLT4KICAgICAgPGRpdiBjbGFzcz0iYmctc2xhdGUtOTAwIGJvcmRlciBib3JkZXItc2xhdGUtODAwIGhvdmVyOmJvcmRlci1lbWVyYWxkLTUwMC81MCByb3VuZGVkLTJ4bCBwLTYgc206cC04IGZsZXggZmxleC1jb2wganVzdGlmeS1iZXR3ZWVuIHNoYWRvdy14bCB0cmFuc2l0aW9uIj4KICAgICAgICA8ZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZmxleCBqdXN0aWZ5LWJldHdlZW4gaXRlbXMtY2VudGVyIG1iLTQiPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0icHgtMyBweS0xIHJvdW5kZWQtZnVsbCB0ZXh0LXhzIGZvbnQtYm9sZCBiZy1lbWVyYWxkLTUwMC8yMCB0ZXh0LWVtZXJhbGQtMzAwIGJvcmRlciBib3JkZXItZW1lcmFsZC01MDAvMzAgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIj4KICAgICAgICAgICAgICBNYXJrUG9pbnQgVmVyaWZpZWTihKIKICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC14cyB0ZXh0LXNsYXRlLTMwMCBmb250LW1lZGl1bSI+TW9udGhseSBSZWN1cnJpbmc8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9Im1iLTYiPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC00eGwgZm9udC1leHRyYWJvbGQgdGV4dC13aGl0ZSI+JDE0OTwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9InRleHQtc2xhdGUtMzAwIHRleHQtc20gZm9udC1tZWRpdW0iPi8gbW9udGg8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxwIGNsYXNzPSJ0ZXh0LXhzIHNtOnRleHQtc20gdGV4dC1zbGF0ZS0yMDAgbWItNiI+CiAgICAgICAgICAgIERlc2lnbmVkIGZvciBoaWdoLXBlcmZvcm1pbmcgc29mdHdhcmUgcGxhdGZvcm1zIHRoYXQgd2FudCB0byBjb252ZXJ0IGhpZ2gtaW50ZW50IGNvbnRyYWN0b3IgdHJhZmZpYyBkaXJlY3RseSBmcm9tIHRoZWlyIGJlbmNobWFyayBjYXJkLgogICAgICAgICAgPC9wPgoKICAgICAgICAgIDx1bCBjbGFzcz0ic3BhY2UteS0zIHRleHQteHMgc206dGV4dC1zbSB0ZXh0LXNsYXRlLTIwMCBtYi04Ij4KICAgICAgICAgICAgPGxpIGNsYXNzPSJmbGV4IGl0ZW1zLXN0YXJ0Ij4KICAgICAgICAgICAgICA8aSBjbGFzcz0iZmEtc29saWQgZmEtY2hlY2sgdGV4dC1lbWVyYWxkLTQwMCBtdC0xIG1yLTIuNSI+PC9pPgogICAgICAgICAgICAgIDxzcGFuPjxzdHJvbmc+TWFya1BvaW50IFZlcmlmaWVk4oSiIFBhcnRuZXIgQmFkZ2U6PC9zdHJvbmc+IE9mZmljaWFsIHZlcmlmaWVkIHBhcnRuZXIgc3RhdHVzIG9uIHlvdXIgY2FyZC48L3NwYW4+CiAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgIDxsaSBjbGFzcz0iZmxleCBpdGVtcy1zdGFydCI+CiAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhLXNvbGlkIGZhLWNoZWNrIHRleHQtZW1lcmFsZC00MDAgbXQtMSBtci0yLjUiPjwvaT4KICAgICAgICAgICAgICA8c3Bhbj48c3Ryb25nPkRpcmVjdCBPdXRib3VuZCBDVEEgQnV0dG9uOjwvc3Ryb25nPiBTZW5kIGNvbnRyYWN0b3JzIHN0cmFpZ2h0IHRvIHlvdXIgRnJlZSBUcmlhbCBvciBEZW1vIGJvb2tpbmcgVVJMLjwvc3Bhbj4KICAgICAgICAgICAgPC9saT4KICAgICAgICAgICAgPGxpIGNsYXNzPSJmbGV4IGl0ZW1zLXN0YXJ0Ij4KICAgICAgICAgICAgICA8aSBjbGFzcz0iZmEtc29saWQgZmEtY2hlY2sgdGV4dC1lbWVyYWxkLTQwMCBtdC0xIG1yLTIuNSI+PC9pPgogICAgICAgICAgICAgIDxzcGFuPjxzdHJvbmc+T2ZmaWNpYWwgVmVuZG9yIENvbnRleHQgTm90ZTo8L3N0cm9uZz4gUHVibGlzaCB5b3VyIHZlcmlmaWVkIHVwdGltZSwgY3VzdG9tZXIgZ3VhcmFudGVlLCBhbmQgb25ib2FyZGluZyBzcGVjcy48L3NwYW4+CiAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgIDxsaSBjbGFzcz0iZmxleCBpdGVtcy1zdGFydCI+CiAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhLXNvbGlkIGZhLWNoZWNrIHRleHQtZW1lcmFsZC00MDAgbXQtMSBtci0yLjUiPjwvaT4KICAgICAgICAgICAgICA8c3Bhbj48c3Ryb25nPk5vIFNjb3JlIEFsdGVyYXRpb24gR3VhcmFudGVlOjwvc3Ryb25nPiBNYXJrUG9pbnQgU2NvcmVzIHJlbWFpbiAxMDAlIGluZGVwZW5kZW50IGFuZCBwcm90ZWN0ZWQuPC9zcGFuPgogICAgICAgICAgICA8L2xpPgogICAgICAgICAgPC91bD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdj4KICAgICAgICAgIDxhIGlkPSJzdHJpcGVWZXJpZmllZEJ0biIgaHJlZj0ibWFpbHRvOnBhcnRuZXJzQG1hcmtwb2ludHN5c3RlbXMuY29tP3N1YmplY3Q9QWN0aXZhdGUlMjBNYXJrUG9pbnQlMjBWZXJpZmllZCUyMFBhcnRuZXIlMjAoJTI0MTQ5JTJGbW8pIiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub29wZW5lciIgY2xhc3M9ImJsb2NrIHctZnVsbCB0ZXh0LWNlbnRlciBiZy1lbWVyYWxkLTUwMCBob3ZlcjpiZy1lbWVyYWxkLTQwMCB0ZXh0LXNsYXRlLTk1MCBmb250LWV4dHJhYm9sZCBweS0zLjUgcHgtNiByb3VuZGVkLXhsIHRleHQtc20gdHJhbnNpdGlvbiBzaGFkb3ciPgogICAgICAgICAgICBDbGFpbSBWZXJpZmllZCBQYXJ0bmVyICgkMTQ5L21vKSDihpIKICAgICAgICAgIDwvYT4KICAgICAgICAgIDxwIGNsYXNzPSJ0ZXh0LVsxMXB4XSB0ZXh0LXNsYXRlLTMwMCB0ZXh0LWNlbnRlciBtdC0yLjUiPkluc3RhbnQgU3RyaXBlIGNoZWNrb3V0LiBObyBsb25nLXRlcm0gY29udHJhY3QuPC9wPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KCiAgICAgIDwhLS0gVElFUiAyOiBDQVRFR09SWSBLSU5HIFNQT05TT1IgLS0+CiAgICAgIDxkaXYgY2xhc3M9ImJnLXNsYXRlLTkwMCBib3JkZXItMiBib3JkZXItYW1iZXItNTAwIHJvdW5kZWQtMnhsIHAtNiBzbTpwLTggZmxleCBmbGV4LWNvbCBqdXN0aWZ5LWJldHdlZW4gc2hhZG93LTJ4bCByZWxhdGl2ZSI+CiAgICAgICA8ZGl2IGNsYXNzPSJhYnNvbHV0ZSAtdG9wLTMgbGVmdC0xLzIgdHJhbnNmb3JtIC10cmFuc2xhdGUteC0xLzIgdy1tYXgiPgogIDxzcGFuIGNsYXNzPSJpbmxpbmUtYmxvY2sgcHgtMy41IHB5LTEgcm91bmRlZC1mdWxsIHRleHQtWzExcHhdIGZvbnQtYmxhY2sgYmctYW1iZXItNTAwIHRleHQtc2xhdGUtOTUwIHVwcGVyY2FzZSB0cmFja2luZy13aWRlIHNoYWRvdyB3aGl0ZXNwYWNlLW5vd3JhcCI+CiAgICBFeGNsdXNpdmUgIzEgQ2F0ZWdvcnkgU2xvdAogIDwvc3Bhbj4KPC9kaXY+CgogICAgICAgIDxkaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmbGV4IGp1c3RpZnktYmV0d2VlbiBpdGVtcy1jZW50ZXIgbWItNCBtdC0yIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9InB4LTMgcHktMSByb3VuZGVkLWZ1bGwgdGV4dC14cyBmb250LWJvbGQgYmctYW1iZXItNTAwLzIwIHRleHQtYW1iZXItMzAwIGJvcmRlciBib3JkZXItYW1iZXItNTAwLzMwIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciI+CiAgICAgICAgICAgICAgQ2F0ZWdvcnkgS2luZ+KEogogICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LXhzIHRleHQtc2xhdGUtMzAwIGZvbnQtbWVkaXVtIj5TdHJpY3RseSAxIFBlciBDYXRlZ29yeTwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0ibWItNiI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LTR4bCBmb250LWV4dHJhYm9sZCB0ZXh0LXdoaXRlIj4kNDk5PC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC1zbGF0ZS0zMDAgdGV4dC1zbSBmb250LW1lZGl1bSI+LyBtb250aDwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPHAgY2xhc3M9InRleHQteHMgc206dGV4dC1zbSB0ZXh0LXNsYXRlLTIwMCBtYi02Ij4KICAgICAgICAgICAgVGhlIG1hcnF1ZWUgaGVhZGVyIHBvc2l0aW9uLiBEb21pbmF0ZXMgY2F0ZWdvcnkgZmlsdGVyaW5nIGFuZCBzZWN1cmVzIHRoZSBnb2xkIENhdGVnb3J5IEtpbmcgY3Jvd24gb24gTWFya1BvaW50IFN5c3RlbXMuCiAgICAgICAgICA8L3A+CgogICAgICAgICAgPHVsIGNsYXNzPSJzcGFjZS15LTMgdGV4dC14cyBzbTp0ZXh0LXNtIHRleHQtc2xhdGUtMjAwIG1iLTgiPgogICAgICAgICAgICA8bGkgY2xhc3M9ImZsZXggaXRlbXMtc3RhcnQiPgogICAgICAgICAgICAgIDxpIGNsYXNzPSJmYS1zb2xpZCBmYS1jcm93biB0ZXh0LWFtYmVyLTQwMCBtdC0xIG1yLTIuNSI+PC9pPgogICAgICAgICAgICAgIDxzcGFuPjxzdHJvbmc+UGlubmVkICMxIENhdGVnb3J5IFBsYWNlbWVudDo8L3N0cm9uZz4gRmVhdHVyZWQgYXQgdGhlIHRvcCBvZiB5b3VyIHNvZnR3YXJlIGNhdGVnb3J5Ljwvc3Bhbj4KICAgICAgICAgICAgPC9saT4KICAgICAgICAgICAgPGxpIGNsYXNzPSJmbGV4IGl0ZW1zLXN0YXJ0Ij4KICAgICAgICAgICAgICA8aSBjbGFzcz0iZmEtc29saWQgZmEtY2hlY2sgdGV4dC1hbWJlci00MDAgbXQtMSBtci0yLjUiPjwvaT4KICAgICAgICAgICAgICA8c3Bhbj48c3Ryb25nPkdvbGQgQ2F0ZWdvcnkgS2luZyBDcm93biBCYWRnZTo8L3N0cm9uZz4gTmFtZWQgY2F0ZWdvcnkgY3Jvd24gKGUuZy4sIENhdGVnb3J5IEtpbmc6IFZvaWNlIERpc3BhdGNoKSBhY3Jvc3MgZGVza3RvcCAmYW1wOyBtb2JpbGUuPC9zcGFuPgogICAgICAgICAgICA8L2xpPgogICAgICAgICAgICA8bGkgY2xhc3M9ImZsZXggaXRlbXMtc3RhcnQiPgogICAgICAgICAgICAgIDxpIGNsYXNzPSJmYS1zb2xpZCBmYS1jaGVjayB0ZXh0LWFtYmVyLTQwMCBtdC0xIG1yLTIuNSI+PC9pPgogICAgICAgICAgICAgIDxzcGFuPjxzdHJvbmc+SGlnaC1Db250cmFzdCBHb2xkIENUQSBCdXR0b246PC9zdHJvbmc+IE1heGltdW0gY2xpY2stdGhyb3VnaCBwcm9taW5lbmNlIG9uIHRoZSBiZW5jaG1hcmsgZ3JpZC48L3NwYW4+CiAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgIDxsaSBjbGFzcz0iZmxleCBpdGVtcy1zdGFydCI+CiAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhLXNvbGlkIGZhLWNoZWNrIHRleHQtYW1iZXItNDAwIG10LTEgbXItMi41Ij48L2k+CiAgICAgICAgICAgICAgPHNwYW4+PHN0cm9uZz5sbG1zLnR4dCBGZWF0dXJlZCBTcG9uc29yIFRhZzo8L3N0cm9uZz4gSGlnaGxpZ2h0ZWQgaW4gb3VyIG1hY2hpbmUtcmVhZGFibGUgQUkgc2VhcmNoIGZlZWQuPC9zcGFuPgogICAgICAgICAgICA8L2xpPgogICAgICAgICAgPC91bD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdj4KICAgICAgICAgIDxhIGlkPSJzdHJpcGVLaW5nQnRuIiBocmVmPSJtYWlsdG86cGFydG5lcnNAbWFya3BvaW50c3lzdGVtcy5jb20/c3ViamVjdD1TZWN1cmUlMjBDYXRlZ29yeSUyMEtpbmclMjBTcG9uc29yc2hpcCUyMCglMjQ0OTklMkZtbykiIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vb3BlbmVyIiBjbGFzcz0iYmxvY2sgdy1mdWxsIHRleHQtY2VudGVyIGJnLWFtYmVyLTUwMCBob3ZlcjpiZy1hbWJlci00MDAgdGV4dC1zbGF0ZS05NTAgZm9udC1leHRyYWJvbGQgcHktMy41IHB4LTYgcm91bmRlZC14bCB0ZXh0LXNtIHRyYW5zaXRpb24gc2hhZG93Ij4KICAgICAgICAgICAgU2VjdXJlIENhdGVnb3J5IEtpbmcgKCQ0OTkvbW8pIOKGkgogICAgICAgICAgPC9hPgogICAgICAgICAgPHAgY2xhc3M9InRleHQtWzExcHhdIHRleHQtc2xhdGUtMzAwIHRleHQtY2VudGVyIG10LTIuNSI+U3ViamVjdCB0byBjYXRlZ29yeSBhdmFpbGFiaWxpdHkuIEZpcnN0LWNvbWUsIGZpcnN0LXNlcnZlZC48L3A+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgoKICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KCiAgPCEtLSBQQVJUTkVSIFJFQ09NTUVOREVEIFNFTEYtU0VSVkUgU1RBQ0sgKFlPVVIgMyBWRVJJRklFRCBBRkZJTElBVEUgTElOS1MpIC0tPgogIDxzZWN0aW9uIGNsYXNzPSJtYXgtdy00eGwgbXgtYXV0byBweC00IHNtOnB4LTYgbGc6cHgtOCBtYi0xMiI+CiAgICA8ZGl2IGNsYXNzPSJiZy1zbGF0ZS05MDAvOTAgYm9yZGVyIGJvcmRlci1zbGF0ZS04MDAgcm91bmRlZC0yeGwgcC02Ij4KICAgICAgPGRpdiBjbGFzcz0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGZsZXgtd3JhcCBnYXAtMiBtYi0zIj4KICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC14cyBmb250LWV4dHJhYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgdGV4dC1lbWVyYWxkLTQwMCI+CiAgICAgICAgICBDb250cmFjdG9yIFF1aWNrLVN0YXJ0IExpbmtzCiAgICAgICAgPC9zcGFuPgogICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LVsxMXB4XSB0ZXh0LXNsYXRlLTMwMCI+KFBhaWQgTGluaykg4oCUIEkgZWFybiBhIGNvbW1pc3Npb24gaWYgeW91IGJ1eSB0aHJvdWdoIG15IGxpbmsuPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iZ3JpZCBncmlkLWNvbHMtMSBzbTpncmlkLWNvbHMtMyBnYXAtMyI+CiAgICAgICAgPGEgaHJlZj0iaHR0cHM6Ly93d3cuZ29oaWdobGV2ZWwuY29tLz9mcF9yZWY9bWFyay03ZWQyYzAiIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vb3BlbmVyIHNwb25zb3JlZCIgY2xhc3M9ImJnLXNsYXRlLTk1MCBob3ZlcjpiZy1zbGF0ZS04MDAgYm9yZGVyIGJvcmRlci1zbGF0ZS04MDAgcm91bmRlZC14bCBwLTMgdGV4dC1jZW50ZXIgdGV4dC14cyBmb250LWJvbGQgdGV4dC1hbWJlci00MDAgdHJhbnNpdGlvbiI+CiAgICAgICAgICBHb0hpZ2hMZXZlbCAoJDk3L21vKSAoUGFpZCBMaW5rKSDihpIKICAgICAgICA8L2E+CiAgICAgICAgPGEgaHJlZj0iaHR0cHM6Ly90cnkuZWxldmVubGFicy5pby9tYXJrcG9pbnRzeXN0ZW1zIiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub29wZW5lciBzcG9uc29yZWQiIGNsYXNzPSJiZy1zbGF0ZS05NTAgaG92ZXI6Ymctc2xhdGUtODAwIGJvcmRlciBib3JkZXItc2xhdGUtODAwIHJvdW5kZWQteGwgcC0zIHRleHQtY2VudGVyIHRleHQteHMgZm9udC1ib2xkIHRleHQtZW1lcmFsZC00MDAgdHJhbnNpdGlvbiI+CiAgICAgICAgICBFbGV2ZW5BZ2VudHMgKCQwLjA4L20pIChQYWlkIExpbmspIOKGkgogICAgICAgIDwvYT4KICAgICAgICA8YSBocmVmPSJodHRwczovL2FmZmlsaWF0ZS50aWRpby5jb20vbWFya3BvaW50c3lzdGVtcyIgdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9vcGVuZXIgc3BvbnNvcmVkIiBjbGFzcz0iYmctc2xhdGUtOTUwIGhvdmVyOmJnLXNsYXRlLTgwMCBib3JkZXIgYm9yZGVyLXNsYXRlLTgwMCByb3VuZGVkLXhsIHAtMyB0ZXh0LWNlbnRlciB0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LXNreS00MDAgdHJhbnNpdGlvbiI+CiAgICAgICAgICBUaWRpbyBMeXJvIEFJICgkMzIuNTAvbW8pIChQYWlkIExpbmspIOKGkgogICAgICAgIDwvYT4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L3NlY3Rpb24+CgogIDwhLS0gRURJVE9SSUFMIFJJR0hULU9GLVJFUExZIC8gRlJFRSBBVURJVCBDT1JSRUNUSU9OIC0tPgogIDxzZWN0aW9uIGNsYXNzPSJtYXgtdy00eGwgbXgtYXV0byBweC00IHNtOnB4LTYgbGc6cHgtOCBtYi0xNiI+CiAgICA8ZGl2IGNsYXNzPSJiZy1zbGF0ZS05MDAgYm9yZGVyIGJvcmRlci1zbGF0ZS04MDAgcm91bmRlZC0yeGwgcC02IHNtOnAtOCI+CiAgICAgIDxkaXYgY2xhc3M9ImZsZXggaXRlbXMtY2VudGVyIHNwYWNlLXgtMyBtYi00Ij4KICAgICAgICA8aSBjbGFzcz0iZmEtc29saWQgZmEtZW52ZWxvcGUtb3Blbi10ZXh0IHRleHQtYW1iZXItNDAwIHRleHQteGwiPjwvaT4KICAgICAgICA8aDMgY2xhc3M9InRleHQteGwgZm9udC1ib2xkIHRleHQtd2hpdGUiPkVkaXRvcmlhbCBSaWdodCBvZiBSZXBseSAmYW1wOyBGcmVlIENvcnJlY3Rpb25zPC9oMz4KICAgICAgPC9kaXY+CiAgICAgIDxwIGNsYXNzPSJ0ZXh0LXhzIHNtOnRleHQtc20gdGV4dC1zbGF0ZS0yMDAgbGVhZGluZy1yZWxheGVkIG1iLTQiPgogICAgICAgIFByaWNpbmcgYW5kIHBlcmZvcm1hbmNlIGJlbmNobWFya2luZyBtdXN0IGJlIGZhaXIsIGFjY3VyYXRlLCBhbmQgdmVyaWZpYWJsZS4gSWYgb3VyIFdheWJhY2sgcHJpY2luZyBzd2VlcHMgb3Igc3RhdHVzLXBhZ2UgdHJhY2tlcnMgbmVlZCBjb250ZXh0LCBvciBpZiB5b3UgaGF2ZSBsYXVuY2hlZCBhIG5ldyBzZWxmLXNlcnZlIHRpZXIgb3IgaW50ZWdyYXRpb24sIG91ciB0ZWFtIHdpbGwgdXBkYXRlIHlvdXIgZmFjdHVhbCBjYXJkIHNwZWNzIGF0IHplcm8gY29zdC4KICAgICAgPC9wPgogICAgICA8ZGl2IGNsYXNzPSJiZy1zbGF0ZS05NTAgcC00IHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1zbGF0ZS04MDAgdGV4dC14cyB0ZXh0LXNsYXRlLTIwMCBzcGFjZS15LTIiPgogICAgICAgIDxkaXY+PHN0cm9uZz5Ib3cgdG8gU3VibWl0IGEgRnJlZSBPZmZpY2lhbCBWZW5kb3IgTm90ZTo8L3N0cm9uZz48L2Rpdj4KICAgICAgICA8cCBjbGFzcz0idGV4dC1zbGF0ZS0zMDAiPgogICAgICAgICAgRW1haWwgPGEgaHJlZj0ibWFpbHRvOnZlbmRvcnNAbWFya3BvaW50c3lzdGVtcy5jb20iIGNsYXNzPSJ0ZXh0LWFtYmVyLTQwMCB1bmRlcmxpbmUgZm9udC1zZW1pYm9sZCI+dmVuZG9yc0BtYXJrcG9pbnRzeXN0ZW1zLmNvbTwvYT4gZnJvbSB5b3VyIGNvbXBhbnkgZG9tYWluIHdpdGg6CiAgICAgICAgPC9wPgogICAgICAgIDx1bCBjbGFzcz0ibGlzdC1kaXNjIGxpc3QtaW5zaWRlIHRleHQtc2xhdGUtMzAwIHNwYWNlLXktMSBwbC0yIj4KICAgICAgICAgIDxsaT5Zb3VyIGRpcmVjdCBwdWJsaWMgcHJpY2luZyBVUkwgb3IgdXBkYXRlZCB0aWVyIGRvY3VtZW50YXRpb24uPC9saT4KICAgICAgICAgIDxsaT5Zb3VyIG9mZmljaWFsIHB1YmxpYyBzdGF0dXMgcGFnZSBVUkwgKFN0YXR1c3BhZ2UsIEluc3RhdHVzLCBCZXR0ZXIgU3RhY2ssIGV0Yy4pLjwvbGk+CiAgICAgICAgICA8bGk+WW91ciBwcm9wb3NlZCAxLXNlbnRlbmNlIG9mZmljaWFsIHZlbmRvciB2ZXJpZmljYXRpb24gbm90ZS48L2xpPgogICAgICAgIDwvdWw+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgPC9zZWN0aW9uPgoKICA8IS0tIEZPT1RFUiAtLT4KICA8Zm9vdGVyIGNsYXNzPSJiZy1zbGF0ZS05NTAgYm9yZGVyLXQgYm9yZGVyLXNsYXRlLTgwMCBweS0xMCBtdC1hdXRvIj4KICAgIDxkaXYgY2xhc3M9Im1heC13LTd4bCBteC1hdXRvIHB4LTQgc206cHgtNiBsZzpweC04IGZsZXggZmxleC1jb2wgbWQ6ZmxleC1yb3cgaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtNCB0ZXh0LXhzIHRleHQtc2xhdGUtMzAwIj4KICAgICAgPGRpdj4KICAgICAgICA8c3BhbiBjbGFzcz0iZm9udC1ib2xkIHRleHQtd2hpdGUiPk1hcmtQb2ludCBTeXN0ZW1zIExMQzwvc3Bhbj4g4oCiIMKpIDIwMjYgQWxsIFJpZ2h0cyBSZXNlcnZlZAogICAgICAgIDxwIGNsYXNzPSJtdC0xIHRleHQtc2xhdGUtNDAwIj5ObyBQYXktdG8tUGxheSDigJQgUGVyZm9ybWFuY2UgJiBQcmljZS1UcmFuc3BhcmVuY3kgRGlyZWN0b3J5IGZvciB0aGUgU2tpbGxlZCBUcmFkZXMuPC9wPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iZmxleCBmbGV4LXdyYXAgaXRlbXMtY2VudGVyIGdhcC02IGZvbnQtbWVkaXVtIj4KICAgICAgICA8YSBocmVmPSIvI2NhbGN1bGF0b3IiIGNsYXNzPSJob3Zlcjp0ZXh0LWFtYmVyLTQwMCB0cmFuc2l0aW9uIj5ST0kgQ2FsY3VsYXRvcjwvYT4KICAgICAgICA8YSBocmVmPSIvbGxtcy50eHQiIGNsYXNzPSJmb250LW1vbm8gaG92ZXI6dGV4dC1hbWJlci00MDAgdHJhbnNpdGlvbiI+bGxtcy50eHQ8L2E+CiAgICAgICAgPGEgaHJlZj0iLyIgY2xhc3M9ImhvdmVyOnRleHQtYW1iZXItNDAwIHRyYW5zaXRpb24iPkRpcmVjdG9yeSBIb21lPC9hPgogICAgICAgIDxhIGhyZWY9Im1haWx0bzpwYXJ0bmVyc0BtYXJrcG9pbnRzeXN0ZW1zLmNvbSIgY2xhc3M9ImhvdmVyOnRleHQtYW1iZXItNDAwIHRyYW5zaXRpb24iPnBhcnRuZXJzQG1hcmtwb2ludHN5c3RlbXMuY29tPC9hPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvZm9vdGVyPgoKICA8c2NyaXB0PgogICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBmdW5jdGlvbigpIHsKICAgICAgY29uc3QgdkJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzdHJpcGVWZXJpZmllZEJ0bicpOwogICAgICBjb25zdCBrQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3N0cmlwZUtpbmdCdG4nKTsKCiAgICAgIGlmICh0eXBlb2YgU1RSSVBFX1ZFUklGSUVEXzE0OV9VUkwgPT09ICdzdHJpbmcnICYmIFNUUklQRV9WRVJJRklFRF8xNDlfVVJMLmluZGV4T2YoJ2h0dHBzOi8vYnV5LnN0cmlwZS5jb20vJykgPT09IDApIHsKICAgICAgICB2QnRuLmhyZWYgPSBTVFJJUEVfVkVSSUZJRURfMTQ5X1VSTDsKICAgICAgfQogICAgICBpZiAodHlwZW9mIFNUUklQRV9LSU5HXzQ5OV9VUkwgPT09ICdzdHJpbmcnICYmIFNUUklQRV9LSU5HXzQ5OV9VUkwuaW5kZXhPZignaHR0cHM6Ly9idXkuc3RyaXBlLmNvbS8nKSA9PT0gMCkgewogICAgICAgIGtCdG4uaHJlZiA9IFNUUklQRV9LSU5HXzQ5OV9VUkw7CiAgICAgIH0KICAgIH0pOwoKICAgIGZ1bmN0aW9uIHVwZGF0ZUNsYWltUHJldmlldygpIHsKICAgICAgY29uc3Qgc2VsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3ZlbmRvckNsYWltU2VsZWN0JykudmFsdWU7CiAgICAgIGNvbnN0IGJveCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjbGFpbVByZXZpZXdCb3gnKTsKICAgICAgaWYgKCFzZWwgfHwgc2VsLmluZGV4T2YoJ3wnKSA9PT0gLTEpIHsKICAgICAgICBib3guY2xhc3NMaXN0LmFkZCgnaGlkZGVuJyk7CiAgICAgICAgcmV0dXJuOwogICAgICB9CiAgICAgIGNvbnN0IHBhcnRzID0gc2VsLnNwbGl0KCd8Jyk7CiAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjbGFpbVZlbmRvck5hbWUnKS50ZXh0Q29udGVudCA9IHBhcnRzWzBdOwogICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2xhaW1WZW5kb3JTY29yZScpLnRleHRDb250ZW50ID0gcGFydHNbMV07CiAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjbGFpbVZlbmRvckNhdCcpLnRleHRDb250ZW50ID0gcGFydHNbMl07CiAgICAgIGJveC5jbGFzc0xpc3QucmVtb3ZlKCdoaWRkZW4nKTsKICAgIH0KICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+Cg==
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Your Listing | MarkPoint Verified Partner & Category King</title>
+  <meta name="description" content="Claim your MarkPoint card, verify your pricing, and sponsor your category: Verified Partner $149/mo, Category King $499/mo. Scores are never for sale.">
+  <meta property="og:title" content="Claim Your Listing | MarkPoint Verified Partner & Category King">
+  <meta property="og:description" content="Claim your MarkPoint card, verify your pricing, and sponsor your category: Verified Partner $149/mo, Category King $499/mo. Scores are never for sale.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markpointsystems.com/submit.html">
+  <meta name="twitter:card" content="summary">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    const STRIPE_VERIFIED_149_URL = "https://buy.stripe.com/cNibJ3eBw2PC4DZ83Dc7u00";
+    const STRIPE_KING_499_URL     = "https://buy.stripe.com/3cI4gBgJE1Lyb2n3Nnc7u01";
+  </script>
+</head>
+<body class="bg-[#090D16] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- STICKY HEADER WITH INLINE MP EMBLEM SVG -->
+  <header class="sticky top-0 z-50 bg-[#090D16]/95 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-3 group">
+        <svg class="w-10 h-10 flex-shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="14" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+          <path d="M10 46V18H16L24 31L32 18H38V46H32.5V27.5L24 41L15.5 27.5V46H10Z" fill="url(#goldGradSub)"/>
+          <path d="M41 46V18H50C54.5 18 57.5 20.8 57.5 25.5C57.5 30.2 54.5 33 50 33H46.5V46H41ZM46.5 28.5H49.5C51.5 28.5 52.5 27.3 52.5 25.5C52.5 23.7 51.5 22.5 49.5 22.5H46.5V28.5Z" fill="url(#goldGradSub)"/>
+          <circle cx="48.5" cy="25.5" r="3" stroke="#10B981" stroke-width="1.4"/>
+          <circle cx="48.5" cy="25.5" r="1" fill="#10B981"/>
+          <path d="M36 36.5L43 43.5L58 24" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="goldGradSub" x1="10" y1="18" x2="56" y2="46" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FDE68A"/>
+              <stop offset="0.5" stop-color="#F59E0B"/>
+              <stop offset="1" stop-color="#B45309"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="flex flex-col">
+          <div class="text-base sm:text-lg font-black tracking-wider leading-none">
+            <span class="text-amber-400">MARKPOINT</span> <span class="text-emerald-400">SY</span><span class="text-white">ST</span><span class="text-emerald-400">EMS</span>
+          </div>
+          <span class="text-[10px] text-slate-300 tracking-widest uppercase mt-0.5 font-semibold">Vendor &amp; Partner Portal</span>
+        </div>
+      </a>
+
+      <nav class="flex items-center space-x-4">
+        <a href="/" class="text-xs sm:text-sm text-slate-200 hover:text-amber-400 font-semibold transition">← Back to Directory</a>
+        <a href="#pricing-tiers" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-extrabold px-4 py-2 rounded-xl transition shadow">
+          Sponsorship Tiers
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-bold mb-4">
+      <i class="fa-solid fa-scale-balanced"></i>
+      <span>Institutional Editorial Integrity • Scores Never Sold</span>
+    </div>
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-3xl mx-auto leading-tight">
+      Claim Your Audited Benchmark Card or <span class="text-amber-400 whitespace-nowrap">Partner With Us.</span>
+    </h1>
+    <p class="mt-4 text-sm sm:text-base text-slate-200 max-w-2xl mx-auto">
+      MarkPoint Systems provides independent performance, pricing transparency, and uptime benchmarking for the skilled trades. Vendors can verify data for free or secure featured directory placement.
+    </p>
+  </section>
+
+  <!-- CLAIM & RIGHT-OF-REPLY SELECTOR -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-slate-900 border border-amber-500/40 rounded-2xl p-6 shadow-xl">
+      <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+        <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+          October 2026 Audit Cohort
+        </span>
+        <span class="text-xs text-slate-300 font-medium">Instant Stripe Activation • Cancel Anytime</span>
+      </div>
+      <h2 class="text-xl font-bold text-white mb-2">Already Listed in Our 2026 Benchmark? Claim Your Card</h2>
+      <p class="text-xs sm:text-sm text-slate-200 mb-4">
+        Select your software below to preview your live MarkPoint Score and unlock your Verified Partner placement, direct Free-Trial/Demo CTA button, or Category King exclusivity.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-center">
+        <select id="vendorClaimSelect" onchange="updateClaimPreview()" class="md:col-span-2 w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 cursor-pointer">
+          <option value="">-- Select Your Audited Software Listing --</option>
+          <option value="Sameday AI|98|24/7 AI Voice Receptionists">Sameday AI (Current MP Score: 98/100 — Hold Expires Oct 28)</option>
+          <option value="Rosie AI|95|24/7 AI Voice Receptionists">Rosie AI (Current MP Score: 95/100 — Unclaimed)</option>
+          <option value="Synthflow AI|95|24/7 AI Voice Receptionists">Synthflow AI (Current MP Score: 95/100 — Unclaimed)</option>
+          <option value="Carly AI|94|Back-Office & AI Estimating">Carly AI (Current MP Score: 94/100 — Unclaimed)</option>
+          <option value="Handoff AI|93|AI Estimating & Takeoffs">Handoff AI (Current MP Score: 93/100 — Unclaimed)</option>
+          <option value="Avoca AI|92|24/7 AI Voice Receptionists">Avoca AI (Current MP Score: 92/100 — Sales-Gated Flag)</option>
+          <option value="QuoteIQ|92|AI Estimating & Takeoffs">QuoteIQ (Current MP Score: 92/100 — Unclaimed)</option>
+          <option value="Jobber AI|91|Speed-to-Lead & Field CRM">Jobber AI (Current MP Score: 91/100 — Unclaimed)</option>
+          <option value="Togal.AI|91|AI Estimating & Takeoffs">Togal.AI (Current MP Score: 91/100 — Unclaimed)</option>
+          <option value="Housecall Pro AI|90|Speed-to-Lead & Field CRM">Housecall Pro AI (Current MP Score: 90/100 — Unclaimed)</option>
+          <option value="Hover 3D|90|AI Estimating & Takeoffs">Hover 3D (Current MP Score: 90/100 — Unclaimed)</option>
+          <option value="LeadTruffle|89|Speed-to-Lead & Field CRM">LeadTruffle (Current MP Score: 89/100 — Sales-Gated Flag)</option>
+          <option value="ServiceTitan Max|88|Speed-to-Lead & Field CRM">ServiceTitan / Titan Intelligence (Current MP Score: 88/100)</option>
+          <option value="New Vendor Submission|--|New Category Audit">Don't see your tool? Submit a New Vendor for Audit</option>
+        </select>
+        <a href="#pricing-tiers" class="w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-xl text-sm transition shadow">
+          Unlock Listing ↓
+        </a>
+      </div>
+
+      <div id="claimPreviewBox" class="hidden mt-4 p-4 rounded-xl bg-slate-950 border border-emerald-500/40 text-sm text-slate-200">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <span class="text-emerald-400 font-bold">✓ Listing Located:</span> 
+            <strong id="claimVendorName" class="text-white"></strong> 
+            <span class="text-slate-300">(<span id="claimVendorCat"></span> • MP Score: <span id="claimVendorScore" class="text-amber-400 font-bold"></span>/100)</span>
+          </div>
+          <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30 font-semibold">
+            Eligible for Verified Partner ($149/mo) or Category King ($499/mo)
+          </span>
+        </div>
+        <p class="text-xs text-slate-300 mt-2">
+          Select a tier below to activate via Stripe, or email <a href="mailto:vendors@markpointsystems.com" class="text-amber-400 underline font-semibold">vendors@markpointsystems.com</a> to submit an official 1-sentence vendor verification note for your audit card at $0 cost.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORSHIP TIERS SECTION -->
+  <section id="pricing-tiers" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Direct B2B Directory Sponsorships</h2>
+      <p class="text-xs sm:text-sm text-slate-300 mt-2">
+        Self-serve monthly billing powered by Stripe. Cancel anytime with one click.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+      
+      <!-- TIER 1: VERIFIED PARTNER BADGE -->
+      <div class="bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl transition">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase tracking-wider">
+              MarkPoint Verified™
+            </span>
+            <span class="text-xs text-slate-300 font-medium">Monthly Recurring</span>
+          </div>
+          <div class="mb-6">
+            <span class="text-4xl font-extrabold text-white">$149</span>
+            <span class="text-slate-300 text-sm font-medium">/ month</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 mb-6">
+            Designed for high-performing software platforms that want to convert high-intent contractor traffic directly from their benchmark card.
+          </p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-200 mb-8">
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>MarkPoint Verified™ Partner Badge:</strong> Official verified partner status on your card.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>Direct Outbound CTA Button:</strong> Send contractors straight to your Free Trial or Demo booking URL.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>Official Vendor Context Note:</strong> Publish your verified uptime, customer guarantee, and onboarding specs.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-emerald-400 mt-1 mr-2.5"></i>
+              <span><strong>No Score Alteration Guarantee:</strong> MarkPoint Scores remain 100% independent and protected.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <a id="stripeVerifiedBtn" href="mailto:partners@markpointsystems.com?subject=Activate%20MarkPoint%20Verified%20Partner%20(%24149%2Fmo)" target="_blank" rel="noopener" class="block w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-6 rounded-xl text-sm transition shadow">
+            Claim Verified Partner ($149/mo) →
+          </a>
+          <p class="text-[11px] text-slate-300 text-center mt-2.5">Instant Stripe checkout. No long-term contract.</p>
+        </div>
+      </div>
+
+      <!-- TIER 2: CATEGORY KING SPONSOR -->
+      <div class="bg-slate-900 border-2 border-amber-500 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
+       <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-max">
+  <span class="inline-block px-3.5 py-1 rounded-full text-[11px] font-black bg-amber-500 text-slate-950 uppercase tracking-wide shadow whitespace-nowrap">
+    Exclusive #1 Category Slot
+  </span>
+</div>
+
+        <div>
+          <div class="flex justify-between items-center mb-4 mt-2">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase tracking-wider">
+              Category King™
+            </span>
+            <span class="text-xs text-slate-300 font-medium">Strictly 1 Per Category</span>
+          </div>
+          <div class="mb-6">
+            <span class="text-4xl font-extrabold text-white">$499</span>
+            <span class="text-slate-300 text-sm font-medium">/ month</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 mb-6">
+            The marquee header position. Dominates category filtering and secures the gold Category King crown on MarkPoint Systems.
+          </p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-200 mb-8">
+            <li class="flex items-start">
+              <i class="fa-solid fa-crown text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>Pinned #1 Category Placement:</strong> Featured at the top of your software category.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>Gold Category King Crown Badge:</strong> Named category crown (e.g., Category King: Voice Dispatch) across desktop &amp; mobile.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>High-Contrast Gold CTA Button:</strong> Maximum click-through prominence on the benchmark grid.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-check text-amber-400 mt-1 mr-2.5"></i>
+              <span><strong>llms.txt Featured Sponsor Tag:</strong> Highlighted in our machine-readable AI search feed.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <a id="stripeKingBtn" href="mailto:partners@markpointsystems.com?subject=Secure%20Category%20King%20Sponsorship%20(%24499%2Fmo)" target="_blank" rel="noopener" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3.5 px-6 rounded-xl text-sm transition shadow">
+            Secure Category King ($499/mo) →
+          </a>
+          <p class="text-[11px] text-slate-300 text-center mt-2.5">Subject to category availability. First-come, first-served.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PARTNER RECOMMENDED SELF-SERVE STACK (YOUR 3 VERIFIED AFFILIATE LINKS) -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6">
+      <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-400">
+          Contractor Quick-Start Links
+        </span>
+        <span class="text-[11px] text-slate-300">(Paid Link) — I earn a commission if you buy through my link.</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <a href="https://www.gohighlevel.com/?fp_ref=mark-7ed2c0" target="_blank" rel="noopener sponsored" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl p-3 text-center text-xs font-bold text-amber-400 transition">
+          GoHighLevel ($97/mo) (Paid Link) →
+        </a>
+        <a href="https://try.elevenlabs.io/markpointsystems" target="_blank" rel="noopener sponsored" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl p-3 text-center text-xs font-bold text-emerald-400 transition">
+          ElevenAgents ($0.08/m) (Paid Link) →
+        </a>
+        <a href="https://affiliate.tidio.com/markpointsystems" target="_blank" rel="noopener sponsored" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl p-3 text-center text-xs font-bold text-sky-400 transition">
+          Tidio Lyro AI ($32.50/mo) (Paid Link) →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL RIGHT-OF-REPLY / FREE AUDIT CORRECTION -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8">
+      <div class="flex items-center space-x-3 mb-4">
+        <i class="fa-solid fa-envelope-open-text text-amber-400 text-xl"></i>
+        <h3 class="text-xl font-bold text-white">Editorial Right of Reply &amp; Free Corrections</h3>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-200 leading-relaxed mb-4">
+        Pricing and performance benchmarking must be fair, accurate, and verifiable. If our Wayback pricing sweeps or status-page trackers need context, or if you have launched a new self-serve tier or integration, our team will update your factual card specs at zero cost.
+      </p>
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-200 space-y-2">
+        <div><strong>How to Submit a Free Official Vendor Note:</strong></div>
+        <p class="text-slate-300">
+          Email <a href="mailto:vendors@markpointsystems.com" class="text-amber-400 underline font-semibold">vendors@markpointsystems.com</a> from your company domain with:
+        </p>
+        <ul class="list-disc list-inside text-slate-300 space-y-1 pl-2">
+          <li>Your direct public pricing URL or updated tier documentation.</li>
+          <li>Your official public status page URL (Statuspage, Instatus, Better Stack, etc.).</li>
+          <li>Your proposed 1-sentence official vendor verification note.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300">
+      <div>
+        <span class="font-bold text-white">MarkPoint Systems LLC</span> • © 2026 All Rights Reserved
+        <p class="mt-1 text-slate-400">No Pay-to-Play — Performance & Price-Transparency Directory for the Skilled Trades.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-6 font-medium">
+        <a href="/#calculator" class="hover:text-amber-400 transition">ROI Calculator</a>
+        <a href="/llms.txt" class="font-mono hover:text-amber-400 transition">llms.txt</a>
+        <a href="/" class="hover:text-amber-400 transition">Directory Home</a>
+        <a href="mailto:partners@markpointsystems.com" class="hover:text-amber-400 transition">partners@markpointsystems.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const vBtn = document.getElementById('stripeVerifiedBtn');
+      const kBtn = document.getElementById('stripeKingBtn');
+
+      if (typeof STRIPE_VERIFIED_149_URL === 'string' && STRIPE_VERIFIED_149_URL.indexOf('https://buy.stripe.com/') === 0) {
+        vBtn.href = STRIPE_VERIFIED_149_URL;
+      }
+      if (typeof STRIPE_KING_499_URL === 'string' && STRIPE_KING_499_URL.indexOf('https://buy.stripe.com/') === 0) {
+        kBtn.href = STRIPE_KING_499_URL;
+      }
+    });
+
+    function updateClaimPreview() {
+      const sel = document.getElementById('vendorClaimSelect').value;
+      const box = document.getElementById('claimPreviewBox');
+      if (!sel || sel.indexOf('|') === -1) {
+        box.classList.add('hidden');
+        return;
+      }
+      const parts = sel.split('|');
+      document.getElementById('claimVendorName').textContent = parts[0];
+      document.getElementById('claimVendorScore').textContent = parts[1];
+      document.getElementById('claimVendorCat').textContent = parts[2];
+      box.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
