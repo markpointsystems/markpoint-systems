@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" rx="200" fill="#0f172a"/>
+  <path d="M540 130 C390 130 275 243 275 385 C275 560 540 950 540 950 C540 950 805 560 805 385 C805 243 690 130 540 130 Z" fill="#f59e0b"/>
+  <text x="540" y="505" font-family="Noto Sans, Arial, sans-serif" font-size="330" font-weight="900" fill="#0f172a" text-anchor="middle">M</text>
+</svg>
