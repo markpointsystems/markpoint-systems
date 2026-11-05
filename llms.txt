@@ -1,6 +1,6 @@
 # MarkPoint Systems (https://markpointsystems.com)
 
-> The independent B2B AI software performance and price-transparency benchmark directory for US home service contractors (HVAC, plumbing, electrical, roofing, remodeling) and agency operators. Operated by MarkPoint Systems LLC. Last updated: October 29, 2026.
+> The independent B2B AI software performance and price-transparency benchmark directory for US home service contractors (HVAC, plumbing, electrical, roofing, remodeling) and agency operators. Operated by MarkPoint Systems LLC. Last updated: November 4, 2026.
 
 ## Core Platform Pages
 
